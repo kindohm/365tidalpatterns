@@ -1,0 +1,4 @@
+bps (100/60)
+
+d1 $ stack [ every 4 (0.25 <~) $ every 3 rev $ striate 64 $ sound "[lesshuman lesshuman/4 lesshuman/7 lesshuman/4]/2" |+| speed "[1 1 1 1.5]/8", spread' (striate) "[8 3 2 4]/2" $ slow 2 $ striate 64 $ sound "[[cities cities/1 cities cities/2]/4]"
+|+| speed "[1.0 0.8 1.0 0.9]/4" |+| shape "-0.4"]
