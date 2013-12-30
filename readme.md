@@ -5,9 +5,8 @@ beginning 2013-12-38.
 
 Patterns are available for listening at:
 
-[https://soundcloud.com/365tidalpatterns/](https://soundcloud.com/365tidalpatterns/)
-
-[http://365tidalpatterns.tumblr.com/](http://365tidalpatterns.tumblr.com/)
+- [https://soundcloud.com/365tidalpatterns/](https://soundcloud.com/365tidalpatterns/)
+- [http://365tidalpatterns.tumblr.com/](http://365tidalpatterns.tumblr.com/)
 
 ## Tidal
 
