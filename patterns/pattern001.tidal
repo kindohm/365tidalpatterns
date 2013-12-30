@@ -1,0 +1,5 @@
+d1 $ spread' slow "[2 3 1]/4" $ jux (iter 8) $ every 4 rev $ sound "[bd*6 [sn*3 bd*2] [bd*4 sn] [sn*6]]"  
+|+| speed ((+1.0)<$> slow 1 sinewave1) |+| cutoff ((*0.5)<$> slow 2 sinewave1) |+| resonance ((*0.5)<$> slow 3 sinewave1)
+
+d1 silence
+

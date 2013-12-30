@@ -1,0 +1,5 @@
+d1 $ every 5 (0.25 <~) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [sound "[[odx*2 [odx/6 mt*2]] [odx/1 odx/3] [odx*3 [mt*2]] [odx/3 odx/6 ~ odx/1]]", every 4 rev $ sound (samples "pluck*8" (run 8))
+|+| shape "0.5"]
+|+| speed "[[1 0.8] 1 1.3 1]"
+
+d1 silence
