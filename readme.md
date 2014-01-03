@@ -15,6 +15,6 @@ Patterns are available for listening at:
 ## Custom Samples
 
 These patterns use custom samples that aren't availble with the stock
-Dirt synthesizer. Custom samples are available at 
-[https://github.com/kindohm/tidal-samples](https://github.com/kindohm/tidal-samples)
+Dirt synthesizer. They originate from older electronic material I've
+produced in the past, alone with some other one-off samples.
 
