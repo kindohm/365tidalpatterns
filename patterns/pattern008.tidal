@@ -1,0 +1,4 @@
+d1 $ jux (spread' (striate) "[2 1 3]/3") $ density 2 $ sound ( samples "[[drum drum] [bd*3 drum] bd*16 [cp*4 bd] [bd*4 lt*4]]" (run 8)) 
+|+| speed ((+0.5) <$> slow 4 sinewave1)
+
+d1 silence
