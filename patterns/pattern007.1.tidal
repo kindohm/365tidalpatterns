@@ -1,0 +1,2 @@
+
+d1 $ every 6 (striate 8) $ smash 4 [2, 1, 4, 3] $ stack [sound "[~ lesshuman/4*4]*4" |+| shape "-0.7", sound "[[~ sn/1], [bd ~ ~ lt] [bd ~ ht mt]]*2", sound "[grunt/3]" |+| speed "[1 0.8 1 0.6, 0.5 0.4 0.5 0.3]/4" ]
