@@ -1,0 +1,20 @@
+bps 1.2
+
+# 010
+
+d1 $ every 4 (jux (iter 8)) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ every 2 (0.25 <~) $ sound "[[bd sn*4] uldrums*24 bd*32 [bd*3 ht*6]]/2"
+|+| cutoff ((*0.5) <$> slow 0.9 sinewave1)
+|+| resonance "0.1"
+|+| speed ((+0.6) <$> slow 1.8 sinewave1)
+|+| shape "0.2"
+
+# 010.1
+
+d1 $ spread' (striate) "[3 1 2 4]/3" $ every 4 (jux (iter 8)) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ every 2 (0.25 <~) $ sound "[[bd sn*4] uldrums*24 bd*32 [bd*3 ht*6]]/2"
+|+| cutoff ((*0.5) <$> slow 0.9 sinewave1)
+|+| resonance "0.1"
+|+| speed ((+0.6) <$> slow 1.8 sinewave1)
+|+| shape "0.2"
+
+
+d1 silence
