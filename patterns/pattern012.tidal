@@ -1,6 +1,7 @@
-bps 0.8
+bps 0.9
 
 d1 $ every 6 (density 2) $ jux (iter 8) $ every 8 rev $ every 5 (0.25 <~) $ sound "[808a/4*16, 808a/2 [808a/3 ~ ~ 808b] [~ 808b/3 808b/3 ~] [~], [~ ~ ~ [~ 808b/2]]/2]"
 |+| speed "[1 1 1 [1.5 0.8] 1 1 1 [1 0.5]]/8"
 |+| cutoff ((*0.5) <$> slow 2 sinewave1)
 |+| resonance ((*0.2) <$> slow 3 sinewave1)
+
