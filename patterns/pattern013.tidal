@@ -1,3 +1,4 @@
 bps (90/60)
 
-d1 $ stack [sound "[arp]/2" |+| speed "[1 1.122]/4", every 6 (slow 1.5) $ every 5 (density 2) $ every 4 rev $ sound "[grunt/3*6]" |+| speed "[0.5 0.4 0.25 0.6 0.8 0.4]" ]
+d1 $ stack [every 3 (density 2) $ sound "mouth*12" |+| pan (slow 3 sinewave1) |+| shape "-0.7", sound "[arp]/2" |+| speed "[1 1.122]/4", every 6 (slow 1.5) $ every 5 (density 2) $ every 4 rev $ sound "[grunt/3*6]" |+| speed "[0.5 0.4 0.25 0.6 0.8 0.4]" ]
+
