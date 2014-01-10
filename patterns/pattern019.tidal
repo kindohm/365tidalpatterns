@@ -1,0 +1,4 @@
+d1 $ every 5 (slow 2) $ stack[ every 4 (0.25 <~) $ sound "[lesshuman [lesshuman/4 lesshuman/5 ~ ~] lesshuman/7 lesshuman/4]"
+|+| speed "[1 1.2 0.8 1]/4", every 4 (rev) $ sound "[[short/1 ~ ~ metal] [~ metal] [~ hh ~ hh] [mouth mouth mouth/1 mouth/2*3]]"
+|+| speed "[1 1 1 0.8]/4"]
+
