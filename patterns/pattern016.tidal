@@ -1,5 +1,2 @@
-d1 $ stack [ sound "[alonevox alonevox/1 alonevox/6 alonevox/5]/16" |+| shape "0.5" |+| speed "0.95", every 4 rev $ every 3 (0.25 <~) $ slow 2 $ striate 128 ( sound "[fire]" |+| shape "-0.2"), sound "[[~ bminst/6]*3]/4" |+| speed "[0.2 0.22 0.178]"]
-
-d1 silence
-
+d1 $ stack [ sound "[alonevox alonevox/1 alonevox/6 alonevox/5]/16" |+| shape "0.5" |+| speed "0.95", every 5 (striate 2) $ every 4 rev $ every 3 (0.25 <~) $ slow 2 $ striate 128 ( sound "[fire]" |+| shape "-0.3") ]
 
