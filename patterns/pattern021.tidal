@@ -1,0 +1,6 @@
+bps 1
+
+d1 $ every 5 rev $ every 3 (0.25 <~) $ stack [ sound "[metal metal ~ ~]/2" |+| speed "[0.025 0.03 ~ ~]/2", every 4 (slow 1.5) $ every 2 (0.25 <~) $ every 3 (0.25 <~) $ sound "[[chin*3] [mouth chin*3] [chin mouth chin chin] [mouth*4] ]" |+| speed "0.2" |+| shape "-0.3", every 2 rev $ striate 128 ( sound "arp")]
+
+
+hush
