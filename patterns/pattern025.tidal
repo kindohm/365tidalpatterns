@@ -1,0 +1,3 @@
+d1 $ density 3 $ every 4 (rev) $ every 3 (0.25 <~) $ smash 5 [3,1,2,4] $ slow 4 $ striate 128 (sound "sytrus1") |+| speed "[0.25 0.125]/2"
+|+| cutoff ((*0.5) <$> slow 3 sinewave1)
+|+| resonance ((*0.5) <$> slow 5 sinewave1)
