@@ -1,0 +1,3 @@
+
+d1  $ stack [ spread' (striate' 6) ((+0.2) <$> slow 8 sinewave1) $ jux rev $ sound "[sytrus2/2*6]" |+| speed "[1 0.8 1.5 0.5 0.6 0.8, 0.25 0.3 0.4]/2" |+| shape "-0.5", every 6 (smash 3 [3,1,2]) $ every 4 (jux rev) $ every 5 rev $ every 3 (0.333 <~) $ sound "[[drum/5 drum/3 drum/2] [drum/1 drum/2 drum/3] [drum/3 drum/2 drum/1] [drum/3 drum drum/2]]" |+| speed "[0.7 0.6 0.8]/3" ]
+
