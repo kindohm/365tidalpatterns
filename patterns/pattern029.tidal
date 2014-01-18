@@ -1,0 +1,2 @@
+d1 $ every 5 (density 2) $ every 3 (slow 1.5) $ every 4 rev $ every 3 (0.125 <~) $ every 2 (0.125 <~) $ every 4 (0.125 <~) $ sound (pick <$> "[[bd bd chin*3 bd] [sn can can bd] [808a metal mouth can] [invaders chin*2 mouth*3 notes], [[pluck*2] mute ~ ~]]" <*> slow 5 (run 8))
+|+| speed "[1 1.5 0.8 1.2 0.6 0.7]/2"
