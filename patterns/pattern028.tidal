@@ -1,0 +1,4 @@
+d1 $ spread' (density) "[4 3 5]/2" $ spread' (striate' 8) "[0.4 0.1 0.3 0.2 0.05]/3" $ sound (pick <$> "ulfx peach sytrus2" <*> slow 7 (run 8))
+|+| speed ((*) <$> sinewave1 <*> ( slow 4 $ "[2.5 1.2 4 3]"))
+|+| cutoff ((*0.5) <$> slow 5 sinewave1)
+|+| resonance ((*0.5) <$> slow 3 sinewave1)
