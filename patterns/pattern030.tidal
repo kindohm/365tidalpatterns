@@ -1,0 +1,4 @@
+bps 1.2
+
+d1 $ stack [ every 3 (0.25 <~) $ every 4 (0.5 <~) $ sound (samples "circus*8" (run 8))
+|+| speed "[1.8 1.8 1.8 1.8 1.6]/2", every 3 (0.25 ~>) $ every 4 (0.25 ~>) $ striate 128 $ sound "breaks125/1" |+| shape "0.7", spread' (slow) "[2 2 2 4 2]/4" $ density 2 $ sound (pick <$> "[bass2*2 bass2 [bass2 bass2*2] [~ bass2*2] ]" <*> slow 3 (run 8)) |+| speed "[1 0.8 1.5 0.8 1 1 0.8 2]/3" ]

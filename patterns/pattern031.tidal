@@ -1,0 +1,6 @@
+d1 $ stack [ spin 1 $ spread' (density) "[4 4 4 3]/8" $ sound "[ht*4 ht*3 ht*4 ht*5 ht*6 ht*7 ht*6 ht*5]"
+|+| speed "[4 4 4.1 4.1 4 4 3.9 3.9]/4"
+|+| cutoff ((*0.5) <$> slow 3 sinewave1)
+|+| resonance ((*0.3) <$> slow 4 sinewave1) |+| shape "-0.5", brak $ every 3 (0.25 <~) $ every 2 (0.125 <~) $ every 4 (0.5 <~) $ sound "[lesshuman/1 [lesshuman/7 lesshuman/1] [lesshuman/4 lesshuman/7] lesshuman/4 lesshuman/4*3 [lesshuman/7 lesshuman/1] [lesshuman/4*2 lesshuman/7] lesshuman/4]/2 " |+| shape "0.7" |+| speed "1.2" |+| vowel "[a e a u]/2" ]
+
+hush
