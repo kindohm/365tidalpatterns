@@ -1,0 +1,2 @@
+d1 $ every 5 (slow 1.5) $ every 3 (0.125 <~) $ every 4 rev $ every 7 (|+| vowel "[a o]") $ spin 1 $ sound (pick <$> "[bd*2 ht*2 autodrums1/2 can*3 cp [~ cp] ~ lt*2, amencutup*2 pluck*3 amencutup*2 amencutup*2]" <*> slow 1.25 (run 8))
+|+| speed ((*) <$> sinewave1 <*> slow 1.33 "[3 2 1.5 2.5]")
