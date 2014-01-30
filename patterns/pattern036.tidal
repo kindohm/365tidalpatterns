@@ -1,0 +1,2 @@
+d1 $ every 5 (spin 1) $ every 6 rev $ every 2 (0.25 ~>) $ every 3 (0.125 ~>) $ every 3 (smash 3 [3,4,2]) $ sound (pick <$> "[robo/3 taste1*2 [taste2 taste1]*2 taste2*2 [gnome beeps] [beeps taste1] [taste2 beeps]*2 [~ taste1]]" <*> slow 1.333 (run 8))
+|+| speed "[1 1 1.2 1]/3"
