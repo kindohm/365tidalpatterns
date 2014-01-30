@@ -1,0 +1,3 @@
+d1 $ every 3 (0.25 <~) $ every 2 (slow 1.5) $ spin 1 $ density 2 $ spread' (striate' 4) ((*0.1) <$> slow 8 sinewave1) $ sound "[robo/2 robo/0 beeps/0]*3"
+|+| speed "[0.25 0.2 0.3 0.1]/3"
+|+| shape "0.6"
