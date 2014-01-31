@@ -1,0 +1,2 @@
+d1 $ every 6 rev $ stack [sound "[lesshuman lesshuman lesshuman [~ lesshuman/1]*2]" |+| shape "0.4" |+| speed "[2 2.5 1.5 3.5]", jux (iter 8) $ sound (pick <$> "[~ beeps*2 beeps*2 beeps*2]*2" <*> density 3 (run 8)) |+| speed ((*) <$> sinewave1 <*> "[2 2.5 4 4.5 2.5 3]/2"), every 3 (0.25 <~) $ density 2 $ sound "[~ lesshuman/4*2 lesshuman/4*2 lesshuman/4*2]" |+| speed "1.5" |+| shape "0.2" ]
+
