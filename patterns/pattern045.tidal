@@ -1,0 +1,3 @@
+d1 $ every 8 (slow 0.75) $ stack [ sound "[~ autodrums2/2]" |+| speed "[1 1 1 0.5]/4", every 4 (jux (iter 9)) $ sound (pick <$> "[bd hh sn hh sn odx hh sn hh sn sn bd]" <*> slow 2 (run 8))
+|+| speed "[2 2 2 2 2 2 2 1]/5"]
+
