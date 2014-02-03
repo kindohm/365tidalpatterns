@@ -1,0 +1,5 @@
+d1 $ every 4 (0.25 <~) $ every 3 (slow 2) $ stack [ every 2 (jux rev) $ sound (pick <$> "[[taste1 beeps] beeps*2 beeps*2 [robo beeps]]*2" <*> density 7 (run 8)) |+| speed "[1 1.5 0.8 0.5 1.25]*3", every 5 (jux (iter 8)) $ every 4 (0.25 <~) $ sound (pick <$> "[gab1*2 [~ gab1] gab1*2 [~ gab1]]*2" <*> density 37 (run 8))
+|+| speed "[1 1.25 2 0.8]"
+|+| cutgroup "1"
+]
+
