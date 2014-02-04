@@ -1,0 +1,6 @@
+bps 1.25
+
+d1 $ stack [every 4 (0.25 <~) $ every 3 (0.25 <~) $ density 2 $ every 2 rev $ stack [ striate 128 (sound ( pick <$> "gab1" <*> slow 3 (run 8))) |+| pan (slow 4 sinewave1), (0.5 <~) $ striate 128 (sound ( pick <$> "gab1" <*> slow 2.5 (run 8))) |+| pan (slow 3 sinewave1)], sound "[~ lesshuman/7 lesshuman/4*5]/3" |+| shape "0.7" |+| speed "0.5"]
+
+
+
