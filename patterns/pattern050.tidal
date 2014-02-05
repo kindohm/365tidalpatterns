@@ -1,0 +1,7 @@
+bps 1.2
+
+d1 $ every 5 (slow 2) $ every 3 (0.25 ~>) $ every 4 (0.25 ~>) $ sound ( pick <$>  "uldrums*8" <*> density 3 (run 8))
+|+| speed "[1 1 1 0.5 1 1.5]/4"
+|+| cutoff ((*0.5) <$> slow 3 sinewave1)
+|+| resonance "0.4"
+
