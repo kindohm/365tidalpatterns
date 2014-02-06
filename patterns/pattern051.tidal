@@ -1,7 +1,6 @@
-bps 1
+bps 1.5
 
-d1 $ slow 2 $ spread' (density) "[2 4 3 1 5]/5" $ rev $ spread' (striate' 64) "[0.3 0.1 0.2 0.4]/3" ( sound "uldrums/5" )
-|+| cutoff ((*0.2) <$> slow 3 sinewave1)
-|+| resonance "0.05"
-|+| speed "[1 1.25 1.5 2 0.8 2.5]/2"
-
+d1 $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack[ every 5 (density 2) $ every 2 (slow 0.75) $ sound "[bd*2 hh*6 bd hh*3 cp ht hh*3 hh*2]/2" |+| speed "4" |+| shape "0.8", jux (iter 8) $ sound "sytrus2/3*8"
+|+| speed "[1 1.5 0.75 0.5 1.25 1.75 2 2.5, 0.25 0.125 0.5]"]
+|+| vowel "[e e e o e e i i a]/3"
+|+| shape ((*0.5) <$> slow 5 sinewave1)
