@@ -1,0 +1,4 @@
+d1 $ every 2 (juxcut rev) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ density 2 $ sound "{bd sn lt bd sn lt*2, hh amoebanotes:3 cp hh}"
+|+| speed (every 4 ((*0.75) <$>) "1")
+|+| shape "0.4"
+
