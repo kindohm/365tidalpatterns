@@ -1,0 +1,3 @@
+d1 $ every 5 (slow 1.5) $ every 4 rev $ every 3 (smash 3 [3,2]) $ juxcut (iter 3) $ every 5 (0.25 <~) $ sound (pick <$> "{[808a*2 808b*2] 808a*4 [808b 808a]*6 808b*8, 808mt 808ht 808lt }" <*> slow 0.77 (run 8))
+|+| speed ((*) <$> slow 3 sinewave1 <*> "[5 3 6 4 2]")
+
