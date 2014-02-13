@@ -1,0 +1,6 @@
+
+d1 $ sound "{autodrums2:2*2 ~ autodrums2:4 lesshuman:4*2 [lesshuman:1 autodrums2:2] ~ autodrums2:4 ~, [ht mt] [hh lt] ht*2 hh*2 [can:4 can:3]}"
+
+d1 $ every 5 (juxcut (iter 8)) $ every 4 (0.125 <~) $ every 3 (0.25 <~) $ every 6 rev $ sound "{autodrums2:2*2 ~ autodrums2:4 lesshuman:4*2 [lesshuman:1 autodrums2:2] ~ autodrums2:4 ~, [ht mt] [hh lt] ht*2 hh*2 [can:4 can:3]}"
+|+| speed "[1 1 1 1 0.8 1 1 1]/3"
+
