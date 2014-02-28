@@ -1,0 +1,4 @@
+bps 1.2
+
+d1 $ every 4 (|+| speed "2") $ sound (pick <$> "{808bd*2 perc 808rs 808ma*2 808sd 808rs perc*2 808rs*2, 808lt*2 808mt 808mt 808ht ~}" <*> slow 2.3 (run 24))
+
