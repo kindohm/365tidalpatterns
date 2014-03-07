@@ -1,5 +1,5 @@
 bps 0.8
 
-d1 $ stack [ every 3 (jux (iter 4)) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ sound (samples "{[808bd bd] [bd*2 808ch] [sn2:0 808bd ~ ~] 808ch*4 , 808mt 808lt 808ht ~ ~}" (slow 0.75 $ run 12)) |+| speed (slow 3.3 $ "[1 1 0.8 1 1 1.2]"), jux (0.025 <~) $ every 5 (rev . striate 128) $ sound (samples "harp" "[0 1]/2")] 
-|+| cutoff "0.15"
-|+| resonance "0.1"
+d1 $ stack [ slow 2 $ jux (iter 4) $ smash 3 [2,1] $ sound (pick <$> "newnotes*16" <*> slow 1.5 "[1 3 8 2 7 6 2 5 9]*2") |+| speed "0.3", every 5 (|+| vowel "e i o") $ every 2 (0.25 <~) $ every 3 (0.25 <~) $ every 3 (striate 3) $ jux (iter 8) $ slow 2 $ sound "[pad:1, [bd [~ mouth*3] cp [can hh]]*4 ]"
+|+| speed "[1 [0.75 1 1 1]]/4"]
+
