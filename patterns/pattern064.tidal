@@ -1,0 +1,8 @@
+d1 $ every 5 (slow 1.5) $ every 3 (density 2) $ jux (0.02 <~) $ every 4 (|+| speed "0.8 0.5 0.25") $ sound "[c64:1 c64:2 c64:11 c64:12*2] [c64:3 c65:8 c64:6 c64:6] c64:10"
+|+| cutoff ((*0.5) <$> slow 7.3 triwave1)
+|+| resonance "0.5"
+
+d1 $ every 5 (slow 1.5) $ every 3 (density 2) $ jux (0.02 <~) $ every 4 (|+| speed "0.8 0.5 0.25") $ sound ( pick <$> "[c64 c64 c64 c64*2] [c64 c65 c64 c64] c64" <*> slow 0.37 (run 16))
+|+| cutoff ((*0.5) <$> slow 7.3 triwave1)
+|+| resonance "0.5"
+
