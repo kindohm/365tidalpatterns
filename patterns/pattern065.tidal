@@ -1,0 +1,5 @@
+bps 0.80
+
+d1 $ every 4 (|+| speed "[[~ 1] 1 1 1]") $ every 3 (0.25 <~) $ stack[ striate' 128 (1/120) (sound "arps")
+|+| cutoff ((*0.2) . (+0.005) <$> slow 6.7 triwave1)
+|+| resonance "0.75", whenmod 6 4 (|+| speed "0.75") $ every 3 (0.122 <~) $ every 4 (0.122 <~) $ density 2 $ sound (pick <$> "[amencutup*8]" <*> (slow 0.8 $ run 16)), every 3 (0.25 ~>) $ every 2 (0.25 ~>) $ striate' 128 (1/30) (sound "tccc15:28") |+| speed "[~ [1 ~ 1 ~] [1 1 ~ 1] [1 1 ~ 1]]" |+| shape "-0.3" |+| cutoff "0.1" |+| resonance "0.1"]
