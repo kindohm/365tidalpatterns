@@ -1,0 +1,3 @@
+d1 $ every 6 (|+| vowel "o a") $ every 6 (slow 0.75) $ whenmod 5 3 (spread' (striate' 2) ((*0.8) . (+0.3) <$> slow 0.7 sinewave1) . slow 1.25) $ slow 0.75 $ sound (samples "{beeps beeps beeps beeps beeps beeps beeps beeps ~ ~, arpy taste arpy taste arpy taste ~, autodrums:5 ~ autodrums:8 autodrums:10 autodrums:9 autodrums:8 autodrums:10 autodrums:9 autodrums:5 autodrums:7 ~ autodrums:8 autodrums:10 autodrums:9 autodrums:8 mt lt autodrums:5}" "[5 7 2]*2")
+|+| shape "0.7" 
+|+| speed "[2 1 2 0.75]/4"
