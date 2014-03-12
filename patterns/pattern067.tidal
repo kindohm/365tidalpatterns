@@ -1,0 +1,6 @@
+bps 1.3
+
+d1 $ whenmod 9 3 (jux (iter 8)) $ whenmod 8 2 (|+| speed "0.8") $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [whenmod 6 2 (|+| cutoff ((*0.3) . (+0.1) <$> slow 1.7 sinewave1)) $ sound "[[bd:4 autodrums:10 autodrums:9 bd:4] [autodrums:10 autodrums:9 bd:4 autodrums:10] [autodrums:9 bd:4 autodrums:10 autodrums:9] [sn2:2]]" |+| resonance "0.5", sound "[[bass3 ~ ~ bass3] [~ ~ bass3 ~] [~ bass3 ~ ~] ~]"
+|+| cut "1" |+| cutoff "0.0012" |+| resonance "0.8" |+| speed "[1 1 1 1 1 1 1.5 1.25]/4", sound "[~ ~ ~ [~ ~ ~ 808ht]]/2"]
+
+hush
