@@ -1,0 +1,2 @@
+d1 $ spread' (slow) "[1 1 2 1 1]/2" $ every 5 rev $ every 3 (0.25 <~) $ stack[ density 2 $ stack[ sound "[~ ~ ~ ulgab:1] [~ ulgab:1]", whenmod 5 2 (jux (iter 8)) $ sound "[~ ulgab ~ ~] ulgab]" |+| cut "1", sound "[[short:1 ~ ~ short:1] ~]" |+| shape "0.6", sound "~ ~ ifdrums:2 [~ ifdrums]", slow 2 $ striate 128 ( sound "bminst:2") |+| speed "[0.25 0.5]/2" |+| shape "0.5"]
+|+| speed "[1 1 1 0.8]/4", sound "{~ ~ ~ ~, ifdrums:1*4 808ch*4 808ch*8}" |+| cut "2"] |+| shape "0.3"
