@@ -1,0 +1,3 @@
+d1 $ whenmod 4 2 (striate 2 . slow 2) $ jux (|+| speed (slow 2.5 $ "[1.5 0.5 2 3]")) $ every 4 (density 2) $ sound (samples "[voodoo*2 voodoo*4 voodoo*8 voodoo*2, jvbass*4 ~ [~ jvbass*2] jvbass*6, ~ ~ cp ~]" (run 77))
+
+hush

@@ -1,0 +1,5 @@
+bps 1.1
+
+d1 $ every 5 (|+| vowel "o u a") $ every 3 (0.33 <~) $ every 4 (0.33 <~) $ stack [ jux (|+| speed "[0.8 0.8 0.6]/2") $ striate 3 $ sound (samples "[ulgab feelfx]*4" (run 18)), jux (iter 8) $ slow 1.5 $ sound (samples "ulgab*3" (run 9)) |+| speed "0.5" ]
+
+hush

@@ -1,0 +1,5 @@
+d1 $ stack[ every 3 rev $ jux (|+| speed "[1.5 2 2 1.7]/3") $ sound (samples "ul*2 ul*3 ul*4" (run 8))
+|+| shape "0.4", spread' (slow) "[1 1 2 1 1]/3" $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ sound (samples "grits*16" (run 19))
+|+| speed "[0.8 1 1 1 1.2 1 1]/3"]
+
+hush
