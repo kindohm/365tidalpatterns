@@ -1,0 +1,2 @@
+d1 $ stack [ jux (iter 6) $ every 2 rev $ spread' ( striate' 128) ((*0.1) <$> slow 8 triwave1) $ sound "lesshuman:1" |+| speed "0.8", every 5 (|+| vowel "o u") $ whenmod 7 3 (spread' (striate' 16) ((*0.1) <$> slow 4.1 triwave1) . jux (iter 12)) $ sound "~ lesshuman:7" |+| speed "0.6"]
+
