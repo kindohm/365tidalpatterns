@@ -1,0 +1,5 @@
+bps 0.8
+
+d1 $ spread' (density) "[1 2 1 1 3 1]/3" $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack[ whenmod 8 2 (|+| speed "1.5") $ sound ( slow 1.5 $ samples "tip*2 [~ tip] tip tip*4" (run 9)), smash 3 [3,1,2] $ sound ( samples "pluck*4 pluck*3" (run 7)) |+| speed "[1.5 1.5 1.5 2.5]/3"]
+
+hush

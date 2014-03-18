@@ -1,0 +1,5 @@
+bps 1.2
+
+d1 $ every 3 (0.25 <~) $ every 4 rev $ stack [ every 2 (0.25 <~) $ striate 8 $ sound "[tip tip:1, ~ tip:2]", jux (|+| speed "[0.5 0.75 1.5]/3") $ density 4 $ sound (samples "{~ ~ ~ ~, newnotes newnotes newnotes}" "{~ ~ ~ ~, 3 1 2}") |+| end ((*0.4) <$> slow 4.75 sinewave1)]
+
+hush
