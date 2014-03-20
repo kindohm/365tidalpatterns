@@ -1,0 +1,3 @@
+d1 $ whenmod 9 5 (jux (iter 6)) $ every 5 (|+| speed "[0.5 -1 2 2, 0.75 ~ 1.5 1.5]") $ let x = "[newnotes*14, [bd [~ less] bd*2 [~ cp] [grunt bd] [sn2 bd] sn*2]]" in (sound $ every 4 (append $ "{~ 808cy ~ ~, bd sn grits}") (samples x (run 28)))
+
+hush
