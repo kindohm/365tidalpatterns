@@ -1,0 +1,2 @@
+d1 $ stack [ juxcut (iter 12) $ density 2 $ sound "sytrus:1*6" |+| speed "[1 0.8 1.122 1.25 2 1.5, ~ 0.5 ~ 0.25 ~ 0.5]", every 4 (0.25 <~) $ every 3 (0.25 <~) $ every 5 (|+| vowel "a o u") $ spread' (density) "[1 2 2 1 2 2]/3" $ sound (samples "[peridrums*2 peridrums [~ peridrums*2] peridrums*2 peridrums peridrums*2]" "[1 3 4 7]*7") |+| speed "[1 1 1 0.7 1 1 1.3]/3"]
+
