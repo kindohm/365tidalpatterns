@@ -1,0 +1,4 @@
+bps 0.7
+
+d1 $ stack [ whenmod 8 5 (|+| vowel "[a o i e]/2") $ sound "[alphabet alphabet:20] [alphabet:3*2 alphabet*2] alphabet*2 [alphabet:17 alphabet ~ alphabet:17]" |+| speed "[1 1 1.2 1 ~]/3", every 4 (|+| speed "[1 [1 ~] 0.7]") $ sound (samples "[autodrums]*16" (slow 0.41 $ "[0 1 2 5 7 8 9 10]")) |+| shape "0.9"]
+

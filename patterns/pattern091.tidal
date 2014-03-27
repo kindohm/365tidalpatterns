@@ -1,0 +1,5 @@
+bps 0.7
+
+d1 $ stack[ sound (samples "amencutup*16" (slow 0.89 $ run (32))), slowspread ($) [density 1, ((|+| end "0.3") . density 2), striate 3, (|+| speed "[0.8 0.4 1.2 1.6 0.4 1.2 0.8, ~ 0.2 ~ ~]"), slow 2] $ jux (iter 16) $ sound (samples "sytrus*16" "2") 
+|+| speed "[[1 0.75 0.5 1.25 1 0.5 1 1.5], [~ 0.25 ~ ~ 0.1225]/3]*3"]
+
