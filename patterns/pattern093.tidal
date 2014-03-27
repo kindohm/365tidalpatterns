@@ -1,0 +1,2 @@
+d1 $ whenmod 5 2 (|+| speed "0.8") $ slowspread ($) [spread' (density) "[1 2 1]", slow 1, striate 2, rev, slow 1, (|+| pan "[0 1]*5")] $ density 2 $ stack [sound (samples "gretsch*2 short*3 [can*2 pluck] short*2" (run 19)), every 3 (|+| speed "~ 1") $ sound "~ vox:4" |+| end "0.4" |+| cut "1"]
+

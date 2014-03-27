@@ -1,0 +1,4 @@
+bps 1
+
+d1 $ every 5 rev $ stack[ jux ((|+| speed "2") . iter 8) $ density 4 $ sound (samples "{~ ~ ~ ~, jvbass jvbass jvbass jvbass ~}" (slow 0.3 $ run 19)), every 4 (rev . striate 2) $ sound (samples "feeldrums*16" (run 18)) |+| speed "[2 3]/2"]
+
