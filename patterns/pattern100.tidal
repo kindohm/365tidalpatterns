@@ -1,0 +1,6 @@
+bps 1.5
+
+d1 $ slowspread ($) [jux (0.25 <~) . brak . (0.25 <~) . trunc 0.25, slow 1, jux (iter 8) . ((|+| cutoff ((*0.04) . (+0.01) <$> slow 0.26 sinewave1)) . (|+| resonance "0.8")), slow 1, jux (trunc 0.15), density 2, (|+| speed "0.8 0.7") . trunc 0.5] $ striate 128 ( sound "less")
+|+| speed "[1 1.2 1.75 3]/2"
+
+hush
