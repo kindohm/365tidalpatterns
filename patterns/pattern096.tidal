@@ -1,0 +1,6 @@
+bps 1.4
+
+d1 $ slowspread ($) [ slow 2, rev, slow 2 . (|+| speed "0.8"), slow 1, slow 2, (|+| cutoff "0.03") . (|+| resonance "0.1")] $ striate 2 $ jux (iter 2) $ stack [ slow 4 $ sound "[[~ 808bd ~ ~] ~ 808cy:3 ~]", sound (samples "feel*16" (run 12))]
+|+| end ((*0.7) . (+0.25) <$> slow 3.8 sinewave1)
+|+| speed "[1 1 2]/2"
+

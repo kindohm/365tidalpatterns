@@ -1,0 +1,6 @@
+bps 1.1
+
+d1 $stack [ slowspread ($) [slow 1, density 2, (jux (|+| speed "1")), striate 3 . rev, striate 2 . rev, slow 1, slow 1.5, density 3 . smash 2 [2,1]] $ sound (samples "feel*16" (run 23)) |+| speed "[3 4 2]/4", slow 2 $ striate' 128 (1/60) (sound "ambloop:5")
+|+| speed "[1 0.75]/4"]
+
+hush

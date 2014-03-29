@@ -1,0 +1,6 @@
+bps 0.88
+
+d1 $ whenmod 6 5 (jux (iter 8)) $ stack [every 3 (0.25 <~) $ sound (samples "ulgab [~ ulgab] [~ ulgab] ulgab*2 ulgab ulgab ulgab*2 [~ ulgab*2]" (run 9))
+|+| cut "1", every 4 (0.25 ~>) $ sound (samples "if if*2 [~ if]" (run 8)) |+| cut "2", slowspread ($) [density 2, jux (rev . iter (4)), density 2 . smash 2 [2,1], (|+| speed "1"), slow 1, spread' (density) "[4 1 2]"] $ density 2 $ sound "[house*4, ~ cp, [~ less:2]*4, [less:1]/5]"]
+|+| speed "2"
+
