@@ -1,1 +1,2 @@
-d1 $ sound "bd"
+d1 $ slowspread ($) [rev, slow 1, slow 2 . juxcut (triple (1%6)), striate 2] $ whenmod 5 3 (trunc 0.5) $ quad (1%16) $ sound "bd*3 [rave2:3 sn] [hh rave2:3] [cp lt*2]"
+|+| speed (every 2 ((-0.1+) <$>) "[1 1.2 1.5 1.7, 0.8]")
