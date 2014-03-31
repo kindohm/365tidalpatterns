@@ -1,0 +1,9 @@
+bps 0.8
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.5 <~) ( (jux (trunc 0.5) $ striate' 64 (1/50) ( sound "alone:7") )
+|+| speed "[[1 0.8], [0.275 0.25]]/2")
+|+| delay "0.4"
+|+| delayfeedback "0.25"
+|+| delaytime "0.5"
+
+hush
