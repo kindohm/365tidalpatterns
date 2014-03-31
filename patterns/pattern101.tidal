@@ -1,0 +1,9 @@
+d1 $ jux (spread' (striate' 2) ((+0.01) <$> slow 3.28 sinewave1)) $ every 4 rev $ every 3 (trunc 0.25) $ (sound "[bd*2 odx*3] [sn*4 less:4] hh*3 cp*2"
+|+| speed ((*2) . (+0.25) <$> slow 3.4 sinewave1)
+|+| accellerate "[1 2 3 -2]/3"
+|+| delay "0.98"
+|+| delayfeedback ((*0.9) . (+0.001) <$> slow 7 sinewave1)
+|+| delaytime ((*0.1) . (+0.005) <$> slow 5 sinewave1))
+|+| cutoff ((*0.4) . (+0.01) <$> slow 4 sinewave1)
+|+| resonance ((*0.5) . (+0.1) <$> slow 5.5 triwave1)
+|+| shape "0.5"
