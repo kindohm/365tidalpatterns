@@ -1,0 +1,4 @@
+bps 1.2
+
+d1 $ slowspread ($) [jux (|+| speed "0.8"), rev, slow 2, trunc 0.5, jux (iter 8), trunc 0.25, (|+| shape "0.2") . (|+| vowel "u i o")] $ stack[ slow 2 $ sound (samples "ohgeez [drum*4 drum*2 cp*2 drum*2] [bd*4 drum*2 feel*2 sn*2] [drum*2 odx*2 feel*2 bd*2]" (run 20)), every 3 (density 2) $ every 4 (density 2) $ every 5 (density 2) $ sound "[house less:2]*4"]
+

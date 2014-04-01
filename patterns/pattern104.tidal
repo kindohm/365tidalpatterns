@@ -1,0 +1,7 @@
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ slowspread ($) [(|+| speed "1.8"), rev, (|+| vowel "u"), density 2, slow 1, (|+| speed "0.6"), (|+| vowel "o")] $ slow 2 $ stack [ slow 2 $ sound (samples "bock nerd" "[0 1 2 3]/4") |+| shape "0.3", striate' 64 (1/50) ( sound "ambloop:4")]
+|+| shape ((*0.7) <$> slow 3.3 sinewave1)
+|+| delay "0.4"
+|+| delayfeedback "0.4"
+|+| delaytime "0.5"
+
+hush

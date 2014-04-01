@@ -1,0 +1,4 @@
+bps 1.3
+
+d1 $ every 3 (0.25 <~) $ whenmod 7 5 (trunc 0.25 . slow 2) $ every 5 ((|+| accellerate "-0.5")) $ every 4 rev $ stack[ sound (samples "peri*16" (run 13)), slow 2 $ sound (samples "perinotes*8" (run 13)) |+| cut "1" |+| cutoff "0.1" |+| resonance "0.2"]
+|+| speed "[1 0.8 1.2 [1.5 0.5]]/2"
