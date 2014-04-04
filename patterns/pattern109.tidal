@@ -1,0 +1,4 @@
+d1 $ every 6 rev $ slowspread ($) [striate 2, (|+| vowel "o u"), density 2, slow 1, (|+| speed "0.8 1.2"), slow 1] $ every 4 (jux (triple 0.25)) $ every 3 (trunc 0.25) $ sound "[[bd jvbass] [hh 808cb] [rm rm] [sn sn ~ rm]]"
+|+| delay "0.6"
+|+| delayfeedback "0.925"
+|+| delaytime "0.01"
