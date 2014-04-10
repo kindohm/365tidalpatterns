@@ -1,0 +1,5 @@
+d1 $ every 6 (jux (rev)) $ every 5 (0.25 <~) $ every 4 (trunc 0.25) $ sound (samples "[[perinotes:2 peri*2] [peri peri*2] [peri peri*2] [peri*4]]" "[0 1 2 3 4 6 8 9 10 11 12 13 14]")
+|+| delay "[0 0 [0.5 0 0 0 0]]/5"
+|+| delayfeedback "0.7"
+|+| delaytime "0.1"
+|+| shape "0.1"
