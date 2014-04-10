@@ -1,0 +1,7 @@
+d1 $ every 7 (slow 2) $ every 3 rev $ whenmod 5 3 (striate 3 . rev) $ every 5 (|+| speed "-3") $ every 4 (density 2) $ sound "bd*3 [ht*3 sn*2] [ht*3 rm sn*3 bd hh] [sn*4 hh*2] drum*3"
+|+| speed "3"
+|+| delay "0.5"
+|+| delayfeedback "0.9"
+|+| delaytime (whenmod 5 2 (triple 0.5) $ every 3 rev $ "[0.01 0.02 0.015 0.025 0.03]/2")
+
+hush

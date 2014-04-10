@@ -1,0 +1,7 @@
+bps 0.8
+
+d1 $ whenmod 7 6 (jux (|+| speed "0.5")) $ whenmod 7 4 (jux (iter 8)) $ spread' (striate) "[2 3 1 4 8]/3" $ sound (samples "[drum*3 feel] [[rm bd] [~ cp:3]] [drum*2 bd] [drum rm ulmel rm]" (slow 0.8 $ run 29))
+|+| speed "0.7"
+
+hush
+

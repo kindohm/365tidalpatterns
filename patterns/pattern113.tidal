@@ -1,0 +1,8 @@
+bps 1.25
+
+d1 $ whenmod 5 3 (|+| delay "0.5") $ slow 2 $ sound (samples "sytrus*3 sytrus*4 [less:1 sytrus*3] sytrus*4 sytrus*2 sytrus*3 less:1*4" "1")
+|+| speed (every 5 ((*1.1225) <$>) $ every 4 ((*1.2) <$>) "[1 1.5 2 0.75 3 2.5 1.5 1.25 0.75, [~ 0.5 ~ 0.25 ~ 0.75 ~ 0.5]*3]")
+|+| shape "0.5"
+|+| delayfeedback "0.8"
+|+| delaytime ((*0.1) <$> slow 5.1 sinewave1)
+

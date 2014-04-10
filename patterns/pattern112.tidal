@@ -1,0 +1,6 @@
+bps 0.7
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.5 <~) $ every 2 (rev) $ spread' (striate) "[32 64 16 24 32 128]/3" $ sound (samples "feel*2 [~ grunt*2] [feel grunt*2 grunt feel*2] [~ feel*2] feel*4" (run 23))
+|+| speed "[1 0.8 1.2]/4"
+
+hush

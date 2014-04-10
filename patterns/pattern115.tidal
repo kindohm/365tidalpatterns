@@ -1,0 +1,4 @@
+bps 1.3
+
+d1 $ every 8 (|+| speed "[0.95 0.9 0.85 0.8]") $ every 5 (slow 2) $ every 4 (0.25 ~>) $ stack [ sound (samples "feel*2 feel feel*2 feel" (run 10)), every 3 (0.25 ~>) $ every 4 ((|+| speed "0.8 0.8 ~ ~")) $ sound (samples "[tccc15]*8" (run 15))
+|+| cut "1", slow 2 $ sound (samples "pluck*2 [~ pluck] pluck*2 pluck*4" "[4 1 8 1 8 7 4 7 8]") |+| shape "0.4"]

@@ -1,0 +1,4 @@
+bps 1.7
+
+d1 $ jux ((|+| speed "2") . (iter 8)) $ slowspread ($) [ (|+| vowel "o u i"), slow 1, (0.25 <~) . rev . striate 2, slow 2] $ sound (samples "future future*2 future future future*2 future*2 future future" (run 13))
+|+| shape ((*0.5) <$> slow 3.8 sinewave1)
