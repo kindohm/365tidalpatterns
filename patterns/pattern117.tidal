@@ -1,0 +1,5 @@
+bps 0.7
+
+d1 $ jux (iter 16) $ every 5 (trunc 0.25) $ every 2 ((|+| speed "0.8 1")) $ every 4 ((slow 4) . (striate 4) . rev) $ density 2 $ sound (samples "psr*2 psr*4 [psr ~ ~ psr] [psr*4]" "[1 2 3 4 5 6 7 8]*3")
+
+hush
