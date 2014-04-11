@@ -1,0 +1,9 @@
+bps 1
+
+d1 $ every 7 (|+| vowel "o u") $ stack[ every 3 (0.25 <~) $ every 4 (0.25 <~) $ sound "[[dsk:1 ~ ~ dsk:1] ~ dss:8 ~ [~ dsk:1 dsk:1 ~] [~ dsk:1 ~ dsk:1] dss:8 [dsk:1*2 ~]]/2", slow 6 $ sound "~ dsfx:7" |+| end "0.35", slow 2 $ jux (iter 64) $ every 4 (density 2) $ every 3 (density 2) $ sound "dsh:3*16"]
+|+| speed "[1 1 1 1 1 1 2 1 1 2]/2"
+|+| delay "[0 0 0 [0.8 0]]/4"
+|+| delayfeedback "0.7"
+|+| delaytime "0.25"
+
+hush
