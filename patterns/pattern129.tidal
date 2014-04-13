@@ -1,0 +1,6 @@
+bps 0.6
+
+d1 $ every 4 (0.33 <~) $ whenmod 5 4 (echo 0.33) $ spread' (slow) "[1 2 1]/3" $ stack [ every 4 (density 2 . rev) $ striate 3 $ sound (samples "[peach*2 beeps*2 [jazz*8]]" (run 44))
+|+| speed "[1 0.7 1, [0.5 1.4 ~]/2]"
+|+| shape "0.4", every 3 (jux (iter 6)) $ striate' 64 (1/40) $ sound "peach" |+| speed "[0.5 0.5 0.5 0.4]/2" |+| shape "0.95"]
+
