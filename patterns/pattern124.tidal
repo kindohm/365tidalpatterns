@@ -1,0 +1,5 @@
+bps 1
+
+d1 $ spread' (slow) "[1 2 3 2 1]/3" $ jux (iter 8) $ density 2 $ sound "[bminst:1 [drum:3 drum:5]] [[drum drum:2] bminst:1]"
+|+| speed "0.5"
+|+| shape "0.5"
