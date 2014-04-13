@@ -1,0 +1,4 @@
+bps 0.8
+
+d1 $ every 3 (slow 2 . triple 0.25) $ jux (iter 8) $ every 4 (trunc 0.25) $ sound (samples "haw*4 [haw*3 haw*2] haw*4 haw*4" ( "[4 1 5 4 5 4 1 5 4 5 3 1 4 5 4 5]"))
+|+| speed "[0.75, [~ 0.5 ~ ~ ~ 0.4 ~]/3]"
