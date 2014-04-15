@@ -1,0 +1,9 @@
+bps 1.2
+
+d1 $ spread' (slow) "[1 2 1 1]/4" $ slowspread ($) [rev, (jux (rev)), slow 2 . striate 2, slow 1] $ density 2 $ sound (samples "[bmdrums bminst bmdrums]*3" (run 23))
+|+| end ((*0.25) . (+0.05) <$> slow 3.1 sinewave1)
+|+| speed (every 6 ((*0.8) <$>) $ "[[1 0.8]/2, [~ 1.2 ~]/3, [2 2.5 2.25]/4]")
+|+| delay "[0 0.2 0.5 0.3 0.8]/2"
+|+| delayfeedback (every 4 ((*1.5) <$>) "0.5")
+|+| delaytime (every 5 ((*0.1) <$>) "0.33")
+
