@@ -1,0 +1,6 @@
+bps 1.6
+
+d1 $ every 6 ((|+| speed "-2 1 -2") . slow 2) $ every 5 (trunc 0.1666) $ whenmod 5 3 (|+| accelerate "-0.5 0.5") $ every 6 (slow 2) $ every 4 (slow 2) $ stack [ every 3 (rev) $ every 4 (slow 0.75) $ sound (samples "ifdrums*12" ( run 22)) |+| shape "0.4", every 2 rev $ striate' 128 (1/90) ( sound "dsfx:7")] |+| speed "2"
+|+| delay "[0 0 0 [0.5 0 0 0]]/5"
+|+| delayfeedback "0.9"
+|+| delaytime "[0.01 0.02]*3"
