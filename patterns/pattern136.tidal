@@ -1,0 +1,6 @@
+bps 1.4
+
+d1 $ stack[ every 3 (jux (rev)) $ spread' (slow) "[1 4 2 1]/4" $ striate 32 $ sound "dsfx" |+| speed "[1 0.75 1.5]/3" |+| delay "[0.5 0.8 0]/2", every 4 (slow 2) $ every 2 (striate 2) $ stack[ sound "[chhh:6*2 chhh:6] [dsfx:6 chhh:6*2] [chhh:6 dsfx:6] [chhh:6*2 chhh:6]", sound (samples "[dsk*4 [~ dss] [dsk*3 ~] [dss dsk*2]]" (run 44))]
+|+| speed (every 3 rev $ "[2 1.75 1.5 2.25, [~ [0.5] ~]]/2")]
+|+| delayfeedback "[0.4 0.9]/3"
+|+| delaytime "[0.9 0.4 0.05]/2"
