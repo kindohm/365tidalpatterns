@@ -1,0 +1,6 @@
+d1 $ stack [ slowspread ($) [trunc 0.5 . rev, slow 1, striate 2 . rev, density 2, jux (rev), (|+| speed "0.8 -1"), slow 1] $ sound (samples "xb1 [bd bd bd cp] [chcp chsn] [chbd*3 dss]" (run 19)), every 3 (striate 2 . slow 2) $ jux (iter 8) $ slow 2 $ sound "~ ~ [~ bminst:2*4] ~"]
+|+| delay (slow 0.7 $ "[0 0 0 0 0 0.6]")
+|+| delayfeedback "0.5"
+|+| delaytime "0.4"
+
+hush
