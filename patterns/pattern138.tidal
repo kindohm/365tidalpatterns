@@ -1,0 +1,6 @@
+bps 1.3
+
+d1 $ every 7 ((|+| speed "0.3") . slow 2) $ whenmod 5 3 (jux (iter 8)) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ every 5 (striate 2) $ stack[ sound "~ ~ ~ less:4" |+| speed "[0.8*3 -0.8]/4" |+| gain "1.4", sound "[mouth*4] [808oh:2 mouth*2] [mouth*2 mouth*4] mouth*4", slow 4 $ sound "dsfx:6*8 [dsfx:6*4 [dsfx:6 dsfx:6 dsfx:6 [~ dsfx:6]]]"
+|+| speed "0.5"]
+|+| shape "0.2"
+

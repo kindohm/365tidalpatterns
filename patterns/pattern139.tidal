@@ -1,0 +1,6 @@
+bps 1.7
+
+d1 $ every 6 (echo 0.5) $ every 5 (slow 4) $ every 3 (density 2) $ every 4 (density 2) $ every 4 ((|+| speed "0.5")) $ sound "chfx:1*4"
+|+| speed (every 7 ((*0.5) <$>) "[1 0.75 1 1.2 0.25]/3")
+|+| shape "0.6"
+
