@@ -1,0 +1,4 @@
+bps 1.2
+
+d1 $ slowspread ($) [jux (iter 8), rev, density 2, density 1, (|+| accelerate "0.5 -0.5")] $ density 2 $ ( spread' (striate' 16) "[0.25 0.33 0.5]/3" $ sound "dsfx:6")
+|+| speed (every 3 rev $ "[0.4 0.8 0.5 0.25]/2")
