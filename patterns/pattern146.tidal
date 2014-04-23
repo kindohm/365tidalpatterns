@@ -1,0 +1,5 @@
+bps (70/60)
+
+d1 $ every 6 (slow 2 . striate 2) $ whenmod 7 6 (striate 2) $ every 9 (|+| pan "[0.2 0.8]*2") $ every 7 ((|+| speed "-0.5 -1.1")) $ every 5 (0.25 ~>) $ every 3 (0.25 ~>) $ every 4 (density 2) $ stack [ slow 2 $ sound (samples "grunt2*4 grunt*4 grunt*4 grunt2*4 grunt2*4 ~ grunt2*4 grunt2*4" (run 57)) |+| gain "0.9" |+| speed "[2 2.2]/5" |+| cut "1", sound (samples "[teeny teeny]*4" (slow 4 $ "[0 1 2 3 4 5 6 7 8]*3 [0 1]*4 [0 1]*4 [0 1]*4 ")) |+| speed "[0.5 1.1]*4"]
+
+hush

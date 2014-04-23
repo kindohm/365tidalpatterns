@@ -1,0 +1,11 @@
+bps 1.7
+
+d1 $ every 6 (density 2) $ every 3 (rev) $ every 4 (slow 2) $ every 2 (jux (iter 8)) $ slow 4 $ sound "[chbd chcp] [chbd chcp] [chbd chcp] [chbd*4 chhh chcp chhh]"
+|+| delay "0.5"
+|+| delaytime "[0.01 0.01 0.01 [0.05 0.01 0.01 0.05]]/3"
+|+| delayfeedback "0.96"
+|+| speed (every 5 ((*0.7) <$>) "[1 2]/2")
+|+| cutoff ((*0.4) . (+0.005) <$> slow 2.1 sinewave1)
+|+| resonance "0.5"
+
+hush

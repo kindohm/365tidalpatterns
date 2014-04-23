@@ -1,0 +1,5 @@
+bps 1.4
+
+d1 $ whenmod 5 4 (slow 2) $ every 5 (striate' 2 0.5) $ every 3 (rev) $ every 4 (trunc 0.25) $ sound (samples "[dsk*2 dsh*4 ~ [dss dsh]*2 dsh*4 dsk ~ dsh]" (run 22))
+
+hush

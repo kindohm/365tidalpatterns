@@ -1,0 +1,8 @@
+bps 1.2
+
+d1 $ slowspread ($) [rev, (|+| end "0.1"), jux (|+| speed "0.75"), slow 2, striate' 2 0.3, (|+| speed "0.7") . slow 2] $ sound (samples "feel*4 big*4 bmdrums*4 josie" (every 3 rev $ run 63))
+|+| delay "[0 0 [0 0.6 0] 0 0]/3"
+|+| delayfeedback "0.6"
+|+| delaytime "0.25"
+
+hush

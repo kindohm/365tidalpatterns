@@ -1,0 +1,5 @@
+bps 1.1
+
+d1 $ stack[ every 3 (|+| vowel "o u") $ sound "[xb1:4*2 ~] less:2 chcp:4 less:2*4" |+| pan ((*0.5) <$> slow 1.8 sinewave1) |+| delay "0.3", every 2 (density 2) $ every 3 (density 2) $ every 4 (slow 2) $ jux (iter 8) $ every 2 rev $ (spread' (striate' 16) ((*0.7) <$> slow 3.1 sinewave1) $ sound "teeny") |+| speed ((*2) . (+0.5) <$> slow 4 sinewave1)] |+| delaytime "0.01" |+| delayfeedback "0.9"
+
+hush
