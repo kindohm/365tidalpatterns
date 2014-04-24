@@ -1,0 +1,4 @@
+bps 0.7
+
+d1 $ slowspread ($) [striate' 2 0.5 . slow 2 . rev, jux (|+| speed "0.7"), (|+| accelerate "-0.5"), slow 2 . triple 0.25, striate' 2 0.5, trunc 0.5, slow 1, jux (iter 4)] $ sound (samples "[big*4 minc*4 feel*4 [grunt peri]*4]" (run 33))
+

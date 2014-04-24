@@ -1,0 +1,7 @@
+d1 $ stack[ every 3 (density 2) $ sound (samples "big*4 big*2 big*2 big*4" (run 41)) |+| speed "1.5" |+| gain "0.7" |+| end "0.1" |+| vowel "u", slowspread ($) [(|+| vowel "a o u"), rev, density 2, (|+| accelerate "-1"), slow 1, ((|+| cutoff ((*0.1) <$> slow 0.7 sinewave1)) . (|+| resonance "0.3"))] $ whenmod 5 2 (jux (iter 8)) $ every 2 (density 2) $ every 3 (density 2) $ slow 8 $ spread' (striate' 64) ((*0.07) <$> slow 3.1 sinewave1) ( sound "ulmel:1")
+|+| speed (every 4 ((*0.8) <$>) "[1, 0.5 0.25, 1.25 2 1.5]")
+|+| delayfeedback "0.3"
+|+| delaytime "0.5"
+|+| delay "0.5"]
+|+| shape "0.2"
+

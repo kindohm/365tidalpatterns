@@ -1,0 +1,7 @@
+bps 0.8 
+
+d1 $ whenmod 6 5 (trunc 0.25) $ every 3 (0.25 ~>) $ every 4 (0.25 ~>) $ every 6 (striate' 4 0.5 . slow 2) $ sound "[big minc:4]*2 gretsch*4 [[minc:5 minc:6] minc ~ minc:4] [minc:3 [minc:4] [minc:5 minc:6] minc:7]"
+|+| speed (every 4 ((*0.8) <$>) $ "1")
+|+| shape "0.3"
+
+
