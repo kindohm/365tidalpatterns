@@ -1,0 +1,8 @@
+bps 1
+
+d1 $ whenmod 5 3 (rev) $ jux (0.02 <~) $ every 4 (density 2) $ every 3 (density 2) $ every 2 (density 2) $ (striate' 32 (0.9) ( sound "chperc") )
+|+| speed "[[2 1.6 2.25 2.5 3 4]*3, [~ 0.5 ~ 0.5 ~ 1 ~]/2]"
+|+| delay "0.3"
+|+| delayfeedback ((*0.95) <$> slow 4.1 sinewave1)
+|+| delaytime "0.01"
+

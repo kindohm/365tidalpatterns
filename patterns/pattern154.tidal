@@ -1,0 +1,6 @@
+bps 1
+
+d1 $ stack[ slowspread ($) [slow 1, slow 2 . jux (iter 8), slow 4 . (|+| delay "0.5")] $ striate' 32 (1/128) $ sound "xbass" |+| speed "[2, [1 1.5]/3]", every 4 (density 2 . rev) $ every 3 (slow 2) $ slow 2 $ (striate' 32 (1/8) ( sound "[rave2:1]")) |+| speed "[[1 1.5 2]*2, 0.5 0.25]"]
+|+| delayfeedback "0.5"
+|+| delaytime "0.6"
+|+| shape "0.3"
