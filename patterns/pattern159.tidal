@@ -1,0 +1,5 @@
+bps 1.25
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack[ jux (iter 8) $ slow 2 $ sound "bd*4 [chsn:1*4 [chhh*2 future:3*2]] [future*2 [chsn:1 future]] [future:3*4 [chsn:1 chhh*2]]", every 2 rev $ slow 8 (striate' 64 (1/80) ( sound "autoinst autoinst:1"))
+|+| speed "[1 0.8]/2" |+| shape "0.6"]
+

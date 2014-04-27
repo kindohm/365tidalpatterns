@@ -1,0 +1,4 @@
+bps 0.8
+
+d1 $ every 6 rev $ every 4 (trunc 0.5) $ whenmod 5 3 (triple 0.5) $ every 3 (density 2) $ sound (samples "dsk*2 dss dsh*4 chperc*2 chperc*2 dsk*2 dss dsh*2" (run 18))
+
