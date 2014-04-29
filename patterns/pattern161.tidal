@@ -1,0 +1,4 @@
+bps 1
+
+d1 $ jux (iter 8) $ spread (slow) [4, 2, 8] $ sound "minc*4 [feel feel:6 ul ul:1] [big big ul:2 ul] [minc:3 minc:1]*2"
+

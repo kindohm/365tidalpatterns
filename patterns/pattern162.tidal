@@ -1,0 +1,6 @@
+
+bps 1.1
+
+
+d1 $ stack [ every 3 (0.25 <~) $ every 5 (0.25 <~) $ every 4 (trunc 0.5 . slow 2) $ sound (samples "gab*4 ~ gab*2 gab*2" "1") |+| cut "1" |+| speed "0.5 0.5 [0.4 0.2] [0.4 0.2]", every 5 (density 2) $ every 3 (density 2) $ every 4 (density 2) $ sound "[house less:2]*4" |+| gain "0.8", jux (iter 8) $ sound "~ less:4 ~ 808ch*4" |+| speed "0.5"]
+
