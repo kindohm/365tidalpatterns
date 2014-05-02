@@ -1,0 +1,4 @@
+bps 0.7
+
+d1 $ every 4 rev $ slowspread ($) [striate' 2 (0.5), slow 1, jux (iter 12), striate' 3 (0.5) . slow 2 . rev, rev, slow 2 . (|+| delay "0.5")] $ density 2 $ stack[ slow 2.5 $ sound "dsh*3" |+| delay "0.5", sound "dsk ~ ~ dsk*2 ~ ~", density 2 $ sound "chperc*6" |+| speed "{3 2 4 5 4 6 5, 1 2 3 4 ~}"] |+| delayfeedback "0.8" |+| delaytime "0.12"
+
