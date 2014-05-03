@@ -1,0 +1,8 @@
+bps 0.8
+
+d1 $ stack [ every 4 (slow 2 . (|+| delay "0.6")) $ every 3 (density 2) $ slow 2 $ sound (samples "[amencutup]*24" (run 14)) |+| speed "0.9", every 5 (slow 2) $ every 2 rev $ slow 2 $ striate' 4 0.5 $ slow 2 $ sound (samples "ulgab ulgab*2 ulgab*2 ulgab ulgab*4 ulgab" (run 19))
+|+| cut "1"
+|+| speed "0.5"]
+|+| shape "0.2"
+|+| delayfeedback "0.7"
+|+| delaytime "0.1"

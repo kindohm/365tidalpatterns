@@ -1,0 +1,6 @@
+bps 1.3
+
+d1 $ slow 12 $ every 2 rev $ striate' 16 (0.4) $ density 4 $ sound (samples "xb1 xb1*2" "1")
+|+| speed "[[1 1.5 0.75 1.25]/2, [~ 2 3 [5 4]/4]/3]"
+|+| shape "0.2"
+

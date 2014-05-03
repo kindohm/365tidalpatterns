@@ -1,0 +1,4 @@
+bps 1.2
+
+d1 $ stack[ jux (|+| speed "0.8") $ every 2 rev (striate' 9 (1/9) $ sound "teeny teeny:1 teeny:3") |+| cutoff ((*0.3) . (+0.05) <$> slow 2.7 sinewave1) |+| resonance "0.5", slow 2 $ striate 4 $ sound (samples "newnotes*12" (run 13)) |+| speed (every 5 ((*0.5) <$>) $ every 3 ((*0.8) <$>) "[1, 2 1.5 3, 0.5 0.75]") |+| delay "0.4" |+| delaytime "0.55" |+| delayfeedback "0.4"]
+

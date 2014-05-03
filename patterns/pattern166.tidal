@@ -1,0 +1,4 @@
+d1 $ every 4 (striate' 4 0.75 . slow 4) $ whenmod 5 4 (rev) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ jux (iter 8) $ every 4 (density 2) $ every 3 (density 2) $ every 2 (density 2) $ sound "feelfx:2", sound (samples "[bd*2 bd*4] [less:1*3 less:4] [laz minc*2] [less:2*2 chperc chperc can]" (run 19))
+|+| cut "1"]
+|+| gain "1.5"
+

@@ -1,0 +1,4 @@
+bps 1.1
+
+d1 $ every 5 (|+| speed "-1.2 0.8") $ every 4 (jux rev) $ whenmod 5 4 (trunc 0.33) $ smash 3 [3,1,2] $ stack [ slow 2 $ sound "~ less:4 ~ ~ less:1*3 ~" |+| cut "1" |+| shape "0.3",  sound "teeny*8 teeny:4*3 teeny:5*6 teeny:6*2 teeny:7*4 teeny:1"
+|+| speed "1 1 1 1 1 0.8"]
