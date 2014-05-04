@@ -1,0 +1,7 @@
+bps 0.8
+
+d1 $ every 5 (slow 2) $ density 2 $ whenmod 5 2 (jux (iter 8)) $ every 2 (0.25 <~) $ every 4 (0.25 <~) $ every 3 rev $ (striate' 16 0.2 $ sound "ul:3")
+|+| speed "[[[2 1.6]/2 2]/2, [~ ~ 3 ~ 4 ~ 12 5 ~ 5 ~ ~ 6 6 ~ 8]/6 ]"
+|+| shape "0.7"
+|+| gain "1.3"
+

@@ -1,0 +1,10 @@
+bps 0.7
+
+d1 $ jux (0.25 <~) $ (every 5 (density 2) $ every 2 (0.25 <~) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ slow 2 $ every 2 rev $ striate' 32 0.025 $ sound "ul:0 ul:4 ul:3*8"
+|+| shape "0.9")
+|+| speed "[[1 1 0.8 0.5 1 2 1.5 0.5], [~ 2 ~ ~ 3]]/4"
+|+| delay ((*0.9) <$> slow 2.1 sinewave1)
+|+| delayfeedback ((*0.95) <$> slow 1.3 triwave1)
+|+| delaytime ((*0.5) <$> slow 1.7 triwave1)
+|+| gain "1.3"
+
