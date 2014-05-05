@@ -1,0 +1,5 @@
+bps 0.7
+
+d1 $ every 4 (density 2) $ every 3 rev $ (striate' 24 0.2 $ sound "minc:1") |+| speed "[1 1.5, 0.5 0.75 0.6, 0.25 0.15, [~ ~ 3 ~ 5]/2]"
+|+| shape "0.3"
+
