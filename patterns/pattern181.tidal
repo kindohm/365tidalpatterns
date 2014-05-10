@@ -1,0 +1,4 @@
+d1 $ slow 8 $ trunc 0.25 $ (striate' 64 0.1 $ sound "gretsch gretsch:1 gretsch:2") |+| speed "[0.5, [0.4 0.6]/2, [4 3 2]/3]"
+|+| shape "0.7"
+|+| gain "1.5"
+

@@ -1,0 +1,9 @@
+bps 1.2
+
+d1 $ slow 2.5 $ (striate' 32 0.02 $ sound "autoinst:2 autoinst:3")
+|+| speed (every 4 ((*1.2) <$> ) $ every 3 ((*0.8) <$> ) "[1, [2 3], ~ ~ 0.5]")
+|+| delay "0.5"
+|+| delaytime "0.5"
+|+| delayfeedback "0.5"
+|+| gain "1.4"
+
