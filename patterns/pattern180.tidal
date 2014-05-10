@@ -1,0 +1,10 @@
+bps 1.1
+
+d1 $ slow 10 $ trunc 0.5 (spread' (striate' 64) ((*0.5) <$> slow 2.7 sinewave1) $ sound "dsk*12 dss*4 [dsk dsh]*4 dsh*8")
+|+| speed "[[3 6 4 2 5]/5, [1 0.75 0.5]/3]"
+|+| shape "0.4"
+|+| delay "0.5"
+|+| delayfeedback "0.8"
+|+| delaytime "0.2"
+|+| gain "1.2"
+

@@ -1,0 +1,4 @@
+bps 0.9
+
+d1 $ stack[ every 4 (striate' 8 0.25 . slow 8 . rev) $ every 3 (0.25 ~>) $ jux (|+| speed "1.5") $ sound "~ ~ ~ jvbass*4" |+| shape "0.5" |+| speed (every 4 ((*1.25) <$> ) "1"), every 2 (0.25 <~) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ slow 2 $( striate' 4 0.5 $ sound (samples "dsk*8 [chperc*3]*2 dsk*2 dsh*4 [dsh*2 chperc:2*2]/2 [dss [dsh dsk]/2] chperc*3" (every 3 rev "0 1 3 6"))) |+| shape "0.2" |+| speed "2"]
+

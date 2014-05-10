@@ -1,0 +1,2 @@
+d1 $ stack[ jux (|+| speed "1.5") $ sound (samples "[~ dsk ~ ~ dss [~ dsk]/3 ~ ~ ~]" "5") |+| speed "2", every 6 (striate' 6 0.5 . slow 3 . rev) $ jux (iter 9) $ every 3 (trunc 0.5) $ sound (samples "dsk*2 dsh dss dsk dsh dss dsh ~ dsh" "2")] |+| shape "0.3"
+
