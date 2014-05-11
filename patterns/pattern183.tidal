@@ -1,0 +1,6 @@
+d1 $ stack [jux (0.02 <~) $ trunc 0.75 $ slow 2 ( striate 32 ( sound "harp harp:1" |+| speed (every 4 ((*0.8) <$> ) "[[1 -1], [0.5 0.25]/3, [-1.5 2]/2]")))
+|+| delay "0.1", slow 2 $ sound "less:1" |+| speed "0.5", slow 2 $ sound "~ less:4" |+| delay "0.3" |+| speed "0.25", every 3 (density 2) $ sound "less:2*16" |+| speed "2" |+| gain "0.8"]
+|+| delaytime "0.5"
+|+| delayfeedback "0.4"
+|+| gain "1.4"
+
