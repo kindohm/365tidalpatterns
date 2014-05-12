@@ -1,0 +1,4 @@
+d1 $ every 4 rev $ (whenmod 4 3 (jux (iter 8)) $ whenmod 3 2 (|+| accelerate "1 -1") $ every 3 (0.25 <~) $ sound $ wedge 0.75 ( wedge 0.25 (every 3 rev $ "[jvbass bd*4 bd*4 cp, newnotes*4]") (whenmod 5 3 (trunc 0.5) $ "[less:1 less:2*4 ~ less:4, newnotes*4]")) (wedge (1/3) "bass auto auto" ( wedge 0.25 "dsk dsh*3" "chperc*3"))) 
+|+| speed "[1 0.8 1.25]/3, [~ 0.5 ~], [4 3 5]/2"
+|+| shape "0.2"
+|+| gain "1.4"
