@@ -1,0 +1,7 @@
+d1 $ stack [every 3 (slow 1.25) $ slow 4 $ (striate' 12 0.3 $ sound (samples "arpy*6" (run 6)))
+|+| speed "[[1 0.8 0.5 1.5], [~ 0.25 ~ ~ 0.1225 ~]/4, [3 ~ 3 2 ~ ~ 6 3 ~]/7]*24"
+|+| delay "0.4" |+| shape "0.3", every 2 rev $ whenmod 4 3 (|+| accelerate "-2") $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ slow 2 $ striate 4 $ sound "dsk*12 dsk*3 chcp dsh*18" |+| delay "[0 0 0 0.5 0]/3"]
+|+| delayfeedback "0.3"
+|+| delaytime "0.5"
+|+| gain "1.3"
+

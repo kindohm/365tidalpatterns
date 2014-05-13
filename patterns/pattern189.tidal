@@ -1,0 +1,7 @@
+bps 1.6
+
+d1 $ slowspread ($) [(|+| accelerate "-5"), slow 1, slow 4 . (|+| delay "0.5"), rev, density 2, slow 1] $ whenmod 5 3 (jux (iter 8)) $ every 4 (density 2) $ every 3 (density 2) $ slow 2 $ trunc 0.5 $ rev $ striate' 4 0.3 $ sound "dsk:1*4" |+| speed (whenmod 7 5 ((*5.5) <$> ) "[[0.5], [0.25 ~ ~]/2, [1 0.8 2]/3, [5 9 3 6 6]/4]")
+|+| delayfeedback "0.9"
+|+| delaytime "0.05"
+|+| gain "1.5"
+|+| shape "0.1"

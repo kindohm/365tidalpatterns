@@ -1,0 +1,4 @@
+bps 1.6
+
+d1 $ every 4 (striate 2 . slow 2 . (|+| speed "0.8")) $ jux (iter 8) $ slow 2 $ sound "dsk:1*2 dsk:1 ~ dss:8 dsh*2 dsh*2 cp dsk:1 cp dsk:1 ~ 808cb ~" |+| speed "0.5"
+
