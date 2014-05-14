@@ -1,0 +1,7 @@
+d1 $ (whenmod 6 5 (density 2) $ every 4 (striate 2 . (every 5 rev)) $ jux ((|+| speed "0.6") . (every 3 (0.25 <~))) $ sound (samples "[feel ul ul [less auto:5 grunt ulgab]/4]" (run 13))
+|+| speed "0.5")
+|+| delay ((*0.5) <$> slow 3.1 sinewave1)
+|+| delaytime "[0.8 0.2 0.5 0.05]/4"
+|+| delayfeedback (slow 0.8 "[0.5 0.2 0.3 0.5 0.8]")
+|+| shape "0.5"
+
