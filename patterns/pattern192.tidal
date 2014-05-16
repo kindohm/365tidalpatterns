@@ -1,0 +1,10 @@
+bps 0.8
+
+d1 $ slow 16 $ trunc 0.25 $ (striate' 256 0.05 $ sound "tabla:1")
+|+| speed (every 2 ((*1.8) <$>) "[2 2 2 [4 1]/2]*8]")
+|+| gain "3"
+|+| delay "0.5"
+|+| delaytime (slow 0.7 "[0.02 0.03 0.01 0.005]")
+|+| delayfeedback (slow 0.8 "[0.8 0.9 0.7 [0.8 0.9]/2]")
+|+| shape "0.3"
+|+| vowel "[a o u]*4"

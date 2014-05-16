@@ -1,0 +1,10 @@
+d1 $ (slow 16 $ trunc 0.25 $ every 3 (|+| sound "tabla:4") $ striate' 256 0.2 $ sound "tabla:1") 
+|+| speed (every 3 ((*1.8) <$>) $ ((*2) <$>) "[[1 0.5 0.75 1.25 1.1225 1.1225 1 1.5 2], [~ 0.5 ~]/4, [4 ~ ~ 4 ~ ~ 2 6 ~ 3 ~ 8]/5]")
+|+| vowel "[a o u i e]/5"
+|+| gain "3"
+|+| delay "[0 0 0 [0.5 0]/2 0]/3"
+|+| delaytime "0.5"
+|+| delayfeedback "0.6"
+
+
+

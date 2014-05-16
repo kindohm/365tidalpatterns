@@ -1,0 +1,6 @@
+bps 0.8
+
+d1 $ sound "{bd*16 [cp 808ch drum lt] bd*4 cp [bd*3 bd*8], ~ ~ less:4 ~, ~ less:1 ~ ~ ~ ~, 808cy:3 ~ ~ ~ ~ ~ ~ ~ ~}"
+|+| shape "0.4"
+|+| gain "1.3"
+
