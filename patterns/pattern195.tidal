@@ -1,0 +1,8 @@
+bps 1.3
+
+d1 $ whenmod 4 3 (density 2) $ slowspread ($) [(|+| vowel "a o u"), (|+| accelerate "2 -2"), slow 2, rev, jux (iter 8), trunc 0.25] $ slow 2 $ every 2 rev $ (striate' 32 0.1 $ sound "b:10") |+| speed "[1, [4 2 5 3]/3, [~ 9 ~ ~ 7 6 ~]/4 ]"
+|+| delay "[0 0 0 0.5 0 0 0]/4"
+|+| delaytime "0.5"
+|+| delayfeedback "0.5"
+|+| shape "0.5"
+

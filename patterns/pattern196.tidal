@@ -1,0 +1,4 @@
+bps 1.2
+
+d1 $ every 5 (const $ sound "~ ~ ~ sub dup*2 dup*2 lesss sub") $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ sound "{lessk ~ lesss ~ lessb ~ lessh*2 lessh*2, pain ~ pain ~ pain ~ ~, dup*2 dup*2 dup*2 ~ ~}"
+|+| gain "1.3"

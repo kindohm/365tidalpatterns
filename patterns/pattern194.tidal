@@ -1,0 +1,7 @@
+
+
+d1 $ stack [ jux (iter 8) $ slow 2 $ sound "[~ [~ k*2] cp:2 ~*3 hh*4 [s ~ perc perc:1] [~ ~ perc:1 k] ~*3]" |+| delay "[0 0 0 [0 0 0 0.5] 0]/3", slow 12 $ trunc 0.5 $ (striate' 64 0.015 $ sound "vox:1") |+| speed "0.5" |+| shape "0.6", slow 4 $ trunc 0.5 $ (striate' 64 0.017 $ sound "vox:1") |+| speed "[1, [1.5 1.25 [1.75 2 2.2 2.5]*2]/4]" |+| shape "0.6", jux (iter 16) $ slow 16 $ trunc 0.5 $ (striate' 128 0.03 $ sound "vox:1" |+| gain "0.2") |+| speed "[1 0.75]/3"] |+| shape "0.5"
+|+| gain "1.5"
+|+| delaytime "0.5"
+|+| delayfeedback "0.5"
+
