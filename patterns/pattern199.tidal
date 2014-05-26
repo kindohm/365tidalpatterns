@@ -1,0 +1,6 @@
+bps 0.6
+
+d1 $ every 4 (striate 2 . jux (iter 8) . rev) $ stack [ slow 1.5 $ sound "coin" |+| speed "[0.5 0.25 0.1225]/2", sound (samples "{~ ~ ~ ~ ~ ~ ~ ~, ~ flkick*2 ~ flkick*2 ~ ~ ~, [~ hh] [~ hh] [808cy:3 ~]/2 ~ [~ hh] [~ hh] ~ ~ ~}" "28"), sound (samples "[~ s]*4" "28") |+| delay "0.4"]
+|+| delaytime "0.21"
+|+| delayfeedback "0.4"
+
