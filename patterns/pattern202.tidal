@@ -1,0 +1,4 @@
+bps 1
+
+d1 $ every 6 rev $ stack [whenmod 8 7 (striate 2 . slow 2) $ every 4 (rev) $ sound "[pain ~ ~ pain] [~ k k k] [sdeep k:1 k:1 k:1] [s perc*2]", (spread' (striate' 16) ((*0.1) . (+0.3) <$> slow 5.1 sinewave1) $ sound "pad:4") |+| speed (every 5 ((*0.5) <$>) $ every 4 ((*0.8) <$>) "[1, 2, 3]"), slow 1.5 $ sound "~ [~ sub] ~ ~" ]
+
