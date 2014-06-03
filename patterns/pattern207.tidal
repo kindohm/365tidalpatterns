@@ -1,0 +1,2 @@
+d1 $ slowspread ($) [jux (0.01 <~), (|+| accelerate "1 0.5 -1"), (|+| speed "-1 1 -1"), slow 1] $ density 2 $ stack [sound "{[peri k] [dup ul] [peri k] hh [cp peri:2], ~ ~ s [~ hh:2] ~ [~ b:19 ~ vox]/3 s [~ hh:2]}", slow 12 $ (striate' 128 0.02 $ sound "alone") |+| speed "[[1 0.8 1.5]/4]" |+| cutoff ((*0.1) . (+0.2) <$> slow 3.9 sinewave1) |+| resonance "0.3"]
+

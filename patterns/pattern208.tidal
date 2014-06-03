@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ every 3 (0.25 <~) $ stack [every 4 (0.25 <~) $ slow 2 $ sound (samples "ktite hh s hh hh s hh hh hh hh s ktite hh s hh hh" "2"), sound "~ cp:2" |+| speed "2", slow 4 $ sound "rev" |+| speed "0.5", slow 2 $ sound (samples "[ ~ [[~ sub] ~ ~ sub] ]" "5"), whenmod 6 5 (|+| speed "1.2") $ slow 7  $ jux (0.01 <~) $ sound (samples "numbers*7" "[8 7 6 5 4 3 2]"),  whenmod 4 3 (slow 2) $ slow 8 $ jux (iter 8) $ (striate' 128 0.008 $ sound "padloop:2") |+| speed "[[1 0.5]/3, [1.5 1.25 2]/4]" |+| cutoff ((*0.45) . (+0.1) <$> slow 4.1 sinewave1) |+| resonance "0.1" |+| gain "0.8"]
+

@@ -1,0 +1,6 @@
+d1 $ stack [slow 5 $ sound "sweep" |+| speed "[1 0.8 0.5]/3" |+| gain "0.9" , whenmod 7 5 (striate 2 . slow 2) $ every 4 (const $ sound "bock nerd judah ~" |+| speed "1" |+| delay "[0 0 [0.5 0 0] 0]/3") $ sound "[kh*4, [~ cp:2]*2]", every 5 (striate 2 . slow 2) $ sound "[~ b:17 ~ b:12]/4 [~ b:13] [~ b:14] [~ b:14]" |+| cut "1", every 3 (slow 2) $ sound "hh*16" ]
+|+| shape "0.2"
+|+| delaytime "0.25"
+|+| delayfeedback "0.5"
+
+hush
