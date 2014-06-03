@@ -1,0 +1,4 @@
+bps 1.4
+
+d1 $ stack[ slowspread ($) [density 2, rev, density 2 . ((|+| cutoff ((*0.1) . (+0.01) <$> slow 1.1 sinewave1)) . (|+| resonance "0.1")), slow 1, density 2 . jux (iter 8), (0.25 <~)] $ slow 8 $ (striate 64 $ sound "ahh") |+| speed (every 3 ((*0.8) <$>) $ "[[1 0.5]/2, [2 2.5 3 1.5]/3]"), whenmod 4 3 (slow 2 . striate 2) $ sound (samples "[[[kit1*4 kit1*2 kit1*4 kit1*2] [kit2*4 kit2*4 kit2*4 kit2*2]]/2]" (run 19)), slow 3 $ sound "[~ sub] ~ ~ ~"]
+

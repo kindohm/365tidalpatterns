@@ -1,0 +1,10 @@
+bps 1.1
+
+d1 $ stack [slow 2.5 $ sound "~ [cp:3 hh perc]*3" |+| speed "[0.6, 1, 2]" |+| shape "0.6", slow 11 $ trunc 0.5 $ (striate' 64 0.1 $ sound "kh*4 s*4 hh*3 s*8 [kh hh]*2 s*2")
+|+| speed "[[0.8 0.5 0.75 [0.25 0.5]/2]/4, [3 2 5 4 2 3]/3, [10 9 7 8]/2]"]
+|+| delay "0.5"
+|+| delayfeedback "0.5"
+|+| delaytime "0.2"
+|+| shape "0.4"
+|+| gain "1.1"
+
