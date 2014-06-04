@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ every 4 (trunc 0.25) $ whenmod 5 4 (jux (iter 8)) $ stack [sound (samples "[[kh kh kh alphabet:3]/4 ~ [s s s alphabet:9]/4 ~ [~ ~ ~ [josie:0 josie:3]/2]/4 s [kh ~]/2 [kh ~]/2 ]" "2") |+| speed "[[1 1 1 0.8]/4 [1 1 1 0.8]/4 [1 1 1 [1, 1.2]]/4 1]", sound (samples "~ ~ [jvbass*4 jvbass*4 jvbass*4 ~]/4 [~ ~ ~ jvbass*4]/4" (run 6)) |+| speed "[1, 0.5, 2]", every 3 (const $ sound "hh*8") $ every 3 rev $ sound "hh*2 hh hh*2 [hh hh*2]/2 hh [hh*2 hh]/2 [hh hh*2]/2 hh"] 
+

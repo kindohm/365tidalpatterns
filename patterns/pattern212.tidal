@@ -1,0 +1,6 @@
+bps 0.7
+
+d1 $ every 3 rev $ sound "{[bd*2 bd*3]/2 [peri*2 peri*3]/2 ul:6 hh*2 hh*2 [bd*2 bd*4]/2 peri*2 ul:5, ul:8 ul:8 ul:8 ~ ~}"
+|+| speed "[1.1, 0.9]"
+|+| accelerate "0.2"
+
