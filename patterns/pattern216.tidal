@@ -1,0 +1,1 @@
+d1 $ whenmod 5 4 rev $ stack[ slow 3 $ jux (iter 12) $ (striate' 64 0.1 $ sound "harp harp:1") |+| speed (slow 0.8 "[[1 0.75], [2 1.5]/3]"), every 4 (0.25 <~) $ slow 1.5 $ sound "ktite:5*2 808ch*3 [s:8 ktite:5] [~ 808ch] dup*8 laz laz laz" |+| speed (every 3 ((*1.2) <$>) "[1 [1 1 1 0.25] 0.25]") |+| cut "1" |+| gain "1 1 [1 0.8] 0.8" |+| shape "0 0 [0 0.3] 0.3"]

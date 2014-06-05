@@ -1,0 +1,7 @@
+bps (150/120)
+
+d1 $ every 6 rev $ whenmod 6 4 (|+| accelerate "-0.5") $ every 5 (trunc 0.25) $ stack [ sound "[~ [kh:14*2 kh:14 ~ ~]]/2 cp:3", sound (samples "hh*16" "[0 0 2 0 3]"), slow 2.25 $ sound "~ ~ ~ 808cb" |+| gain "1.2", sound (samples "~ b [~ b] ~ ~ b b ~ b ~ b b ~ ~ b ~" (every 4 (slow 0.8) $ run 11))
+|+| cut "1"
+|+| speed (every 6 ((*(-1.5)) <$>) "[1 1.5 1.25 1 0.8 1 1.25 1]/2]") ]
+|+| shape "0.3"
+

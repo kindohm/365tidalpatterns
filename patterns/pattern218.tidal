@@ -1,0 +1,7 @@
+bps (140/120)
+
+d1 $ whenmod 6 4 (trunc 0.25) $ stack[ density 2 $ sound (samples "{~ ~ ~ ~ ~ ~ ~ ~, hh hh hh hh ~ ~}" "15") |+| gain "0.9" , every 3 (0.25 <~) $ sound "[[[kh:29*2 [~ kh:28*2 ~ ~]/4 ~ ~] ~]/2 s:9]" |+| shape "0.2", (jux (0.02 <~)) $ slow 2.75 $ sound "fran" |+| delay "0.5" |+| gain "0.9", every 4 (const $ sound "b:4*4" |+| cut "1") $ whenmod 5 3 (rev) $ sound (samples "b ~ b b ~ b b b b ~ b ~ b ~ b ~" "4") |+| gain "0.9"
+|+| cut "1"]
+|+| delayfeedback "0.3"
+|+| delaytime "0.9"
+
