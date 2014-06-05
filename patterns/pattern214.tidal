@@ -1,0 +1,4 @@
+bps 0.8
+
+d1 $ stack[ whenmod 4 3 (slow 1.5) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ density 2 $ sound "[k:8*2, [hh*4 hh*8]/2 [sdeep, [nerd:3 bock:2 [~ nerd:4]]/3]]" |+| speed "[1, 1.1]" |+| gain "1.2", slow 2 $ jux (iter 8) $ trunc 0.25 $ (striate 8 $ sound "[k*6 k*4 k*8 k*16]") |+| speed "[[1 1.5 2]/3, [0.9 0.8 0.7]/4, [5 7 6 8 4 3]/5]"]
+

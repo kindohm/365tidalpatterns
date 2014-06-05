@@ -1,0 +1,4 @@
+bps 1.3
+
+d1 $ whenmod 6 5 (trunc 0.25) $ whenmod 5 4 (jux (iter 8)) $ stack [slow 4 $ sound "[gnome:3 [~ ~ ~ numbers]/4 ~ ~]" |+| cut "1" |+| accelerate "[0 0 -0.25]/3" |+| speed (every 4 ((*1.1) <$>) "[1]") |+| shape "0.2", slow 8 $ (striate' 128 0.01 $ sound "padloop:4") |+| speed "[1 0.8, [1.5 1.1225]/3]", every 4 (slow 2) $ every 3 (slow 2) $ sound "hh*16" |+| gain "0.85" |+| speed "1.2", slow 2 $ sound "[~ 808bd:2] ~ ~ ~ ~ ~ ~ ~", sound "~ 808sd" |+| speed "1, 1.5"]
+

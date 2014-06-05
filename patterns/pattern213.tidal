@@ -1,0 +1,4 @@
+bps 0.7
+
+d1 $ stack[ density 2 $ sound "{hh hh:2 hh hh:2 [hh, cp:2] hh hh hh, k k k k k s ~ ~ ~ ~ }", slow 8 $ (striate' 128 0.03 $ sound "padloop") |+| speed (((*0.8) <$>) $ density 2 "[[1 1.5 1.1225 1.25]/3, [~ 0.8 ~ 0.75]/4, [~ ~ ~ 2.5 ~ ~ 3.5]/5]"), every 3 (0.25 <~) $ sound "gab:1*4 ~ [~ gab:4*2] [gab:4*2 ~]" |+| speed "[5, 3]", sound "~ ~ laz ~" |+| speed "0.25" |+| delay "0.5" |+| delayfeedback "0.2" |+| delaytime "0.8"]
+
