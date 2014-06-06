@@ -1,0 +1,6 @@
+bps (175/120)
+
+d1 $ stack[ slowspread ($) [slow 2, slow 1, rev, slow 1, jux (iter 8)] $ sound (samples "[kit3*16, [[~ b] ~ b sub [~ b]]/3]" (slow 0.4 $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ "[0 2 3 6 7 8 9 10 11 12 13]"))
+|+| speed "[1 1 1 -1 1 1 0.8 1 1 1.2]/3", sound (samples "[~ nerd ~ vox ~ gnome ~ nerd]/6" (slow 0.8 $ run 13)) |+| cut "1", whenmod 8 7 (const $ density 2 $ sound "[house hh]*4") $ sound "~" ]
+|+| shape "0.2"
+
