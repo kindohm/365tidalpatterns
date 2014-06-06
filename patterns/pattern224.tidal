@@ -1,0 +1,9 @@
+d1 $ jux (iter 16) $ slow 16 $ (striate' 32 0.02 $ sound "intro:1 intro:2 intro:3 intro:4")
+|+| speed "[0.5, [1.5 1.65]*2]"
+|+| cutoff "0.04"
+|+| resonance "0.1"
+|+| shape "0.3"
+|+| delay "0.3"
+|+| delaytime "0.7"
+|+| delayfeedback "0.1"
+

@@ -1,0 +1,4 @@
+bps (140/120)
+
+d1 $ every 10 (const $ sound "[llama ~ [~ 808cb ohgeez]]" |+| end "0.8 1") $ stack [ sound "[~ [~ house]*2 [~ house]*2 ~]", jux (|+| speed "0.9") $ sound "[~ s:10]*2" |+| shape "0.2", sound (samples "[[kit1*4 kit1*4 kit1*4 ~]/4 [kit3*4 kit3*4 kit3*4 ride]/4 kit3*4 kit1*4]" (slow 1.1 $ run 52)) |+| speed "0.9" |+| accelerate "-1", (striate' 16 0.15 $ sound "[alphabet:8 alphabet:8 alphabet:8 alphabet:19]/4") |+| speed "[[1 0.8], [2 1.5 ~]/2]" |+| gain "[1 [0 1 1 1] 1 1 ]/4"]
+

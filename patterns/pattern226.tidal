@@ -1,0 +1,7 @@
+bps 1.1
+
+d1 $ stack[ slow 2 $ sound "[808cb*4 [808cb 808cb 808cb [808cb*2 ~]]]" |+| cut "1"
+|+| speed "[0.25 [0.25 0.25 0.25 0.1225]]", slow 2.5 $ sound "lessb", 
+ every 5 (const $ sound "~") $ every 3 (jux (iter 8)) $ sound "[[~ [~ [lessk ~]/2]] lesss]" |+| speed "[0.5 [1 1 1 -1]/4]", sound "[~ lessh]*4" |+| gain "0.7" |+| speed "1.25", slow 6 $ sound "vox:7 vox:8" |+| cutoff "0.01" |+| resonance "0.1"]
+|+| shape "0.2"
+
