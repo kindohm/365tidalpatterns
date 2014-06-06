@@ -1,0 +1,6 @@
+bps (120/120)
+
+d1 $ whenmod 5 4 (striate 2 . slow 2) $ jux (iter 4) $ sound (samples "kh*2 kh:30 [s hh] [[perc b:2]/2 [ul:0 ul]/2] [newnotes newnotes] [kh:26 b:0]/2 [~ control]/2 ktite*3" (run 43)) |+| end "1 1 1 0.23"
+|+| speed "[[1 1 1 [0.8 1]], [~ 2 ~]/3]"
+|+| shape "0.3"
+

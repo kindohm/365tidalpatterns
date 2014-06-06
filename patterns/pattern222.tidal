@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ stack [ whenmod 6 5 (slow 2) $ whenmod 7 6 (jux (iter 8)) $ every 7 (const $ sound (samples "kit5*4 ~ ~ kit4*4" (run 43))) $ sound (samples "[[kit1 kit5]/2 [ul kit5]/2]*2 [[kit2 kit1]/2 [[peri kit4]/2 kit5]/2]*2 [[kit3 kit5]/2 kit1]*2 [[feel kit4]/2 [kit2 kit5]/2]*2" (slow 0.8 $ every 2 (0.25 ~>) $ run 32)), sound (samples "~ s ~ s" "2") |+| gain "1.1", jux (0.05 <~) $ slow 8 $ (striate' 64 0.05 $ sound "[intro:1 intro:2 intro:3 intro:4]/4") |+| cutoff "0.06" |+| resonance "0.1" |+| speed "[[1 1.25], [2 2.5 4 3]*2]"]
+
