@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ slowspread ($) [slow 2, trunc 0.25, trunc 0.25, rev, striate 2, striate 2, slow 1, ((|+| speed "0.8") . slow 2), jux (iter 8), slow 1, slow 1] $ every 4 (0.25 <~) $ every 5 (0.25 <~) $ stack [ slow 2 $ sound (samples "bom noi laz c64 doru b ul c64 noi bom c64 ul laz dor b noi" (run 66)) |+| speed "[1, 1.1]", sound (samples "k*4 [s hh ~ hh]" (run 9)) ]
+

@@ -1,0 +1,5 @@
+bps 1.2
+
+d1 $ stack[ every 4 (slow 2) $ sound (samples "[[~ [boi*3 ~] ~ [~ ~ ~]], doru*12]" (run 26)) 
+|+| speed "[[1 0.8 [1 -1]/2 1.2]/5]", sound (samples "[kh ~]/2 kh ~ ~ ~ hh sdeep ~ ~ ~ hh hh" "11"), slow 8 $ striate 32 $ sound "pad"]
+

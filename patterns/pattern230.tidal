@@ -1,0 +1,5 @@
+bps 0.8
+
+d1 $ whenmod 5 4 (trunc 0.25) $ every 4 (smash 4 [2,1] . (|+| speed  "[1 -0.8 1.2 1.5]")) $ stack [ sound "at:1 [bom laz:3] [tiho laz:4] [laz:2*2 laz:2]"
+|+| speed "0.75", sound (samples "[minc:0 doru] [minc:0 doru] [s doru ul doru] [s kh] h*4 kh [s ul hh perc] [kit1 kit1]" (run 8)) |+| shape "0.3" |+| speed "[1, 0.8]", slow 6 $ sound "salsa:1" ] |+| shape "0.2"
+
