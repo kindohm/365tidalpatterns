@@ -1,0 +1,5 @@
+bps (175/120)
+
+d1 $ whenmod 6 4 (jux (|+| speed "1.25")) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack[ sound "~ [~ bom] [~ drop ~ ~]/4 [bom [drop:1 ~]/2]", slow 2.5 $ sound "dawn", sound (samples "k ~ s ~ ~ k s ~" "3"), sound "hh:8*8" |+| gain "0.9"]
+|+| speed (whenmod 5 4 ((*0.9) <$> ) "1")
+

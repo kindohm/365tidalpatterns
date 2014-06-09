@@ -1,0 +1,4 @@
+bps (125/120)
+
+d1 $ stack [ whenmod 7 5  (const $ density 2 $ sound "sub:1 [cp sub:1 ~ ~]" |+| speed "0.8") $ sound "sub:1*4", slow 3 $ sound "[~ 808cy:4] [~ 808cy:4] ~ ~" |+| speed "1 -1 c1 1", every 3 (const $ sound "[808oh:4 808ch*4] 808ch*8") $ sound "808ch*16" |+| gain "0.8"]
+

@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ stack[ whenmod 8 7 (slow 2 . (|+| speed "1.5") . (const $density 2 $ sound (samples "k [~ kit4:11] s [vox:0 kit4:11] k s [~ kit4:11] [vox:0 kit4:11]" "11"))) $ sound (samples "k [kit4:3 kit4:11] s [kit4:3 kit4:11] k [s kit4:11] [kit4:3 kit4:11] [kit4:3 kit4:9]" "11"), slow 2 $ sound (samples "b b [~ drop]/2 [~ b] ~ ~ b [~ b]" (every 4 (slow 0.7 . rev) $ "[[3 5]/2 2 16 12 8 13 [21 22]/2 [19 20]/2]")) |+| cut "1" |+| speed "[1 1 1 1.2 1 1 1.511]/3", slow 4 $ (striate 32 $ sound "pad:8") |+| speed "[1 0.9]/2"]
+
