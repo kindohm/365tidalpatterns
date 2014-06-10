@@ -1,0 +1,6 @@
+bps (175/120)
+
+d1 $ every 4 (rev) $ whenmod 6 5 (striate 2 . slow 2) $ every 5 (trunc 0.25) $ stack [ whenmod 6 4 (|+| speed "[0.8 1.2]/3") $ whenmod 5 4 (jux (iter 8)) $ slow 2 $ sound (samples "[kh hh]*4 [s hh hh stite] [~ hh*6 ~ ~] [s kh hh*2 stite]" "10"), slow 2 $ sound (samples "[at b:9]/2 doru*2 c64*2 doru*2 c64*2 c64*2 clak*4 doru*2" (run 44))
+|+| speed "[0.8 0.8 0.8 -0.8]/3", slow 2 $ sound (samples "~ drop [~ [drop sub]/2] ~" (slow 0.8 $ run 29)) |+| cut "2"]
+|+| shape "0.2"
+
