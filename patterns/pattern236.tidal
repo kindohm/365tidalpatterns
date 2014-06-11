@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ slowspread ($) [jux (iter 8), trunc 0.25, trunc 0.25, (|+| speed "0.8"), striate 2 . slow 2, slow 1, (|+| speed "1 1 -1 1"), slow 1, (|+| delay "[0 0.4 0 0 0]*5")] $ stack [slow 2 $ sound (samples "doru*2 bom [up ~]/2 [~ drop] ~ [doru bom] doru*2 bom" (run 14)), sound (samples "[kit3*8 kit3*8 kit3*8 kit3*16]/4" (whenmod 5 4 (slow 0.7) $ run 43)), slow 3 $ sound "fxlong:1" |+| gain "0.9" |+| cut "1", slow 3 $ sound (samples "~ fran" (run 7)) |+| gain "1.2"] |+| delayfeedback "0.3" |+| delaytime "0.33"
+

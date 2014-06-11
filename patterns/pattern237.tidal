@@ -1,0 +1,4 @@
+bps (140/120)
+
+d1 $ whenmod 5 4 (jux (iter 8)) $ every 4 (trunc 0.25) $ stack [ slow 2 $ sound (samples "[at:1 ~]/2 ~ [c64:7 doru*2] [laz doru*2] [c64 c64*2] [boi doru] [[noi boi*2]/2 [doru c64:9]] doru*4" (run 17)) |+| speed "[0.8]", slow 3 $ sound "~ lesss" |+| cut "1" |+| speed "1 0.5", slow 4 $ (striate 8 $ sound "[padloop:8]") |+| speed "[0.25 0.4]" |+| gain "0.9"]
+
