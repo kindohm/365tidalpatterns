@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ slowspread ($) [jux (iter 8), rev, slow 1, slow 2, slow 1, striate 2 . slow 2, slow 1, trunc 0.25, trunc 0.25] $ whenmod 9 8 (const $ stack [sound "ohh" |+| cut "1" |+| end "0.5", sound "[~ [ride sub:5] ~ sea, hh*16]"]) $ whenmod 8 6 (0.25 <~) $ whenmod 6 4 (0.25 <~) $ stack [ slow 2 $ sound (samples "[[kit1 peri]*2, kh:17*4]/2 kit1*4 peri*4 [peri kit1] kit1*4 peri*2 [peri kit1]*2 [kit1 peri]" (slow 0.4 $ "[0]")), density 2 $ sound "~ shard:8" |+| speed "2", sound (samples "{hh ~ hh ~ hh ~ hh hh, doru lessh*2 [boi at:1]/2 ~ ~}" (run 10)) ] |+| shape "0.2"
+
