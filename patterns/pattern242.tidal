@@ -1,0 +1,4 @@
+bps (125/120)
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ whenmod 7 5 (|+| speed "0.9") $ every 5 (trunc 0.25) $ stack[ sound "faze" |+| cut "1", sound (samples "[hh*2 [kh k] [s hh] [~ untuned] mel [~ [~ stab]/2]]" (run 33))] |+| shape "0.2"
+

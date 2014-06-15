@@ -1,0 +1,5 @@
+bps (172/120)
+
+d1 $ slowspread ($) [slow 2, slow 1, jux (iter 8), striate 2 . slow 2, slow 1, (|+| accelerate "-0.2"), trunc 0.25, trunc 0.25] $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ sound (samples "[~ ~ ~ sea]/4 [hitter hitter hitter hitter b]/5 [s gab:4] [hh hh kh kh]" (run 31)), whenmod 7 6 (const $ sound (samples "[untuned*4 doru] doru*3" (run 27))) $ sound (samples "untuned c64 pot hh doru boi c64 hh" (run 31)) ]
+|+| shape "0.2"
+
