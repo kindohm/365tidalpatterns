@@ -1,0 +1,5 @@
+bps (170/120)
+
+d1 $ stack [ whenmod 10 8 (|+| speed ((*2) . (+0.5) <$> slow 3.1 sinewave1)) $ every 3 (density 2) $ every 4 (density 2) $sound "hh:5*8" |+| gain "0.9" , whenmod 7 6 (const $ sound (samples "kit3*4 kit3*2 [kit3 stab?] kit3*4" (slow 0.7 $ run 44))) $ every 6 (const $ stack [sound (samples "[kit1*2 kit1*4 [kit1 ~] kit1*4]" (slow 0.8 $ run 20)), sound (samples "~ ~ [~ fx?] ~" (slow 2 $ "8 10")) |+| gain "0.9" ]) $ sound (samples "~ [doru? perc] ~ clak? [clak? perc] ~ ~ [doru? perc]" (run 31)), slow 4 $ sound (samples "[[stite:0 ~ ~ stite:0 ~ ~ stite:0 ~]*4 [[hitter hitter hitter hitter vox:1 hitter hitter hitter]/8 ~ ~ hitter ~ ~ hitter ~]*4]/2" "1") |+| cut "[1 0]/4"] 
+|+| shape "0.3"
+

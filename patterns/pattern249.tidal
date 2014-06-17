@@ -1,0 +1,4 @@
+bps (140/120)
+
+d1 $ whenmod 5 4 (slow 2) $ stack [ every 4 (0.25 <~) $ every 3 (0.25 <~) $ every 2 (0.25 <~) $ ((0.25 <~) $ sound (samples "[[ktite:5] [perc 808oh:3]/2? [stite kit5]/2 [perc east]/2]*4?" (run 22))), density 2 $ sound "~ cp", whenmod 6 4 (const $ sound "nine [~ nine] ~ [~ nine ~ ~]" |+| gain "0.9" |+| cut "1") $ sound "bass2*16?" |+| shape "0.5" |+| cut "1"] |+| shape "0.3"
+

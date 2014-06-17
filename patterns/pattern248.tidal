@@ -1,0 +1,4 @@
+bps (140/120)
+
+d1 $ every 3 (jux (palindrome)) $ whenmod 5 3 (0.25 <~) $ stack [ degradeBy 0.5 $ sound "~ ~ ~ up" |+| speed "0.8", sound (samples "~ [horny? stab]/2 ~ cp" (run 31)), sound (samples "[kh*2]? bass2? [s perc*2] hh*4?" (run 19)), slow 3 $ sound (samples "heem?" "0") |+| speed "[0.25]", every 2 (density 2) $ every 3 (density 2) $ every 4 (density 2) $ sound "house hh" ] |+| shape "0.2"
+
