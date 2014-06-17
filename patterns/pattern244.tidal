@@ -1,0 +1,4 @@
+bps (125/120)
+
+d1 $ stack[ sound "[~ b]*4" |+| speed "[1 1 1 0.8]/8" |+| shape "0.4", slow 12 $ (striate' 64 (1/20) $ sound "music8:3") |+| speed "[[1 0.75], [0.5 1.5]*3]" |+| delay "0.4", slow 24 $ trunc 0.2 $ striate' 64 0.2 $ sound "[ahh:3 ahh:4]/2" |+| delay "0.4"] |+| delayfeedback "0.5" |+| delaytime "0.6" |+| shape "0.2"
+

@@ -1,0 +1,4 @@
+bps (140/120)
+
+d1 $ whenmod 8 6 (trunc 0.25) $ stack [ slow 2 $ sound (samples "sub [~ sub] ~ hitter [~] sub ~ sub" (run 34)) |+| cut "1", whenmod 5 3 (jux (iter 8)) $ every 3 (slow 2) $ stut 4 0.2 0.75 $ sound "hh*4" |+| gain "0.5", every 3 (0.25 <~) $ every 4 (0.25 <~) $ whenmod 10 8 (const $ sound (samples "[[k kh]*8]?" (run 42))) $ sound (samples "[~ doru] [[c64 ul]/2]? s [~ stab:12?]/2 kh*2 [hh cp] [b lesss]/2 cp" (run 71)) |+| speed "0.9" ] |+| shape "0.2"
+

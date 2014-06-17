@@ -1,0 +1,5 @@
+bps (125/120)
+
+d1 $ whenmod 10 8 (trunc 0.25) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ whenmod 7 6 (const $ sound (samples "kh hh pain kh hh pain kh hh pain kh kh kh shard ~ 808cb sub" (run 33))) $ stack [ slow 2 $ sound (samples "[kh [mel bass3]] [mel bass3]*2 [s k ~ sub?] [hh k]*2 [s hh*2] doru*2 [cp bass3 ~ untuned] c64*2" (run 33)), density 2 $ sound "[pain]/4 [half:1 [pain]/3]", slow 4 $ trunc 0.75 $ striate' 64 (1/20) $ sound "psh" |+| gain "0.8", slow 1.5 $ sound "[peach]/3" |+| shape "0.2"]
+|+| shape "0.4"
+

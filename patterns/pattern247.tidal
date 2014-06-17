@@ -1,0 +1,4 @@
+bps (170/120)
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ slow 8 $ striate 16 $ sound "music8:2", whenmod 9 8 (const $ slow 2 $ sound (samples "s:10 kit1*2 kit1 s:10 kit2*2 kit4 kh:9 kh:9 kh:9 kh:9 [kit2 kit1] [kit2 kit1] kit1*2 kit1 kit1*2 kit1" (run 33))) $ sound (samples "[kh:8] [~ kit3] s:9 [hh kit3] [~ kit3] s:9 [~ kit3] [~ kit3]" (run 33)), slow 4 $ striate 32 $ sound "[blh4:4 blh4:4 blh4:4 bl4:5]/4" |+| cutoff ((*0.4) . (+0.005) <$> slow 2.1 sinewave1) |+| resonance "0.4" ] |+| shape "0.2"
+
