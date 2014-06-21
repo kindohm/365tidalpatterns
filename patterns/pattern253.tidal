@@ -1,0 +1,4 @@
+bps (120/120)
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ sound (samples "dreambell dreambell*2 [~ dreambell] [~ dreambell]" (every 4 (slow 0.4) $ run 7)) |+| end "0.2" |+| speed (whenmod 5 4 ((*1.1225) <$>) "1"), stut 4 0.3 0.75 $ slow 0.75 $ sound "[peri:7*4 ~ ~ ~]" |+| gain "0.5" |+| speed "2", slow 2.5 $ (striate' 32 0.1 $ sound "lesss") |+| speed "[0.5 0.4]/3" ] |+| shape "0.2"
+

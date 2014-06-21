@@ -1,0 +1,4 @@
+bps (170/120)
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [stack [ density 4 $ sound (samples "doru [lessh peri]" (run 54)) |+| cut "1",  sound (samples "untuned [doru ul]" (run 24)),  sound (samples "[~ peri*2]*2" (run 33))] |+| speed "[0.5 0.5 0.5 0.6 0.7 0.5]/6", sound (samples "[kh shard [ride shard] hh:8*4]" "16")] |+| shape "0.2"
+

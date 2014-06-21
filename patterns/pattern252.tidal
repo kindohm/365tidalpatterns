@@ -1,0 +1,4 @@
+bps (130/120)
+
+d1 $ stack [ jux (iter 16) $ slow 4 $ trunc 0.25 $ (striate' 64 0.05 $ sound "stab:4") |+| speed (whenmod 5 4 ((*0.9) <$>) "[[1 0.9 1 0.8]/4, [1.5 2]/3]*2") |+| delay "0.4" |+| delayfeedback "0.4" |+| delaytime "0.5", whenmod 6 5 (0.25 <~) $  sound (samples "[[kh:0 untuned*2] [peri*2 doru] kh:0 [peri peri untuned perc], [~ psh]]" (run 33)), jux (iter 8) $ sound "~ ~ ~ 808oh:2?" |+| speed "0.9",slow 8 $ striate' 128 (1/80) $ every 2 (rev) $ sound "intro:1" |+| gain "0.8"
+] |+| shape "0.2"
