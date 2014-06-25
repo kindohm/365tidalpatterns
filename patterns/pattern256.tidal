@@ -1,0 +1,4 @@
+bps 1
+
+d1 $ whenmod 5 4 (trunc 0.25) $ every 3 (0.25 <~) $ stack [sound (samples "~ gab gab [~ b]/2 bass2*2 bass2 [bass2 b]/2 gab*2" (run 19)) |+| cut "1", sound (samples "[kh*2 kh] [shard future future [stab hh]/2?] [cp ktite hh ktite] [k*2 hh*2]" (run 23)) |+| gain "1 [1 1 1 0.8] 1 1", jux (iter 8) $ slow 2 $ striate' 32 0.1 $ sound "heem" |+| speed "0.5" |+| gain "0.75"] |+| shape "0.2"
+

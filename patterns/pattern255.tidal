@@ -1,0 +1,4 @@
+bps (175/120)
+
+d1 $ whenmod 10 8 ((|+| speed "0.8") . slow 2) $ whenmod 8 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 7 6 (const $ sound (samples "ohh ~ [~ b] ~ sub [~ sub] ~ sub" (run 17)) |+| cut "3") $ slow 2 $ striate 32 $ sound "[blh2:4 blh2:4 blh2:1 blh2:3]/4" |+| cutoff ((*0.4) . (+0.001) <$> slow 3.1 sinewave1) |+| resonance "0.3", sound (samples "[~ kit3] kit3*2 perc*2 kit1 [perc kit1] [untuned kit2] kit3*2 kit1*2" (run 59)), sound (samples "kh [shard [~ kh?]c] [~ ~ ~ kh?] shard" "22"), slow 8 $ (striate' 64 0.015 $ sound "music8:4") |+| speed "[1, ~ 1.5]" |+| gain "0.9" |+| cutoff "0.05" |+| resonance "0.1"] |+| shape "0.2"
+
