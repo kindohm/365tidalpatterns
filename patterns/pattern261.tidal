@@ -1,0 +1,4 @@
+bps (130/120)
+
+d1 $ every 3 (0.25 <~) $ slowspread ($) [slow 2, rev, jux (iter 8), striate 2 . slow 2, slow 1, (|+| speed "0.8") . slow 2, jux (|+| speed "2"), slow 1, striate 4 . (|+| speed "0.5") . slow 4, trunc 0.25, trunc 0.25] $ stack [ sound (samples "k*8 s*4 hh*8 [k s pain]*2" (run 42)) |+| end "0.4", sound "faze*2 ~ ~ ~" |+| cut "1" |+| speed "[2 2 2 3]/4", slow 2 $ striate 8 $ sound "ahh:4/2" |+| gain "0.9"] |+| shape "0.2"
+

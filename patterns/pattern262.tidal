@@ -1,0 +1,4 @@
+bps (170/120)
+
+d1 $ slowspread ($) [(0.25 <~), slow 2, slow 1, slow 1, (|+| speed "0.7") . slow 2, slow 1, jux (iter 8)] $ stack [ sound (samples "at:1 [s k k k]" (run 19)), sound (samples "[~ future]*8?" (run 13)) |+| speed "2", slow 2 $ sound "{~ ~ ~ ~, hh*8 ~ ~}" |+| gain "0.8", slow 4 $ (striate' 32 0.05 $ sound "lessmel") |+| speed "[1, 1.5]"] |+| shape "0.2"
+
