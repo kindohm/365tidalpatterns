@@ -1,0 +1,4 @@
+bps (130/120)
+
+d1 $ slowspread ($) [rev, slow 2, (0.25 ~>), slow 1, jux (palindrome), slow 1.5] $ stack [ whenmod 9 7 (const $ whenmod 5 4 (striate 3) $ sound (samples "bass1:3*3 jvbass*4" (run 11)) |+| cut "2") $ slow 4 $ trunc 0.75 $ (striate' 64 0.2 $ sound "[b:3]") |+| speed "[[3.5 2 2.5 1.5]*2, [3 4 4.5]*3]" |+| gain "0.8", sound (samples "foot foot*2 [~ foot] foot*2 foot*2 [~ foot] foot*2 foot" ( run 17)) |+| shape "0.2", whenmod 7 6 (const $ sound "vox:1 vox:0 bd*2 bd*9" |+| speed "0.5" |+| cut "3") $ slow 2 $ (sound $ wedge (3/4) (samples "ktite cp perc*3!! perc*2" (run 21)) (samples "bd*2 cp" (run 19)))] |+| shape "0.2"
+
