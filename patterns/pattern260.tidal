@@ -1,0 +1,4 @@
+bps (172/120)
+
+d1 $ every 6 (trunc 0.25) $ whenmod 11 10 (slow 2 . (|+| speed "0.5") . (|+| delay "0.3") . jux (0.005 <~)) $ whenmod 7 6 (rev) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack[ slow 4 $ striate 32 $ sound "[bl4:10 bl4:12 bl4:10 bl4:11]/4", sound (samples "k:5 [hh untuned] stite:0 [k:5 hh] [hh untuned] stite:0 [perc short] [short kit4]" (run 23)), slow 8 $ sound (samples "~ fxlong" (slow 0.5 $ run 11)) |+| gain "0.8"] |+| shape "0.2" |+| delayfeedback "0.6" |+| delaytime "0.45"
+
