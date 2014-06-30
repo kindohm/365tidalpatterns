@@ -1,0 +1,6 @@
+bps (125/120)
+
+
+d1 $ whenmod 6 5 (trunc 0.25) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ whenmod 5 4 (striate 2 . slow 2) $ stack [ sound "~ cp:3 ~ [~ cp:3 ~ ~]", sound (samples "[future*2 [future untuned]] future*4 [kh [future kh]] [cp [~ perc]]" (run 27)), degrade $ sound (samples "bass1 [~ gab ~ hitter] [jvbass b] [~ bass1 ~ jvbass]" (run 29)) |+| cut "1", density 2 $ sound  "[house hh]*2", slow 8 $ (striate 16 $ sound "[music8:12]/1") |+| gain "0.8" |+| speed "[[0.5 1]*3, [0.75 1.25]*2]/2"]
+
+hush

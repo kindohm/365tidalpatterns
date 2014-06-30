@@ -1,0 +1,5 @@
+bps (160/120)
+
+d1 $ every 5 ((|+| speed "0.5") . slow 2) $ whenmod 7 6 (trunc 0.25) $ whenmod 6 5 (|+| vowel "o i") $ whenmod 5 4 (jux (iter 8)) $ stack [ slow 2 $ sound (samples "[kit3*2 vox:1?]/2 [kit3 kit3*2] [kit3*4 nerd:1]/2 kit3*2 [kit3 kit3*2] kit3*2 kit3*4 [kit3*2 kit3]" (run 31)), slow 2 $ sound (samples "b b b [~ tin] [~ tin] b*2 b*2 faze" (every 4 (slow 0.7) $ run 10)) |+| speed "[1 1 1.1225 1]/4" |+| cut "1", sound (samples "[kh*2 ~]? [[shard:1 kh? ~ kh?] kh*4?]" "17")] |+| shape "0.2"
+
+
