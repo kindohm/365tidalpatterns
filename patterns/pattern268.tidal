@@ -1,0 +1,4 @@
+bps (160/120)
+
+d1 $ every 5 (trunc 0.25) $ whenmod 5 4 (0.25 <~) $ whenmod 4 3 (0.25 <~) $ stack [ sound "~ [~ crush] ~ crush", whenmod 7 6 (const $ sound (samples "kit1*2 [~ kit1] [~ dup] [~ dup] drop kit1*2 kit1 [s sub]" (run 34))) $ sound "~ shard:1", sound (samples "k*16?" (run 31)), slow 12 $ (striate' 256 (1/100) $ sound "pad") |+| speed "[[1 0.75], [1.5 ~ 2 ~ 2.5]/2]"] |+| shape "0.2"
+

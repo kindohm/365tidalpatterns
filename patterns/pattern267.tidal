@@ -1,0 +1,5 @@
+bps (160/120)
+
+d1 $ whenmod 5 4 (rev) $ whenmod 6 5 (trunc 0.25) $ every 2 (striate 2) $ every 3 (0.25 <~) $ (|+| accelerate "[1 -1 0 [1 -1]]/2") $ stack [ every 7 rev $ sound (samples "crush ~ ~ crush ~ sub/2 crush/4 hitter/6" (run 13)) |+| cut "1", sound (samples "~ stite [~ stite] ~" "5"), slow 2 $ sound (samples "peri*2 kit5*2 [hh ul] doru*2 [hh dup] ul*2 ul*2 [dup untuned]*2" (run 49))] |+| speed (every 6 ((*1.25) <$>) "[1 1 1 [1 1 -1]]/3") |+| shape "0.2"
+
+hush
