@@ -1,0 +1,5 @@
+bps (172/120)
+
+d1 $ slowspread ($) [(|+| speed "0.5") . slow 2 . (|+| delay "0.6"), trunc 0.25, trunc 0.25, slow 1, rev, jux (iter 8), slow 1, (|+| vowel "u o"), slow 1] $ whenmod 7 6 (|+| speed "0.9") $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 9 7 (const $ slow 4 $ striate 16 $ sound "[blh4:18 blh4:19]/2" |+| shape "0.2") $ slow 2 $ striate 16 $ sound "[blh2:0 blh2:0 blh2:0 blh2:1]/4", whenmod 6 4 (const $ sound (samples "kh [ride hh] shard kh [ride hh] shard kh [ride hh]" "1") |+| cut "1") $  sound (samples "k hh stite hh hh k stite hh" "6") |+| shape "0.4", sound (samples "kit4*8" (every 3 (0.25 <~) $ every 2 (0.25 <~) $ run 44)), slow 8 $ (striate 32 $ sound "music8:4") |+| shape "0.3" |+| speed "[1, [~ 1.5 ~]*2]" ] |+| delayfeedback "0.3" |+| delaytime "0.5"
+
+hush
