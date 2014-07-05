@@ -1,0 +1,6 @@
+bps (130/120)
+
+d1 $ stack [ slow 2 $ sound (samples "jvbass*4 ~ lessb ~ ~ ~ jvbass*4 jvbass*4" (run 51)) |+| shape "0.5" |+| cut "1", density 2 $ sound "[~ cp/2]" |+| shape "0.9", density 2 $ sound (samples "k*4? [lesss [hh?, k?] k? k?]" (run 63)), sound "~ [b:8*4? ~]/2 ~ [~ sub]" |+| cut "3" |+| shape "0.4",  density 1 $ sound (samples "ride*2? ~ ride*2? ~" (run 41)) |+| speed (every 7 ((*0.8) <$>) "[1 1 0.9 1 1 0.8]/3"), slow 3 $ sound (samples "[numbers fx]" (slow 0.8 $ run 42)) |+| shape "[0.5 0]" |+| speed "1.2" ]
+|+| delayfeedback "0.4"
+|+| delaytime "0.35"
+

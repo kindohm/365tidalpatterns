@@ -1,0 +1,5 @@
+bps (130/120)
+
+d1 $ every 8 (density 2) $ whenmod 10 9 (smash 4 [4,2]) $ every 5 (striate 2 . slow 2 . (|+| speed "0.8")) $ whenmod 8 7 (trunc 0.25) $ whenmod 9 7 ((|+| speed "0.5") . slow 2) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 7 6 (density 2) $ sound "[~ hh:3]*4" |+| speed "[1 ~]/6", whenmod 5 4 (const $ sound "flkick:33*16?") $ sound "flkick:33*4" |+| shape "0.1" |+| speed "0.9", every 2 (rev) $ sound (samples "404*4 [~ 404]*2 [404 ~ 404 404] [404 404 ~ 404]" (run 133)) |+| cutoff ((*0.45) . (+0.04) <$> slow 6.1 sinewave1) |+| resonance "0.4" |+| speed "[1 1 1 0.9]/4" |+| delay "0.6"] |+| delayfeedback "0.3" |+| delaytime "0.35"
+
+
