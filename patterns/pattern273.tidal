@@ -1,0 +1,5 @@
+bps (160/120)
+
+d1 $ every 3 (0.25 <~) $ stack [ slow 8 $ (striate 32 $ sound "music8") |+| speed "[1 0.9]/2", whenmod 5 4 (jux (iter 8)) $ slowspread ($) [(|+| speed "0.8"), slow 1, (|+| speed "0.5") . slow 2, (|+| speed ((*2) . (+0.1) <$> slow 3.1 sinewave1)), slow 1, trunc 0.25] $ slow 2 $ sound (samples "ktite*4 [stite hh perc hh] ktite*2 stite*2 [perc untuned]*2 [stite kh]*2 doru*4 perc*2" (every 4 (slow 0.7) $ run 33)), slowspread ($) [slow 2, (|+| speed "[ 0.5 -0.5]") . slow 2, slow 1, (|+| accelerate "0.5"), (0.25 <~), trunc 0.25] $ slow 2 $ sound (samples "~ fx ~ fx ~ ul gab feel [~ gab]" (run 95)) |+| cut "3" ] |+| shape "0.2"
+
+hush

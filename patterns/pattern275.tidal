@@ -1,0 +1,5 @@
+bps (175/120)
+
+d1 $ slowspread ($) [(|+| speed "0.7") . slow 2 . (|+| delay "0.6"), slow 1, trunc 0.25, jux (iter 8), (0.5 <~), (|+| accelerate "[1 -1]*3"), brak, slow 1, (|+| speed "-1")] $ whenmod 6 3 (density 2) $ every 3 (0.25 <~) $ stack [ slow 8 $ striate 32 $ sound "music8:5", sound (samples "hh perc untuned kit1 dup perc hh perc" (run 63)), sound (samples "kh [s kh]" "17") |+| cut "1" ] |+| delayfeedback "0.5" |+| delaytime "0.35" |+| shape "0.2"
+
+

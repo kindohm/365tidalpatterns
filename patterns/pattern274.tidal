@@ -1,0 +1,5 @@
+bps (140/120)
+
+
+d1 $ whenmod 10 8 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ whenmod 8 6 (|+| speed "0.8 -0.8 1 -1.2") $ stack [ whenmod 6 5 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ slow 4 $ (striate 64 $ sound "music8:2") |+| speed "[1 0.9 1 1.5 0.5]" |+| shape "0.3", every 4 (density 2) $ every 3 (density 2) $ sound (samples "hh*8" "19") |+| gain "0.9", sound "~ sna" |+| shape "0.2", degradeBy 0.7 $ sound (samples "flkick*16" "28") ] |+| shape "0.2"
+
