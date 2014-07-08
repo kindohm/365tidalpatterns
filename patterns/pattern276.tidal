@@ -1,0 +1,10 @@
+bps (130/120)
+
+d1 $ whenmod 10 9 (const $ sound "123" |+| cut "1" |+| speed "0.65") $ whenmod 8 7 (|+| speed "0.8") $ stack [ 
+sound (samples "flkick*16?" (run 99)), 
+whenmod 6 5 (const $ sound "123" |+| speed "[1.3 -1.3]/2" |+| cut "1") $ degradeBy 0.7 $ sound (samples "404*16" (run 10)) |+| delay "0.5" |+| cut "1",
+whenmod 7 6 (const $ sound (samples "kh*4? [perc shard] [~ kh]*2 [cp 808cb sub ~]" (run 44)) |+| shape "0.2") $ sound (samples "[pain minc] [taste pain] pain*2 minc*2 minc*2 minc*2 pain*2 taste*2" (every 4 (slow 0.4) $ run 49)) ]
+|+| shape "0.2"
+|+| delayfeedback "0.5"
+|+| delaytime "0.35"
+
