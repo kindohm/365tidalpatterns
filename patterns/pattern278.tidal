@@ -1,0 +1,5 @@
+bps (100/120)
+
+d1 $ slowspread ($) [trunc 0.25, jux (iter 16), (|+| accelerate "-0.5 0.5"), slow 1, (|+| speed "-1"), slow 2 . (|+| speed "0.5"), stut 4 0.25 0.25, slow 1, (|+| vowel "u"), stut 8 0.5 0.5, slow 1] $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 5 4 (const $ sound (samples "bock 808cb hitter stite*3 [doru perc]*2 peri*4 [peri perc]*2 sea" (run 73))) $ whenmod 4 3 (const $ sound (samples "sub b shard k*4 stite*4 [k stite]*4 hh*8" (slow 0.76 $ run 88))) $ density 2 $ sound (samples "hawk ktite*4 laz ktite*4" (every 2 (slow 0.8) $ run 13)), slow 4 $ trunc 0.5 $ (striate' 128 (1/80) $ sound "cave") |+| speed "0.7" ] |+| shape "0.3"
+
+hush

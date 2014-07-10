@@ -1,0 +1,5 @@
+bps (170/120)
+
+d1 $ whenmod 6 4 (trunc 0.25) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [slow 8 $ spread' (striate' 128) ((*0.02) . (+0.001) <$> slow 2.1 sine1) $ sound "pad:95" |+| gain "0.8", sound (samples "k*16?" (run 99)), whenmod 8 6 (density 2) $ sound "~ s:1", slow 2 $ sound (samples "~ ~ b ~ ~ [~ b] ~ ~" (run 48)) |+| shape "0.3", sound (samples "{~ ~ ~ ~, hh*4 hh*4 hh*4 ~ ~}" (run 87)) |+| gain "0.9"] |+| shape "0.4"
+
+

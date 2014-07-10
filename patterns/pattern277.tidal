@@ -1,0 +1,5 @@
+bps (130/120)
+
+d1 $ slowspread ($) [jux (iter 8), rev, stut 4 0.25 0.25, slow 1, slow 2 . (|+| speed "0.5"), (|+| accelerate "0.5 -0.5"), slow 1, (|+| speed "0.8 1.2"), striate 2, stut 8 0.5 0.5, slow 1, triple 0.25 . (|+| speed "1.5")] $ whenmod 6 4 (trunc 0.25) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ whenmod 8 7 (const $ stack [ slow 2 $ striate 16 $ sound "fxlong:7", sound (samples "[perc doru]*4 [peri pot]*3 [shard kh*4] kh*6" (run 99)) ]) $ whenmod 7 5 (const $ sound (samples "b*2 vox stab [kh k]*4 [cp b] [404 cp] [stab cp]" (slow 0.8 $ run 77))) $ whenmod 5 4 (const $ sound (samples "kh*4 [shard 808cb nerd peri] [cp s]*2 kh*8" (run 55))) $ sound (samples "k*6 stite*3 [hh stite]*2 hh*8 [stite*3 k*3]" (run 43)) |+| shape "0.2"
+
+
