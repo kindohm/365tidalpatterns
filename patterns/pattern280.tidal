@@ -1,0 +1,5 @@
+bps (175/120)
+
+d1 $ slowspread ($) [jux (iter 8), striate 2 . slow 2, slow 1, stut 4 0.25 0.25, slow 1, (|+| speed "1.5") . slow 0.75, stut 8 0.5 0.5 . (|+| speed "1.25"), slow 1] $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 4 3 (density 2) $ sound (samples "{~ ~ ~ ~, hh*2 hh*2 ~ ~ ~}" (run 11)), sound "[house hh:3]*2", whenmod 5 4 (0.25 <~) $ density 2 $ sound (samples "{~ ~ ~ ~, k k stite ~ kh ~ [s hh]}" (run 13)), whenmod 6 5 (0.25 <~) $ sound (samples "{~ ~ ~ ~, dup*2 dup*2 dup*2 ~ ~ ~ ~ ~ dup*2}" (run 18)), whenmod 7 6 (density 2) $  sound (samples "{~ ~ ~ ~, ~ b nine ~ ~ [~ b]}" (run 7)) |+| cut "3", whenmod 8 7 (|+| speed "0.8") $ sound "~ psh [~ psh] ~" |+| speed "[1 1 -1 ~]/3", density 2 $ sound "clak*4 ~" |+| shape "0.4"  ]
+
+hush

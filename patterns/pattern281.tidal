@@ -1,0 +1,5 @@
+bps (170/120)
+
+d1 $ slowspread ($) [stut 6 0.4 0.4, slow 1, striate 2 . slow 2, trunc 0.25, trunc 0.25, slow 1, (|+| speed "0.5") . slow 2, slow 1] $ stack [ whenmod 7 6 (|+| delay "~ 0.5 ~") $ every 3 (0.25 <~) $ sound (samples "{~ ~ ~ ~, [k hh]*2 s [~ s] hh*2 hh*2}" (run 5)), whenmod 6 5 (0.25 <~) $ sound (samples "{~ ~ ~ ~, ~ jvbass*2 jvbass*2 [~ bass2] [~ bass2] ~}" (run 11)), whenmod 4 3 (slow 2) $ density 2 $ sound (samples "{~ ~ ~ ~, peri*2 peri*2 ul}" (run 10)), slowspread ($) [jux (iter 8), rev, (|+| speed "0.5") . slow 2, slow 1, stut 4 0.25 0.25, slow 1] $ density 2 $ sound (samples "{~ ~ ~ ~, ~ mel*2 mel*2 ~ ~ mel*2 mel*2 ~ ~}" (slow 0.8 $ run 5)) |+| cut "3"  ] |+| delayfeedback "0.5" |+| delaytime "0.5"
+
+hush
