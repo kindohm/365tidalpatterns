@@ -1,0 +1,4 @@
+bps (100/120)
+
+d1 $ whenmod 5 4 (trunc 0.25) $ every 3 (0.25 <~) $ slowspread ($) [stut 4 0.5 0.5 . slow 1.5, rev, rev, slow 1, slow 1, (|+| vowel "u o i e"), (|+| speed "0.5") . slow 2, degradeBy 0.5, (|+| accelerate "-1 1"), slow 1, (|+| speed ((+1) <$> slow 1.2 sine1))]$ stack [ jux (0.01 <~) $ (striate' 32 0.05 $ sound "frolic") |+| speed "[1, ~ 0.5 ~]/3" |+| shape "0.2", sound (samples "~ cp ~ shard" (run 12)) |+| shape "0.3", sound (samples "[k*2 kh]*2 stite*8 ride:1 dup*16?" (run 19)), sound "[hawk*2 ~]/2 [~ laz] ~ ~" |+| cut "3" ] |+| shape "0.2"
+

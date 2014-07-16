@@ -1,0 +1,10 @@
+bps (140/120)
+
+d1 $ whenmod 10 9 (const $ density 2 $ sound (samples "ride*6" (run 4)) |+| speed "0.6" |+| cut "8" |+| cutoff ((*0.45) <$> slow 3.1 sine1) |+| resonance "0.45") $ every 7 (slow 2 . (|+| speed "0.5")) $ whenmod 6 5 (trunc 0.25) $ every 3 (0.25 <~) $ whenmod 6 5 (jux (iter 8)) $ stack [slow 16 $ trunc 0.5 $ (spread' (striate' 32) ((+0.001) <$> slow 3.1 sine1) $ sound "fxlong:8") |+| shape "0.5" |+| speed ((+1) <$> slow 4.1 sine1), stack [ every 3 (stut 4 0.25 0.25) $ sound "mel" |+| speed "[0.5 0.5 0.5 0.25]/4"
+|+| shape "0.4"
+|+| delay "0.5", whenmod 8 6 (const $ slow 4 $ sound (samples "k*8? [kh shard] hh*8 cp [k s]*6 [kh hh]*4 808cb dup*4" (run 21)) |+| speed "0.8") $ density 2 $ sound (samples "{~ ~ ~ ~, peri peri*2 peri peri*2 foot*3}" (run 4)) |+| speed "0.8", sound (samples "[s [k k*2]/2]*2 [[hh*6 ul hh*6 sea/3] hh*12]/2" "19") ] ]
+|+| delaytime "0.5"
+|+| delayfeedback "0.5"
+|+| shape "0.2"
+
+hush
