@@ -1,0 +1,5 @@
+bps (200/120)
+
+d1 $ whenmod 8 3 (slowspread ($) [(|+| vowel "i i i e"), stut 8 0.5 0.5 . slow 2, (|+| speed "0.8"), slow 1, trunc 0.25, trunc 0.25, slow 1, slow 1, rev . striate 4 . slow 2]) $ every 4 (0.25 ~>) $ every 5 (0.25 ~>) $ whenmod 10 8 (const $ slow 2 $ sound "bom*4 [lesss bom*2] bom*4 [bom*2 lesss]" |+| cut "2 0 2 [2 0]" |+| speed "0.8") $  whenmod 8 6 (const $ slow 2 $ stack [ sound (samples "[peach sub] [~ kh] [lesss c64] [psr c64] peach [psr c64] c64:1*2 c64:1*2" (run 43)) |+| cut "0 0 1 1", sound "[bom boi] [noi bosch] [~ [lessb boi]] [~ boi]*2" ]) $ stack [density 2 $ sound (samples "{~ ~ ~ ~, psr c64 peach psr c64 peach psr}" (run 71)) |+| cut "1" |+| shape "0.3" |+| speed "[1 0.8 0.5 0.9]/3", slow 2 $ sound (samples "kh*2 kh [cp boi] bosch [~ bosch] b*2 ul*2 peri*2" (run 31)) |+| speed ((+0.6) <$> slow 1.23 sine1) |+| cut "2", sound "lessb/4 lesss", slow 2 $ sound "~ ~ lessh*4 ~" ] |+| delayfeedback "0.5" |+| delaytime "0.5"
+
+hush

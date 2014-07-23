@@ -1,0 +1,5 @@
+bps (100/120)
+
+d1 $ stack [ whenmod 6 5 (slow 2 . slow (5%4)) $ whenmod 5 4 (trunc 0.25 . striate 2) $ stack [ density 4 $ sound (samples "{~ ~ ~ ~, stite stite stite stite crush/2}" (run 12)) |+| shape ((*0.8) <$> slow 2.1 sine1), whenmod 6 4 (const $ sound (samples "{~ ~ ~ ~, ride ride k*16}" (slow 0.8 $ run 20))) $ sound (samples "ride ride ride k*16" (slow 0.8 $ run 20)) |+| speed "[0.8 [0.8 [1 0.9 0.8]/3]]"] , whenmod 5 3 (jux (|+| speed "0.9")) $ every 2 (0.25 <~) $ every 3 (0.25 <~) $ spread (slow) [6, 3, 5, 4] $ (striate' 32 0.025 $ sound (samples "alonevox" (slow 0.9 $ run 11))) |+| speed (every 3 ((*0.9) <$>) "[0.8 -0.8 0.5 1]") |+| shape ((*0.5) <$> slow 1.7 sine1) ]
+
+hush

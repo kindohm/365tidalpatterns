@@ -1,0 +1,5 @@
+bps (170/120)
+
+d1 $ slowspread ($) [(|+| speed "1 2 -3 4"), trunc 0.25, trunc 0.25, slow 1, slow 2 . stut 8 0.5 0.5, slow 1] $ stack [ whenmod 6 4 (iter 4) $ slow 2 $ sound (samples "noi*4 bom [boi noi] hh*4 [c64 dup*2] [c64 doru]*2 [doru ul]*2 [peri c64*2]" (run 45)) |+| cut "3" |+| speed ((+0.5) <$> slow 1.8 sine1), sound (samples "[[kh*2 pain]/2 earth] [shard:9 pain/2 earth kh/2]" (slow 0.9 $ run 12)) |+| shape "0.2", sound (samples "~ ~ ~ b ~ ~ [~ b] [~ b]" (run 47)) |+| cut "2" |+| speed "2", slow 2 $ every 2 rev $ trunc 0.5 $ striate 32 $ sound "shard:4"]
+
+hush

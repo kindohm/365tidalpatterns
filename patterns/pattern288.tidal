@@ -1,0 +1,5 @@
+bps (110/120)
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ iter 16 $ stack [ iter 8 $ whenmod 9 8 (const $ sound (samples "k*4 [kh*2 [kh shard]] [808cb cp] [~ cp]" (run 24))) $ sound (samples "[k*2 kh*2] [s [peri ul]] [cp peri ul peri] [hh flkick]*2" (run 31)), iter 4 $ sound (samples "~ b ~ ~ ~ ~ [~ b] ~" (run 42)) |+| cut "1", whenmod 5 3 (slow 2) $ slow 4 $ (striate 64 $ sound "pad:4") |+| speed "[1 0.5, [1.5 ~ ~ 2]/3]", every 3 rev $ sound "~ ride [~ ride] [~ ride]" |+| speed "1 1.1 1.2" ]
+
+hush

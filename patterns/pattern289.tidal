@@ -1,0 +1,5 @@
+bps (180/120)
+
+d1 $ whenmod 10 8 (const $ stack [slow 2 $ sound "~ [gnome:74 gnome:76]/2" |+| speed "1.1", slow 2 $ sound "fire" |+| cut "1"]) $ stack [ brak $ (striate 32 $ sound "bass2 bass2:1") |+| shape "0.4" |+| speed "2", whenmod 4 3 (slow 2) $ iter 4 $ sound (samples "[s hh]*2 [k*4 kh*2] [stite hh*4] [peach hh cp hh]" (slow 0.8 $ run 31)) |+| cut "1", slow 4 $ sound (samples "{~ ~ ~ ~, ~ gretsch:0*8 ~}" (slow 0.7 $ run 11)) |+| shape "0.4" ]
+
+hush
