@@ -1,0 +1,7 @@
+bps (200/120)
+
+d1 $ slowspread ($) [stut 4 0.25 0.25, slow 2 . (|+| vowel "o u e i"), slow 1, (|+| accelerate "1 -1"), (|+| speed "-1 1.1"), slow 1] $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 5 4 (0.25 <~) $  slow 4 $ trunc 0.5 $ (striate' 64 0.06 $ sound "doosh") |+| speed "[1 2 0.5 1]*2" |+| gain "[1 1 1.1 1.2]*2", whenmod 4 3 (0.25 <~) $ slow 2 $ sound (samples "~ [hh [~ stite]] s [hh [hh stite]] s k*4 [hh stite]*2 [k kh]*2" (run 31)), whenmod 6 4 (0.25 <~) $ whenmod 7 6 (density 2) $ sound (samples "arpy*16" (run 21)) |+| cutoff ((*0.2) <$> slow 1.91 sine1) |+| speed "[1 1 1 0.5]/4" |+| resonance "0.5" |+| delay "0.5" ] |+| delaytime "0.75" |+| delayfeedback "0.5"
+
+hush
+
+hush

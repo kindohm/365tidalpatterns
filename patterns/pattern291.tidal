@@ -1,0 +1,5 @@
+bps (130/120)
+
+d1 $ whenmod 9 7 (trunc 0.25) $ iter 8 $ stack [trunc 0.5 $ (striate' 16 0.2 $ sound "crush") |+| speed ((whenmod 4 2 rev) "[[1 1 0.75]/3, 1.5 0.5]*2") |+| gain "1.2" |+| cutoff "0.1" |+| resonance "0.5", density 4 $ sound (samples "{~ ~ ~ ~, peri peri peri peri doru perc}" (run 18)) |+| speed "0.7", sound "[b:11 b:10*2]/2" |+| cut "2", density 2 $ sound "[kh/2 kh] ~ [shard hh] ~" |+| speed "1.5" ]
+
+hush

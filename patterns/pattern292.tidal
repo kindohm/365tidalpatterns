@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 8 6 (trunc 0.25) $ every 5 (0.25 <~) $ every 4 (0.25 <~) $ whenmod 9 6 (iter 8) $ stack[ slow 2 $ sound (samples "kh*4 k*2 [s ~] peri*4 [shard peri*2] k*4 peri*4 ~" (run 22)), slow 2 $ sound (samples "~ ~ [~ b] ~ ~ ~ ~ b" (run 44)), density 2 $ sound "{~ ~ ~ ~, sea*2 sea*2 ~}" |+| cut "4" |+| speed (whenmod 14 8 ((*0.5) <$>) "0.5"), sound "[house hh:8]*4" ]
+
+hush
