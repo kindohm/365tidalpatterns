@@ -1,0 +1,5 @@
+cps 1.1
+
+d1 $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [ slow 2 $ whenmod 9 7 (const $ slow 2 $ sound (samples "k*8 [k*2 kl] [shard k kh k] [shard drop kh kh] [cp kh*2] kh*4 kh*6 [shard sub k laz:1]" (run 33))) $ sound (samples "[kh*2? kl] [hh hh hh s] [k*2 808bd] [[808cy 808cb laz:1]/3 kl hh hh]" (run 22)), slow 8 $ trunc 0.5 $ rev $ (striate 16 $ sound "padloop8:2") |+| delay "0.3" ] |+| delayfeedback "0.4" |+| delaytime "0.4"
+
+hush
