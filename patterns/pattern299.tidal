@@ -1,0 +1,8 @@
+cps 1
+
+d1 $ whenmod 8 6 (|+| speed "0.9") $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [slow 16 $ (trunc 0.25 $ striate 16 $ sound "k*24 s:4*16 hh*12 perc*16")
+|+| delay "0.4" |+| gain "0.7", whenmod 7 6 (striate 2) $ slow 2 $ sound (samples "[~ kh] [~ kh? ~ kh] [cp:3 s] [ kh]" (run 18)), whenmod 6 5 (striate 2) $ slow 4 $ sound (samples "hh*6 hh*4 hh*3 hh*2 hh*2 hh*3 hh*4 hh*6" "3") |+| cutoff (scale 0.07 0.3 $ slow 5 sine1) |+| speed (scale 0.5 1 $ slow 4.1 sine1) |+| resonance "0.4" |+| delay "0.2" ]
+|+| delaytime "0.4"
+|+| delayfeedback "0.5"
+
+hush
