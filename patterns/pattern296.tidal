@@ -1,0 +1,5 @@
+bps (240/120)
+
+d1 $ whenmod 8 7 (|+| accelerate "-0.1") $ whenmod 6 5 (trunc 0.25) $ iter 4 $ stack [ sound (samples "psr*2 psr k psr*2 psr k psr k" (run 18)), stut 4 0.25 0.5 $ sound "{~ ~ s:8 ~ ~}%4", sound "{hh*2 hh*2 ~}%4" |+| gain "0.85", sound "~ [mach mach*2]/2" |+| cut "2" |+| speed "[1 0.8 1 -0.8]/5" ] 
+
+hush

@@ -1,0 +1,11 @@
+bps (220/120)
+
+d1 $ whenmod 10 8 ((|+| speed "0.4") . slow 2) $ whenmod 5 4 (rev) $ whenmod 8 5 (iter 4) $ whenmod 9 5 (iter 8) $ slow 4 $ (striate' 128 (0.05) $ sound "mach")
+|+| speed (slow 1.25 $ "[1 0.5, [1.5 2 1.25 0.75]/3]")
+|+| cutoff (scale 0.01 0.2 $ slow 2.1 sine1)
+|+| resonance "0.3"
+|+| delay "0.5" 
+|+| delayfeedback "0.4" 
+|+| delaytime "0.5"
+
+hush

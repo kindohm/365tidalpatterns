@@ -1,0 +1,6 @@
+bps (220/120)
+
+d1 $ whenmod 9 7 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ sound (samples "{k clak k clak clak}%4" (run 13)),  sound (samples "{~ arpy*2 ~ arpy*2 ~ arpy*2 ~}%4" (run 33)) |+| delay "0.5" |+| cutoff (scale 0.03 0.3 $ slow 2.813 sine1) |+| resonance "0.7", sound (samples "{hh hh hh hh ~ hh ~ ~ ~}%8" (run 31)), sound (samples "{~ b ~ ~ sub/2 ~}%4" (run 11)) ] |+| delaytime "0.4" 
+|+| delayfeedback "0.5" 
+
+hush
