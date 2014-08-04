@@ -1,0 +1,5 @@
+bps (175/120)
+
+d1 $ slowspread ($) [slow 1.5, slow 1, slow 2, slow 3, slow 1, rev, (|+| speed "0.5") . slow 2, slow 1] $ whenmod 9 7 (degradeBy 0.8) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ degradeBy 0.5 $ stack [ sound (samples "flkick*16" (run 72)) |+| shape "0.1" |+| gain "1.1", slow 8 $ (striate 128 $ sound "insect") |+| cut "1" |+| shape "0.6" |+| gain "1" |+| speed "[0.5, 1]" ], sound (samples "~ s ~ s" (run 16)) |+| speed "0.7", density 2 $ sound (samples "{hh hh*2 hh hh*2 hh ~}%4" (run 22)), slow 8 $ (striate' 128 (1/60) $ sound "padloop4") |+| speed "[1 0.5, ~ 1.5 2]" ]
+
+hush

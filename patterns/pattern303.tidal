@@ -1,3 +1,5 @@
 bps (130/120)
 
+d1 $ whenmod 5 4 (|+| speed "1.2 1.5 1 0.7") $ iter 4 $ stack [whenmod 6 5 (0.25 <~) $ density 2 $  sound "squares ~ ~ squares" |+| cut "1" |+| speed "1 1.1", whenmod 7 5 (0.25 <~) $ sound "[[~ ~ ~ ~ ~ ~ laz:1*4]/8 [laz:1 laz:0]/2]*2" |+| speed "0.25" |+| cut "2", whenmod 4 3 (0.25 <~) $  sound "[cp:4/2 ~ ~ cp:4 ~ ~ ~ ~]*2", sound "[~ ~ ~ [~ gab*2]/2 ~ ~ ~]" |+| cut "3", whenmod 5 4 (0.25 <~) $ sound (samples "kit1*16" (run 33)) |+| speed "2" ] 
+
 hush
