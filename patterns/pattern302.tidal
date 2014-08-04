@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 9 7 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ sound (samples "k*4 [[s, cp] laz:1] [hh*4] [[s, cp] ktite ~ hh]" (run 14)) |+| speed "[1 1 1.1 -0.9 1]/6", sound (samples "[~ sub] ~ b/2 [~ b/3]" (run 14)) |+| cut "1", sound "[kl [~ kl]]*2" |+| cut "2" |+| speed "0.5" |+| gain "0.9", sound "~ gnome:2/2 vox:1/3 fran:8" |+| speed "1.25" |+| cut "3", slow 2 $ trunc 0.25 $ striate 16 $ sound "alone" |+| speed (whenmod 5 4 ((*0.9) <$>) "1") |+| gain "0.9" |+| cutoff "0.05" |+| resonance "0.1" |+| delay "0.4"] |+| delayfeedback "0.5" |+| delaytime "0.5"
+
+hush
