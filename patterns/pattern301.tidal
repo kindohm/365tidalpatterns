@@ -1,3 +1,5 @@
+bps 1
+
 d1 $ slowspread ($) [rev, jux (iter 8), slow 1, (|+| speed "0.5, -0.7") . slow 2, slow 1, stut 8 0.5 0.5 . slow 2, slow 1, (|+| accelerate "-0.5")] $ every 5 (0.25 <~) $ whenmod 8 6 (trunc 0.25) $ stack [slow 4 $ striate 16 $ sound "pad:9" |+| shape "0.3", whenmod 11 9 (const $ slow 2 $ sound (samples "k*6 k*6 [ul:1 ul]*2 [sea gab] monster monster ul*2 ul" (run 33))) $ slow 2 $ sound (samples "monster:0 [ul2:0 k*2] peri*4 ul2:0" (run 19)), sound "{~ ~ ul:3*2 ul:3*2 ~}%4"] |+| speed "[1 1 -1.1 1 1 0.8]/6"
 
 hush
