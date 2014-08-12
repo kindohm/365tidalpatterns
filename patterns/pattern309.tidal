@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 8 6 (trunc 0.25) $ slowspread ($) [slow 2 . (|+| delay "0.5"), slow 1, (|+| speed "0.5") . slow 1.5, stut 8 0.5 0.2, rev, slow 1, stut 16 0.5 0.1] $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [ whenmod 5 3 (|+| speed "0.5") $ whenmod 4 3 (0.25 <~) $ slow 2 $ chop 64 $ sound (samples "~ newnotes newnotes ~ newnotes newnotes ~ newnotes" "[15 20 17 12 23 22 18]*5") |+| delay "0.5", whenmod 6 5 (0.25 <~) $ sound (samples "tite*8 [s tite*4 tite tite*2]" (run 34)), whenmod 5 4 (0.25 <~) $ slow 2 $ (chop 8 $ sound (samples "k*8 hh*16 shard tite*12" (run 62)))  ] |+| delayfeedback "0.4" |+| delaytime "0.35"
+
+hush

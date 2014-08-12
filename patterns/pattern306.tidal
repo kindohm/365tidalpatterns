@@ -1,0 +1,4 @@
+
+d1 $ whenmod 8 7 (|+| vowel "a o u e") $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 6 5 (|+| accelerate "1") $ whenmod 5 4 (stut 8 0.5 0.1) $ whenmod 6 4 (chop 6) $ slow 2 $ sound (samples "keys2*4 keys2*4 keys2*4 keys1*4" (whenmod 4 3 (const $ "[2 3]*8") $ "[0 1]*8")) |+| delay "0.2" |+| delayfeedback "0.2" |+| delaytime "0.35" |+| speed "[1 0.9 1.25 1]/3", slowspread ($) [chop 16, slow 1, stut 12 0.7 0.1, slow 1, jux (iter 8), slow 1, iter 4] $ every 3 (0.25 <~) $ slow 2 $ sound "~ [kv kv ~ kv] sv [~ kv? ~ kv?]" |+| speed (whenmod 5 3 ((*0.8) <$>) "[1 1.1 1 1 0.9]/7"), sound "{hh*2 hh*2 ~ hh*2 ~}%4" |+| gain "0.8" |+| speed "[1 1 2 1 1.5 -1]/5" ]
+
+hush

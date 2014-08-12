@@ -1,0 +1,6 @@
+bps (200/120)
+
+
+d1 $ whenmod 15 13 (iter 4) $ every 3 (0.25 <~) $ stack [whenmod 8 7 ((|+| speed "0.5") . slow 1.5) $ whenmod 9 7 (trunc 0.25) $ whenmod 5 4 (stut 8 0.6 0.1) $ whenmod 4 3 ((|+| speed "1.5") . stut 4 0.25 0.25) $ slow 2 $ sound (samples "[sv:1 sv:0 ~ kv]!! [kv kv ~ kv]" (run 9)), whenmod 7 4 (|+| speed "1.1225") $ whenmod 5 4 (chop 12) $ sound (samples "{~ bass2*2 mach bass2*2 ~}%4" (run 26)) |+| gain "0.9" |+| shape "0.2" |+| cut "1", sound (samples "{hh*2 hh*2 hh*2 hh*2 hh*2 ~ ~ ~ ~ ~ ~}%8" (run 44))]
+
+hush

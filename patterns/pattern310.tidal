@@ -1,0 +1,5 @@
+bps (175/120)
+
+d1 $ stack [ whenmod 4 3 (stut 4 0.5 0.33) $ sound (samples "[[kv kv:2]/2 ~ ~ tite:1] [sv tite:2] [hh ~ tite:4 tite:3]" (run 44)) |+| speed "[1 [1,1.5] [0.8,2] [0.8 1 0.5 1.2]]/4", whenmod 7 5 (trunc 0.25) $ slowspread (slow) [1,2,1.5,1,3,0.5] $ chop 64 $ sound "[~ bass2] bass2:1*4 [[bass2 bass2:1] [bass2:0 bass2:1]]" |+| speed "[1, 0.5]"]
+
+hush
