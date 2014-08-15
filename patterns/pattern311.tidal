@@ -1,0 +1,6 @@
+bps (150/120)
+
+d1 $ whenmod 4 3 (trunc 0.5 . striate 8 . slow 2) $ whenmod 6 5 (slow 2 . stut 4 0.25 0.25) $ whenmod 8 7 (trunc 0.25) $ every 3 (0.25 <~) $ whenmod 7 6 (stut 12 0.5 0.1) $ iter 4 $ stack [ whenmod 6 4 (|+| speed "0.9") $ density 2 $ sound "bass1:1 ~ ~ bass1:1" |+| cut "1",  whenmod 5 4 (const $ sound (samples "[kv [sv hv]] [hv kv] [sv hv*2] [kv [sv hh*4]]" (run 31))) $ sound (samples "kv*2 [sv kv] hv*4 [kv hv]*4" (run 13)) |+| speed "[1, 1.1, 0.9]" ]
+
+hush
+

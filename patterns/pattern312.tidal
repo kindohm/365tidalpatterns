@@ -1,0 +1,6 @@
+bps (160/120)
+
+d1 $ stack [ spread' (chop) "[16 24 16 12 6 16]/6" $ stack [ sound (samples "kv*16?" (run 24)) |+| speed "[1 1 0.8 1.2]/6", sound "~ [sv:4, sv:0, sv:3]", sound "hv*8", sound "{bass2 ~ bass2*4}%4" |+| delay "[0 0 0 0.5]/5" ], jux (0.01 <~) $ degradeBy 0.7 $ slow 4 $ (striate 64 $ sound "plane") |+| speed "[[1 0.5]/2, [1.5 2]]" |+| delay "0.3"] |+| delaytime "0.4" |+| delayfeedback "0.4"
+
+hush
+
