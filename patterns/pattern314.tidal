@@ -1,0 +1,5 @@
+bps (120/120)
+
+d1 $ slowspread ($) [(|+| speed "2 0.8"), stut 8 0.5 0.2, slow 1, (|+| speed "1 -1 1 -1"), (|+| accelerate "-1 1"), slow 1, trunc 0.25, trunc 0.25] $  stack [ whenmod 16 8 (const $ slowcat [sound "gnome:1*8", sound "gnome:1*4"] |+| cut "1" |+| begin "0.05") $ slowcat [sound "nerd:5*8", sound "nerd:5*4"] |+| cut "1", slowcat [sound (samples "k*4 [s k*2] [k*2 s] [k hh]*4" (run 44)), sound (samples "[s hh]*4 [cp 808cb bass1 kh s bass2 ~ bass2]" (run 22)), sound (samples "kh*8 [s kh hh hh k hh ~ hh]" (run 33)), sound (samples "[kh tite]*4 [sv hv kv hv] kv*4 [sv kv*2]" (run 44))] ]
+
+hush

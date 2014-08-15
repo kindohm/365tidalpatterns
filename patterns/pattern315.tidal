@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 8 6 (trunc 0.25) $ whenmod 5 4 (iter 4) $ whenmod 6 5 (|+| speed "1.5 0.8 2 0.5") $ stack [ slow 2 $ chop 32 $ sound (samples "judah nerd bock*2 newnotes*8" (slow 0.8 $ run 116)), slow 2 $ sound (samples "[k*2 [~ k] [~ k] k*2] [[stite,s] ktite*6] k*6 [[stite,s] k*2 k*2 k*2]" (run 24)), every 4 (density 2) $ every 3 (density 2) $ sound "hh:3*8", chop 24 $ sound (samples "keys2*4 ~ ~ ~" (run 73)) |+| delay "0.7" ] |+| shape "0.2" |+| delaytime "0.3" |+| delayfeedback "0.4"
+
+hush
