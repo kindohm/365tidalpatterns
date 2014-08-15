@@ -1,3 +1,5 @@
 bps (180/120)
 
+d1 $ whenmod 5 3 ((|+| speed "0.5") . slow 3 . jux (iter 4)) $ whenmod 7 5 (degradeBy 0.7 . (|+| delay "0.5")) $ (slow 2 $ stut 64 0.25 0.75 $ sound (samples "kv [sv kv]" (irand 9))) |+| delaytime "0.2" |+| delayfeedback "0.5"
+
 hush
