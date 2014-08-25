@@ -1,0 +1,5 @@
+bps (210/120)
+
+d1 $ whenmod 8 6 (slowspread ($) [trunc 0.25, trunc 0.25, slow 1, jux ((|+| speed "0.8")), stut 8 0.6 0.1, rev, slow 1, (|+| speed "0.5") . slow 2 . stut 4 0.25 0.25, (|+| speed "1 -1 1.25 1.5"), slow 1, stut 8 0.5 0.2, slow 1]) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ slow 2 $ slowspread (chop) [128, 64, 256, 32, 200] $ sound (samples "newnotes*4 [~ keys2*2 keys2*2 keys2*2] [keys1 keys1 newnotes newnotes] newnotes*4" (run 33)) |+| cutoff (scale 0.03 0.3 $ slow 2.9 sine1) |+| resonance "0.7" |+| cut "1" |+| speed "1, 1.5" |+| shape "0.3" |+| delay "0.4", slow 2 $ sound (samples "kh*8 [shard kv ~ kv] [kv kl ~ kl] [shard laz:0 ~ gab:0]" (whenmod 9 6 (slow 0.8) $ whenmod 7 5 (0.25 ~>) $ run 43)), slow 1.5 $ sound "fuckable" |+| speed "1.1" |+| delay "0.3" |+| shape "0.5"] |+| delaytime "0.4" |+| delayfeedback "0.3"
+
+hush

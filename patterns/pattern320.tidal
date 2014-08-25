@@ -1,0 +1,5 @@
+bps (160/120)
+
+d1 $ slowspread ($) [slow 2, slow 1, slow 1.5 . stut 3 0.25 0.25, (|+| speed "0.5") . stut 4 0.25 0.25 . slow 3, slow 1, rev, (|+| vowel "o"), slow 1, slow 4 . jux (0.01 <~) . rev, slow 1, trunc 0.25, trunc 0.25] $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ chop 128 $ stack [sound "[kv ~]/2 [sv]", sound (samples "~ hv ~ hv*2" (run 7)), sound "[~ [~ dup]/2] ~ [dup*2 dup] ~", every 3 (density 2) $ every 4 (density 2) $ density 2 $ (0.5 <~) $ sound "808sd", every 3 (0.25 <~) $ every 4 (0.25 <~) $ slow 2 $ sound "cave sea alone frolic scrape padloop8:5 pad" |+| gain "0.9" |+| speed (scale 0.8 1 $ slow 5.1 sine1)]
+
+hush

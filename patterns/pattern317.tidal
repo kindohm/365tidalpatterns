@@ -1,0 +1,3 @@
+d1 $ whenmod 8 5 (|+| speed (whenmod 7 4 ((*0.9) <$>) "0.9")) $ whenmod 9 7 (trunc 0.25) $ stack [ whenmod 5 4 (0.25 <~) $ slow 2 $ sound "~ mach b ~ mach b ~ ~ ~ ~ mach b ~ mach b mach b" |+| cut "1", stack [slow 2 $ sound "~ cp:3", slow 2 $ (0.025 <~) $ sound "~ cp:4"], whenmod 7 5 (0.25 <~) $ slow 2 $ degradeBy 0.3 $ sound (samples "kh*2 ~ ~ ~ ~ ~ [~ kh] [~ kh]" "13") |+| gain "0.9", whenmod 5 4 (density 2) $ whenmod 4 3 (density 2) $ sound (samples "hh*4" "7") |+| gain "0.9" ]
+
+hush

@@ -1,0 +1,5 @@
+bps (200/120)
+
+d1 $ slowspread ($) [trunc 0.25, trunc 0.25, slow 1, (|+| speed "0.7") . slow 2 . stut 8 0.5 0.25, slow 1, rev, slow 1, (|+| accelerate "-1 1"), slow 1, (|+| speed "1 -1 1.5 2"), slow 1] $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [chop 128 $ stack [slow 2 $ sound "autopad autopad:1", sound "~ keys2" ], slow 2 $ sound (samples "[kv k kh kv] [psh sn tite tite] tite*6 [psh drop/2 ~ ~]" (run 31)), slow 2 $ sound "~ ~ ~ [~ ~ ~ [~ ~ ~ mint]/4]" |+| delay "0.3", slow 2 $ sound (samples "~ ~ ~ [~ b/3] ~ ~ b:1/2 [~ b:1/2]" "6") |+| cut "2"] |+| delaytime "0.5" |+| delayfeedback "0.5"
+
+hush
