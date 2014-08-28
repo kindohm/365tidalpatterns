@@ -1,0 +1,5 @@
+cps 0.5
+
+d1 $ slowspread ($) [stut 12 0.5 0.1 . slow 2, rev, slow 1.5 . (|+| accelerate "-1 1"), id, (|+| speed "1.2 1.5"), jux (iter 8), id] $ whenmod 8 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ stack [ sound (samples "keys2*8" (slow 0.73 $ run 21)), sound (samples "[~ 404]*8" (slow 6.1 $ run 23)) |+| gain "0.7" |+| speed "0.5" ] |+| cutoff (scale 0.01 0.2 $ slow 4.1 sine1) |+| resonance "0.7" |+| delay "0.3" |+| shape "0.3" |+| delayfeedback "0.4" |+| delaytime "0.5", jux ((|+| speed "1.1")) $ sound (samples "kv*12 [[sv, cp] kv? kv? kv? kv? kv?]" (slow 0.9 $ run 34)) |+| cutoff (scale 0.01 0.1 $ slow 2.9 sine1) |+| resonance "0.1"]
+
+hush

@@ -1,0 +1,5 @@
+cps 0.4
+
+d1 $ whenmod 10 8 (trunc 0.33) $ within (0.25, 0.75) (whenmod 6 5 (jux (iter 6)) . whenmod 7 5 (slow 1.5) . whenmod 5 3 (slow 2 . rev)) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ (slowspread (chop) [32, 4, 64, 16] $ sound "sea*4 sea*4 sea*4 sea*4 sea sea") |+| speed (whenmod 6 4 ((*0.9) <$>) $ whenmod 5 3 ((*0.9) <$>) "[1 0.75 [0.5 0.25]/2]") |+| delay "0.5", slow 1 $ slowspread (chop) [64, 128, 256] $ sound (samples "tite*4 [~ tite*2] tite*4 tite*4 [doru*2 tite*2] tite*4" (run 42)) |+| speed (scale 0.8 1.5 $ slow 2.81 sine1) |+| shape (scale 0.01 0.5 $ slow 2.1 sine1) |+| speed "0.1225", chop 512 $ sound "doosh bosch" |+| shape "0.2" |+| speed "[[1 0.5 0.25]/4], [3 0.1225 0.75]" |+| delay "0.2"] |+| delayfeedback "0.4" |+| delaytime "0.6"
+
+hush

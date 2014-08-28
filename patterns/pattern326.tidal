@@ -1,0 +1,5 @@
+bps (180/120)
+
+d1 $ slowspread ($) [stut 12 0.5 0.1 . slow 2, id, rev, id, (|+| speed "0.5 1.2 1.5"), (|+| accelerate "-0.5"), id, trunc 0.25, trunc 0.25, id, within (0.25, 0.75) ((0.25 <~))] $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [ slow 4 $ striate 32 $ sound "[blh4:16 blh4:17]/2", slow 4 $ striate 64 $ sound "insect", sound (samples "tite*16" (run 32)), sound (samples "~ shard ~ [~ shard]" (every 4 (slow 0.8) $ run 31)), sound (samples "[~ ~ ~ kh] ~ [~ kh] ~" (run 24)) ]
+
+hush
