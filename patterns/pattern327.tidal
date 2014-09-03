@@ -1,0 +1,4 @@
+cps (100/120)
+
+d1 $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ whenmod 7 5 (iter 4) $ whenmod 6 5 (stut 8 0.5 0.1) $ stack [ whenmod 5 4 (0.25 <~) $ slow 2 $ sound "[kv*2 kv kv*2 kv*2 [~ kv] [~ kv] ~ kv*2 ~]" |+| speed "19", whenmod 4 3 (0.25 <~) $ whenmod 5 3 (slow 4 . (|+| speed "2")) $ chop 128 $ sound "[~ [sv ~] sv ~ sv]" |+| speed "5" |+| shape "0.3", every 5 (density 2) $ whenmod 3 2 (0.25 <~) $ within (0, 0.5) (every 3 (density 2)) $ slow 2 $ sound (samples "kv*2 kv sv ~ sv ~ kv*2" (run 31)), whenmod 8 5 (const $ slow 2 $ (chop 64 $ sound "pad:4 pad:6") |+| speed (scale 0.5 1.5 $ slow 4.1 sine1)) $ slowspread (slow) [3, 2, 4, 2.5] $ chop 128 $ sound "autobass" |+| speed "[1 1.5 2]/3" ]
+
