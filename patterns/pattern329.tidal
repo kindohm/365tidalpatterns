@@ -1,0 +1,5 @@
+cps 0.6
+
+d1 $ whenmod 10 8 (trunc 0.25) $ every 5 (0.25 <~) $ every 4 (0.25 <~) $ stack [ within (0.25, 0.75) (whenmod 5 3 (slow 2) . whenmod 7 5 (rev)) $ jux (0.01 <~) $ slow 2 $ (striate' 2048 (1/500) $ sound "gnome:4") |+| speed "[1 2 0.75 1.5]/3" |+| shape "0.4", slowspread ($) [stut 16 0.5 0.1, id, (|+| vowel "a o u e i o u a u a o e u"), (|+| speed "0.75") . slow 1.5, id, trunc 0.25, id, (|+| speed "2 3 5"), (|+| accelerate "0.5 -1 2 0"), id, (|+| cutoff (scale 0.01 0.3 $ slow 1.19 sine1)) . (|+| resonance "0.7") ] $ slow 2 $ sound (samples "[tite*3 kv] [kh tite] [shard hh tite*2] [stite hh sv tite*2] [hh tite]*2 [cp tite*2] [shard tite*4] [cp kv kh kv]" (run 52))] 
+
+hush

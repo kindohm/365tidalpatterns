@@ -2,3 +2,4 @@ cps 1
 
 d1 $ whenmod 8 6 (trunc 0.25) $ slowspread ($) [(|+| vowel "a o u"), rev, id, stut 4 0.25 0.25 . slow 2, (|+| speed "0.5 0.8 0.6") . slow 2, id, within (0.5, 1) ((|+| speed "2")), (0.25 <~), id, (|+| delay "0.7")] $ every 4 (within (0.25, 0.75) (slow 2 . rev . (|+| speed "0.7"))) $ stack [ stack [slow 8 $ trunc 0.25 $ (striate 16 $ sound "kv*8 sv*16 hv*32 tite*8") |+| speed (scale 1 3 $ slow 2.1 sine1), whenmod 7 4 (degradeBy 0.5 . density 2) $ slow 4 $ sound (samples "[kv*2 kv sv]!!! kv*6" (run 11)) |+| speed "[3 2 5]/2" ], jux (0.01 <~) $ slowspread (slow) [6, 8, 12, 4, 16] $ trunc 0.5 $ (striate' 1024 (1/100) $ sound "[josie fran]/2") |+| speed (whenmod 6 4 ((*0.8) <$>) "[1, [~ 0.5 ~ 1.5 ~ 2]/4]") |+| delay "0.4", every 3 (0.25 <~) $ slow 2 $ sound (samples "kh [~ kh*2] shard [tite*8 kh] [tite hh]*2 [kh hh*3] [shard kh] [~ kh]" (run 5)) |+| cut "3" ] |+| delayfeedback "0.4" |+| delaytime "0.4"
 
+hush
