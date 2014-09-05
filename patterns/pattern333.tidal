@@ -1,0 +1,5 @@
+bps (140/120)
+
+d1 $ iter 8 $ whenmod 5 4 (degradeBy 0.8) $ whenmod 4 3 (degradeBy 0.4) $ whenmod 3 2 (degradeBy 0.2) $ whenmod 2 1 (degradeBy 0.1) $ sound (samples "half*16" (irand 33))
+
+hush

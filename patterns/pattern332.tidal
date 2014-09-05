@@ -1,0 +1,5 @@
+bps (250/120)
+
+d1 $ whenmod 12 10 ((|+| speed "1 0.95 0.9 0.85") . trunc 0.25) $ whenmod 8 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 20 10 (const $ sound "~") $ whenmod 7 5 (density 2) $ whenmod 6 4 (density 2) $ sound "josie:2*2" |+| speed (every 3 ((*1.2) <$>) $ every 4 ((*2) <$>) $ every 5 ((*0.7) <$>) "0.7") |+| cut "1", slow 4 $ sound (samples "kh*8 shard:3 [~ kh]*4 shard:3" (run 32)), whenmod 7 4 (stut 2 0.5 0.25) $ sound "xh*4" |+| gain "0.8", sound "~ [~ mel*8]/2 pad:4 [pad:4 mel:2*8 ~ ~]/4" |+| cut "2" ]
+
+hush
