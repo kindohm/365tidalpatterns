@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 18 9 (slow 1.5) $ whenmod 12 9 (slow 4 . stut 8 0.5 0.1 . trunc 0.25) $ whenmod 8 5 (within (0.25, 0.75) (slow 4 . stut 4 0.25 0.25 . (|+| speed "0.75"))) $ slowspread (chop) [2,8,64,32,16] $ stack [slow 2 $ sound (samples "{[tite xh]*2 tite*4 [hh tite]*2 tite*4 [hh*2 tite*2] tite*4}%8" (run 53)) |+| speed "1", slow 5 $ sound "fxlong:7 fxlong:9", sound "~ xs [~ stite] [~ xs]", sound (samples "[xk kv]*2 ~ [xk*2 ~] [~ flkick ~ k]" (run 11)), slow 2 $ sound (samples "{numbers nerd ~}%4" (run 11)) |+| speed "0.75"]
+
+hush
