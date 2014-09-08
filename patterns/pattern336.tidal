@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 6 5 (|+| speed "-1") $ whenmod 8 6 (trunc 0.25) $ iter 8 $ stack [  iter 4 $ whenmod 3 2 (degradeBy 0.6) $ whenmod 4 3 (degradeBy 0.4) $ whenmod 5 4 (degradeBy 0.2) $ sound (samples "[kit5 kit2]*8" (slow 0.8 $ run 16)), slow 3 $ (striate 4 $ sound "[bl4 bl4:3]/2") |+| speed "[1 1 -1, 2 -2 2]", sound "~ psh" |+| speed "0.5"]
+
+hush
