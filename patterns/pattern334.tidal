@@ -1,0 +1,6 @@
+
+bps (175/120)
+
+d1 $ whenmod 8 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ slow 4 $ striate 16 $ sound "[blh4:3 bl4:7]/2", whenmod 7 5 (|+| speed "1.5") $ whenmod 5 3 (0.25 <~) $  whenmod 9 8 (stut 16 0.3 0.2 . whenmod 8 5 (slow 2.5)) $ slow 2 $ sound "~ sna [~ sna] ~ sna [~ sna] ~ sna", slow 2 $ sound (samples "kh*2 kh ~ kh*2 kh ~ [~ kh] [~ kh]" "10"), sound (samples "hh*16?" (run 20)) |+| speed "1.5", whenmod 11 9 (|+| speed "0.8") $ every 5 (|+| delay "0.7") $ whenmod 8 6 (density 8 . (|+| speed "1.5")) $ slow 3 $ sound "salsa:1"] |+| delaytime "0.7" |+| delayfeedback "0.7"
+
+hush

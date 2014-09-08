@@ -1,0 +1,5 @@
+bps (190/120)
+
+d1 $ slowspread ($) [slow 1.5, id, slow 0.75, rev, within (0.25, 0.75) (density 2), id, trunc 0.25, id] $ stack [ slow 16 $ (striate 64 $ sound "padloop16") |+| speed "[[1 0.5 0.25], [~ 0.75]]", whenmod 13 11 (const $ slow 2 $ sound (samples "kh*16 shard" (run 20))) $ whenmod 10 5 (slow 1.5) $ slow 2 $ sound (samples "[k ktite] kh [k ktite] kh [s ktite] s [s ktite] s hh*8 kv*4 [sv hv]*2 [kv kh] sea/2 sub:0/3" (every 4 (slow 0.7) $ run 42)) |+| cutoff (scale 0.05 0.2 $ slow 2.1 sine1) |+| resonance (scale 0.1 0.6 $ slow 2.7 sine1), slow 6 $ trunc 0.5 $ striate' 2048 (1/1000) $ sound "salsa:1" |+| speed "0.7" |+| delay "0.5" ] |+| delaytime "0.7" |+| delayfeedback "0.6"
+
+hush
