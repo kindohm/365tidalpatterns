@@ -2,3 +2,4 @@ bps (150/120)
 
 d1 $ whenmod 20 5 (slowspread ($) [id, density 2, rev, stut 8 0.5 0.1, id, (|+| speed "-1 1 0.75 1.5"), id (|+| accelerate "1 -1"), striate 4 . slow 2, chop 16, id, (|+| delay "0.4")]) $ whenmod 8 6 (trunc 0.25) $ whenmod 17 7 (every 4 (0.25 <~) . every 3 (0.25 <~)) $ stack [whenmod 20 13 (|+| gain "0") $ whenmod 11 7 (const $ sound "nerd*4" |+| cut "3") $ sound "[~ nerd]*2" |+| begin "0.05" |+| speed "[1 1.5]/4", sound "~ [stite:3, cp:4]" |+| shape "0.5", whenmod 8 4 (const $ stack [ sound "sub*8?" |+| cut "2", sound "llama*8?" |+| cut "1" |+| end "0.25"]) $ sound "blue:1*8?" |+| shape "0.5" |+| begin "0.1" |+| end "0.2", whenmod 8 4 (const $ sound "flkick*8?") $ sound "kh:10*8?" ] |+| delaytime "0.5" |+| delayfeedback "0.3"
 
+hush
