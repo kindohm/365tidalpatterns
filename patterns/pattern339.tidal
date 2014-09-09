@@ -1,0 +1,5 @@
+bps (160/120)
+
+d1 $ whenmod 20 12 (slow 0.8) $ whenmod 13 8 (every 3 (0.25 <~) . every 4 (0.25 <~)) $ stack [whenmod 12 8 (const $ sound "llama:6*8?" |+| speed (whenmod 7 5 ((*0.75) <$>) "1") |+| end "0.1" |+| cut "2") $ sound "blue:1*8?" |+| shape "0.2" |+| begin "0.09" |+| end "0.2", whenmod 10 6 (|+| gain "0") $ sound "flkick:309*8?" |+| speed "0.75", whenmod 10 6 (|+| gain "0") $ sound (samples "[~ ~ ~ [kh kh?]] shard:20" (run 22)), sound "~ ~ ~ sub/3", whenmod 6 4 (slow 2) $ slow 4 $ (striate 16 $ sound "ping") |+| speed "[0.5 0.25, [~ ~ ~ 0.75]]/3"]
+
+hush
