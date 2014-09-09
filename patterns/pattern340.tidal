@@ -1,3 +1,5 @@
 bps (170/120)
 
-d1 $ slowspread ($) [(|+| accelerate "1 -1"), id, rev, (0.25 <~), trunc 0.25, trunc 0.25, id, (|+| speed "1"), id, const $ striate 8 $ sound "nerd:9" |+| speed "0.9", slow 0.8, id, chop 16] $ iter 8 $ stack [ every 4 (trunc 0.5) $ trunc 0.25 $ slow 4 $ (striate 8 $ sound "harp") |+| shape "0.3" |+| speed "[0.5, [~ 1 ~]/2]", slow 2 $ sound (samples "{tite*4 [s hh*2] [peri*2 s] [hh*6] [shard kh] [hh*2 shard] ride ride [~ flkick] [~ flkick] [k*4]}%8" (run 14)) ]
+d1 $ slowspread ($) [(|+| accelerate "1 -1"), id, rev, (0.25 <~), trunc 0.25, trunc 0.25, id, (|+| speed "1"), id, const $ chop 8 $ sound (samples "[[alphabet numbers]/2 [dup*3 808cb*3]/2]*2" (run 7)) |+| speed "[0.9 1.2]" |+| gain "0.9", slow 0.8, id, chop 16, const $ sound "pluck [pluck:2 sub]", within (0.25, 0.75) (density 2)] $ iter 8 $ stack [ every 4 (trunc 0.5) $ trunc 0.25 $ slow 4 $ (striate 8 $ sound "harp") |+| shape "0.3" |+| speed "[0.5, [~ 1 ~]/2]", slow 2 $ sound (samples "{tite*4 [s hh*2] [peri*2 s] [hh*6] [shard kh] [hh*2 shard] ride ride [~ flkick] [~ flkick] [k*4]}%8" (run 14)), whenmod 14 7 (|+| gain "0") $ sound "ride*2" |+| speed "1.1" |+| gain "0.9" ]
+
+hush

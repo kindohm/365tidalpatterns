@@ -1,3 +1,5 @@
 bps (130/120)
 
-d1 $ whenmod 6 4 (const $ slow 2 $ sound (samples "kh*16 [shard laz:3] [~ laz:1 ~ laz:2] [~ laz:2 ~ laz:0]" (run 33)) |+| speed "0.8 0.5") $ stack [ sound "flkick:52*8?", sound "electrowave*8?" |+| cut "1", sound "laz:1*8?" |+| cut "2" |+| speed "0.8" |+| gain "0.9"]
+d1 $ slowspread ($) [striate 3, id, rev, (|+| speed "0.9 -0.9"), id, slow 2 . (|+| speed "0.75 -0.8 0.5"), id, chop 4, id]$ whenmod 8 6 (trunc 0.25) $ slowspread (density) [1,2,1,3,1,2,1] $ whenmod 6 4 (const $ slow 2 $ sound (samples "kh*16 [shard laz:3] [~ laz:1 ~ laz:2] [~ laz:2 ~ laz:0]" (run 33)) |+| speed "0.8 0.5") $ stack [ sound "flkick:52*8?", sound "electrowave*8?" |+| cut "1", sound "laz:1*8?" |+| cut "2" |+| speed "0.8" |+| gain "0.9"]
+
+hush
