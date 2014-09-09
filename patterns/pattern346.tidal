@@ -1,0 +1,5 @@
+bps (165/120)
+
+d1 $ iter 4 $ stack [ slowspread ($) [chop 16, (|+| vowel "o u"), stut 8 0.4 0.25, id, (|+| speed "-1"), (|+| accelerate "-1"), id] $ sound "dorug dorug:1", whenmod 10 6 (const $ sound (samples "amencutup*16" (slow 0.8 $ run 22))) $ sound (samples "amencutup*16?" "[1 4 3 5]/4") |+| shape "0.2" |+| speed "[1 1 0.8 1 1 [1 -1] 1.2 0.8 1]/5", slowspread (trunc) [0.5, 0.25, 0.5, 0.75, 1] $ striate 32 $ sound "pad:9" |+| shape "0.5" |+| cut "2"]
+
+hush

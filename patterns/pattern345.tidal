@@ -1,0 +1,5 @@
+bps (140/120)
+
+d1 $ whenmod 20 12 (slowspread ($) [chop 128, chop 32, id, trunc 0.5 . striate 2 . slow 2 , stut 3 0.4 0.33, id, trunc 0.25, trunc 0.25])  $ whenmod 14 7 (slow 0.8) $ stack [ sound "[rave:1*32? rave:8*32?]/8" |+| speed "[0.5 0.4 0.5 0.75 0.3 0.5]/4" |+| gain "0.9" |+| cut "1" |+| end "0.2", whenmod 16 8 (const $ sound "[sub*32? drop*32?]/8" |+| cut "2" |+| speed "[1 2 1 1.5 3 1]/4") $ sound "[flkick:1*32? flkick:1*32?]/8", stack [(0.025 <~) $ sound "~ cp:4", (0.05 <~) $ sound "~ cp:3", sound "~ cp"], whenmod 6 5 (density 2) $ whenmod 5 4 (density 2) $ whenmod 4 3 (density 2) $ whenmod 3 2 (density 2) $ sound "hh:7*4" ]
+
+hush
