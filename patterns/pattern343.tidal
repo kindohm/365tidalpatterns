@@ -1,0 +1,5 @@
+bps (160/120)
+
+d1 $ whenmod 20 12 (every 3 (0.25 <~) . every 4 (0.25 <~)) $ stack [ sound "[~ ~ ~ flkick] [cp, stite:12]", sound "[~ ~ ~ fran] ~" |+| cut "1", whenmod 8 4 (const $ stack [sound "sub*8?" |+| cut "3" |+| speed "[1 2 1.5 3]/5", sound "nerd:14*2" |+| cut "1"]) $ sound "~ [control]" |+| cut "1" |+| end "0.23" |+| speed "0.75", whenmod 8 7 (density 2) $ whenmod 5 3 (density 2) $ sound "hh:2*8" |+| gain "0.6", whenmod 16 12 (const $ sound "808sd*16?" |+| speed (scale 1.5 2.5 $ slow 4.1 sine1)) $ sound "~", density 2 $ sound "~ salsa:1" |+| speed (whenmod 9 4 ((*0) <$>) "2") |+| begin "0.1" |+| gain "0.7"] 
+
+hush
