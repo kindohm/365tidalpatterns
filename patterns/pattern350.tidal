@@ -1,0 +1,5 @@
+bps (155/120)
+
+d1 $ iter 8 $ slowspread ($) [chop 4, rev, (|+| speed "0.5") . slow 2, id, trunc 0.25, jux (|+| speed "1.1"), id] $ stack [ within (0.25, 0.75) (every 3 (rev . slow 2 . stut 8 0.4 0.2)) $  whenmod 5 3 (degradeBy 0.6) $ sound (samples "grunt*16" (run 11)) |+| end "0.05" |+| speed "2", sound "~ kv*2 ~ ~ ~ ~ ~ ~", sound "~ ~ shard:16 ~", sound "~ ~ ~ sdeep*4" |+| speed (whenmod 6 5 ((*0.5) <$>) "5"), sound (samples "~ ~ ~ b/2 ~ b/5 ~ b/3" (run 328)) |+| cut "3", density 2 $ sound (samples "{hh*2 ~ [~ dup] [~ dup] ~}%4" "10") |+| speed "2", slow 2 $ trunc 0.5 $ (striate 16 $ sound "fxlong:9") |+| speed "[0.75 0.5 1]/4" |+| gain "0.85" ]
+
+hush
