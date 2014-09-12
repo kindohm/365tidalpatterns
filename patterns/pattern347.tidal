@@ -1,0 +1,5 @@
+bps (200/120)
+
+d1 $ whenmod 16 8 (slowspread ($) [chop 8, (|+| speed "-1 1.2 0.8 -1"), rev, trunc 0.25, trunc 0.25, jux ((|+| speed "0.9")), id, striate 4 . slow 2 . trunc 0.25]) $ within (0.25, 0.75) (whenmod 5 4 (rev . stut 4 0.25 0.25)) $ whenmod 12 8 ( every 4 (0.25 <~) . every 3 (0.25 <~)) $ stack [ sound (samples "tite*8" (run 10)), slow 2 $ sound (samples "~ [~ b:0] ~ ~ ~ ~ b b/2" (run 13)) |+| cut "1", sound "[~ hh]*2", sound "[~ shard:1]", sound "[[kh/2 kh ~ ~] [~ kh ~ ~]]", slow 2 $ sound (samples "~ ~ [kv*2] ~" (run 13)) ]
+
+hush
