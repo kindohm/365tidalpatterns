@@ -1,0 +1,5 @@
+bps (200/120)
+
+d1 $ whenmod 32 16 (slow 0.75) $ within (0, 0.5) (whenmod 7 5 ((|+| speed "0.8") . jux (|+| speed "1.1"))) $ within (0.25, 0.75) (every 3 (slow 4 . rev . stut 8 0.3 0.1)) $ stack [ density 2 $ sound "k:11 [~ k:13]" |+| shape "0.3", sound "~ hh:10", sound "[~ hh:12]*2" |+| gain "0.9" |+| speed "2", rev $ (slowspread (striate) [256, 32, 64, 128] $ sound (samples "{laz bock [kh hh]*4 ~ ~}%4" (run 11))) |+| delay (scale 0.1 0.5 $ slow 2.9 sine1) |+| gain "0.8" ] |+| shape "0.2" |+| delaytime (scale 0.01 0.1 $ slow 4.1 sine1) |+| delayfeedback (scale 0.1 0.6 $ slow 3.2 sine1)
+
+hush

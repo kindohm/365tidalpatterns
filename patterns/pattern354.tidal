@@ -1,0 +1,7 @@
+bps (220/120)
+
+d1 $ stack [ sound "grunt peri*2 doru*2 grunt*2 grunt peri peri peri*2" |+| begin "0.1" |+| end "0.2" |+| shape "0.2", sound "~ shard:13" |+| gain (whenmod 12 6 ((*0) <$>) "1"), slowspread (slow) [8, 12, 10, 16] $ trunc 0.1225 $ (slowspread (striate) [16,8,32] $ sound "kv*16 [~ kv*4] kv*4 kv*8 kv*12 kv*16 [~ kv*6] kv*18") |+| gain "0.9" |+| speed (every 4 ((*0.5) <$>) "1") |+| delay "0.4"] |+| delaytime "0.55" |+| delayfeedback "0.4"
+
+hush
+
+

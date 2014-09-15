@@ -1,0 +1,5 @@
+bps (210/120)
+
+d1 $ whenmod 32 16 (iter 4) $ within (0.25, 0.75) (every 3 (rev . slow 2 . stut 8 0.25 0.25)) $ stack [ slow 2 $ sound "{[sub kh] ~ ~ [sub kh] ~ ~ [sub kh] ~ ~ ~}%8" |+| speed "[4 3 5 2]/5", sound "[~ cp:4]", slow 2 $ sound "{hh:12*2 hh:12*2 hh:12*2 ~ ~}%4", whenmod 7 5 (jux (|+| speed "0.6")) $ slow 2 $ sound (samples "gnome gnome*4 gnome [numbers gnome]" (whenmod 7 5 (slow 0.3) $ run 8)) |+| end (scale 0.35 0.45 $ slow 3.1 sine1) |+| begin "0.3" |+| speed (whenmod 6 4 ((*1.1) <$>) "0.5")]
+
+hush

@@ -1,0 +1,5 @@
+bps (200/120)
+
+d1 $ whenmod 16 12 (iter 4) $ slowspread ($) [trunc 0.25, trunc 0.25, id, rev, (|+| accelerate "0.5 -0.5"), within (0, 0.5) (slow 4 . rev . stut 4 0.25 0.25), jux (iter 8)] $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ sound "{[feel peri]*2 tite*6 [hh*4] tite*6 [feel k]*2 [feel k]*2}%4", sound "~ s" |+| shape "0.3", sound "[~ heem/2] ~ ~ ~" |+| speed "0.75", slowspread (striate) [256, 8, 64, 16, 32, 128] $ whenmod 7 5 (density 2) $ sound "laz*8?" |+| begin "0.3" |+| end "0.8" |+| speed "[1 1.2 0.8 1 0.5 1.5]/5" |+| gain "0.9" ]
+
+hush
