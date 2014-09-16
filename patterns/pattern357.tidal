@@ -1,0 +1,5 @@
+bps (110/120)
+
+d1 $ whenmod 12 8 ( slowspread ($) [iter 4, trunc 0.25, trunc 0.25, slow 2.5 . (|+| speed "0.5") . stut 4 0.25 0.25, (|+| accelerate "1 -1"), rev . slow 0.75]) $ stack [ slow 4 $ stack [sound "~ ~ ~ [drop*16? josie:7*16? heem*16? alonevox:2*16?]/4" |+| end "0.4" |+| cut "3" |+| shape "0.3", sound "bee:1 [[~ bee:1] ~ ~ ~] bee:1 bee:1*16?" |+| cut "1"], whenmod 10 9 (density 2) $ slowspread (chop) [32, 16, 128, 64] $ whenmod 7 5 (within (0.25, 0.75) (rev . slow 2 . stut 8 0.25 0.25)) $ slow 2 $ every 3 (0.25 ~>) $ sound (samples "laz:1/3 [k doruk]*6 [dorug beeps] [kv sv]*2 [vocad peri*4]/2 [peri hh]*2 peri*4 [shard peri tite peri]" (run 33)) |+| speed "[1 1 0.8 1 1.5 [0.5 1]]/5" ]
+
+hush

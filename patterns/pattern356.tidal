@@ -1,0 +1,5 @@
+bps (120/120)
+
+d1 $ whenmod 20 17 (slow 1.5 . (|+| speed "0.8")) $ whenmod 8 6 (trunc 0.25) $ whenmod 16 12 (every 3 (0.25 <~) . every 4 (0.25 <~) . iter 4) $ whenmod 10 6 (slowspread (chop) [8, 12, 4, 16]) $ stack [ whenmod 7 4 (slowspread ($) [chop 16 . (|+| delay "0.3"), within (0.25, 0.5) (striate 3), rev . stut 8 0.25 0.25, trunc 0.25]) $ slow 2 $ sound (samples "{blip2*2 blip [blip2 blip] blip2*2 blip2 [blip*2 blip2]}%8" (run 11)) |+| begin "[0 0 0.2 0]/4" |+| end "[1 1 0.3 1]/4" |+| speed "[[1 1 0.5 1]/5, [~ 2 ~ ~ 1.5 ~]/3]", every 3 (brak . (|+| accelerate "-2")) $ sound "[digi [digi*2 ~ ~ ~]]" |+| speed "1" ] |+| delaytime "0.5" |+| delayfeedback "0.5"
+
+hush
