@@ -1,5 +1,5 @@
 bps (160/120)
 
-d1 $ iter 4 $ whenmod 10 8 (jux (iter 8)) $ whenmod 9 8 (slow 2) $ whenmod 8 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 10 6 (slowspread (chop) [16, 32, 8, 24]) $ slow 2 $ sound (samples "ktite*8 [stite rave] rave*4 fran stite" (run 32)) |+| cut "1" |+| speed "1 [1 0.5] 0.5 0.5 1 1", sound (samples "hh kv hh kv ~" (run 13)), slowspread (striate) [16, 128, 256] $ sound "kv*8 xh*6 [~ stite*3] cp"]
+d1 $ iter 4 $ whenmod 10 9 (jux (iter 8)) $ whenmod 9 8 (slow 2) $ whenmod 8 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 10 6 (slowspread (chop) [16, 32, 8, 24]) $ slow 2 $ sound (samples "ktite*8 [stite tite] rave*4 fran stite" (run 25)) |+| cut "1" |+| speed "1 [1 0.5] 0.5 0.5 1 1", sound (samples "hh kv hh kv ~" (run 13)), slowspread (striate) [16, 128, 256] $ sound "kv*8 xh*6 [~ stite*3] cp"]
 
 hush
