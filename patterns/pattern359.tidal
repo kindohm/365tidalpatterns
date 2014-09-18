@@ -1,0 +1,5 @@
+bps (170/120)
+
+d1 $ whenmod 32 24 ( slowspread ($) [chop 16, spread' (chop) "128  64  512 32", iter 4, iter 4, within (0.25, 0.75) (rev . slow 2 . stut 8 0.25 0.25), striate 3 . trunc 0.25 . slow 2, trunc 0.25, trunc 0.25, id] . every 3 (0.25 <~) . every 4 (0.25 <~)) $ stack [ whenmod 24 16 (const $ sound "digi*8" |+| speed "0.9" |+| shape "0.2") $ sound "digi*12" |+| gain "[1 0.75 0.75]*8" |+| shape "0.2", whenmod 12 8 (slow 1.5) $ whenmod 16 8 (const $ sound (samples "peri*3 peri*3 ~ ~" (run 22))) $ sound (samples "{~ peri*3 peri*3}%4" (run 31)), whenmod 20 16 (slow 1.5) $ whenmod 18 11 (const $ sound "[~ ktite:1 ktite:1]*4") $ sound "{[~] [~ ~ ~ stite:8] [~] [k:16 k:16 ~] [~]}%4", whenmod 16 12 (const $ sound "~") $ sound "[~ [cp:4, stite]]" |+| delay "0.4" ] |+| delayfeedback "0.6" |+| delaytime "0.35" |+| shape "0.1"
+
+hush
