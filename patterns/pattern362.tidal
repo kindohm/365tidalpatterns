@@ -1,0 +1,3 @@
+bps (160/120)
+
+d1 $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ iter 4 $ jux (0.01 <~) $ slowspread (slow) [1, 1, 2, 1, 1, 2, 3] $ slowspread (chop) [16, 32, 24, 8, 12, 64] $ every 4 (density 2) $ every 3 (density 2) $ every 2 (density 2) $ sound "[yoi rev keys1*3 hitter/2]*2" |+| gain "0.9", sound (samples "{shard:9/4 kh*2 [shard hh*2] hh*4 [~ ~ ~ xk*6]/4}%4" (run 44)), slowspread (chop) [1, 2, 4, 8, 16] $ sound "alonevox:5*4?" |+| shape "0.6" |+| speed "[0.9 0.9 0.8 0.9 1]/3" |+| end "0.1" |+| cut "1" ] 
