@@ -1,0 +1,5 @@
+bps (190/120)
+
+d1 $ whenmod 16 8 ( every 3 (0.25 <~) . every 4 (0.25 <~) . slowspread ($) [trunc 0.25, iter 4, within (0.25, 0.75) (slow 2 . rev . stut 8 0.25 0.25), id, rev, (|+| speed "2") . density 2, (|+| accelerate "0.5 -0.5")]) $ stack [ slow 8 $ (slowspread (striate) [32, 64, 16, 128] $ sound "padloop8:1") |+| speed "[[1 0.5]/2, [1.5 2]*2]" |+| delay "0.4", every 5 (|+| gain "0") $ every 6 (density 2) $ slow 2 $ sound (samples "~ k*2 k*2 ~ ~ ~ ~ ~" (run 33)), whenmod 8 4 (const $ sound "~") $ slow 3 $ sound "~ vocad" |+| speed "[2 1 2 0.5]/4" |+| delay "0.3" |+| cut "2", slow 2 $ sound (samples "~ ~ [hh*8 ~] ~" "11") |+| speed "2" |+| gain "0.8", slow 2 $ sound "~ ~ ~ [~ cp/2 ~ ~]" |+| speed "2"] |+| delaytime "0.5" |+| delayfeedback "0.5"
+
+hush
