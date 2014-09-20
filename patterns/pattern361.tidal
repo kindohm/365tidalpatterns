@@ -1,5 +1,5 @@
 bps (135/120)
 
-d1 $ whenmod 8 6 (trunc 0.25) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [ degradeBy 0.6 $ sound "scream*8" |+| end (whenmod 5 3 ((*0.05) <$>) "1") |+| cut "1" |+| speed (every 3 ((*0.9) <$>) "1"), whenmod 9 7 (const $ stack [sound "kv:1*8?", sound "blue:1*8?" |+| end "0.3" |+| cut "2" |+| shape "0.5" |+| begin "0.1"]) $ sound "~ sv [~ sv] cp", sound "kv:2*4? ~ [~ kv:5 ~ ~] [~ kv:4*2?]", whenmod 11 7 (const $ sound "ride:2*4" |+| cut "3" |+| gain "0.9" |+| speed "[1 -1]") $ sound (samples "~ hh*8 ride:2 ~" (run 55)) |+| gain "0.8" ]
+d1 $ whenmod 8 6 (trunc 0.25) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [ degradeBy 0.6 $ sound "scream*8" |+| end (whenmod 5 3 ((*0.05) <$>) "1") |+| cut "1" |+| speed (every 3 ((*0.9) <$>) "1"), whenmod 9 7 (const $ stack [sound "kv:1*8?", sound "blue:1*8?" |+| end "0.3" |+| cut "2" |+| shape "0.5" |+| begin "0.1"]) $ sound "~ sv [~ sv] cp", sound "kv:2*4? ~ [~ kv:5 ~ ~] [~ kv:4*2?]", whenmod 11 7 (const $ sound "ride:2*4" |+| cut "3" |+| gain "0.8" |+| end "0.25") $ sound (samples "~ hh*8 ride:2 ~" (run 55)) |+| gain "0.8" |+| end "0.25" ]
 
 hush
