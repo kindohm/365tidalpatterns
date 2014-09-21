@@ -1,0 +1,5 @@
+bps (140/120)
+
+d1 $ whenmod 32 24 (slow 0.75) $ whenmod 24 16 (iter 4) $ whenmod 16 8 (every 3 (0.25 <~) . every 4 (0.25 <~) . slowspread ($) [trunc 0.25, trunc 0.25, rev, (|+| accelerate "1 -1"), (|+| speed "0.5") . slow 2, (|+| speed "-1 1.5 2"), within (0.25, 0.75) (slow 2 . rev . stut 8 0.25 0.25), id])  $ stack [ (whenmod 8 6 (const $ sound "thx:1*16?") $ whenmod 4 2 (slow 2) $ whenmod 5 2 (degradeBy 0.5) $ sound (samples "thx*8" (irand 42))) |+| cut "1" |+| speed "[1 1 1 0.8 1 1 1.1 1 -1 1 1]/8" |+| gain "1.1", whenmod 12 8 (const $ sound "[~ sna [~ sna] ~]") $ slow 2 $ sound "~ sna ~ sna", every 5 (density 2) $ every 4 (density 2) $ every 3 (density 2) $ sound "hh:7*4" |+| gain "0.9", every 7 (within (0, 1) (rev . stut 8 0.25 0.25)) $ whenmod 8 6 (const $ sound "kh:14*16?" |+| cut "2") $ sound "[kh:14/2 ~ [~ kh:14/3 ~ ~] kh:14/4]", whenmod 8 4 (const $ slow 2 $ (striate 16 $ sound "alone") |+| speed "[0.5 0.25, [1.5 1]/2]" |+| delay "0.4" |+| gain "0.85") $ slowspread (striate) [64, 32, 512, 128] $ sound "[~ laz]*2" |+| delay "0.4" |+| speed "0.5" |+| gain "0.8" |+| cut "3" ] |+| delaytime "0.5" |+| delayfeedback "0.5"
+
+hush
