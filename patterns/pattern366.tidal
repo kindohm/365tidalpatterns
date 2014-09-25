@@ -1,9 +1,5 @@
-cps 1.3
-
-d1 $ whenmod 30 22 ((|+| speed "0.7") . slow 1.25) $ whenmod 20 16 ((|+| speed "2.5") . density (4/3)) $ whenmod 16 10 ((|+| speed "1.5") . density (3/2)) $ stack [ whenmod 9 5 (density 2) $ sound (samples "{bd*2 k*2 k*2 k*2 k*2}%4" (run 23)) |+| gain "{1 0.7 0.7 0.7 0.7}%4" |+| shape "0.4", every 3 (0.25 <~) $ every 4 (0.25 <~) $ within (0, 0.5) (whenmod 5 3 (trunc 0.25 . slow 2) . whenmod 6 4 (slow 4 . (|+| speed "0.5 -0.5") . whenmod 7 4 (jux (iter 4)))) $  within (0.25, 0.75) (every 3 (rev) . every 4 (slow 2 . (|+| speed "2")) . every 2 ((|+| speed "0.8 -1"))) $ slow 4 $ striate' 32 (1/20) $ sound (samples "{ride*2 [latibro untuned peri] ride 808cy [latibro stite] [sdeep hh] peri*2}%4" (run 31)) ]
-
-hush
-
 cps 1
 
 d1 $ slowspread (slow) [1, 1.5, 2, 1.25, 0.8, 0.5, 0.75] $ slowspread (spin) [50, 40, 30, 20, 10, 60, 70, 80, 90, 100] $ slowspread (density) [1, (11/10), (12/10), (13/10), (14/10), (15/10), (16/10), (17/10), (18/10), (19/10), (20/10)] $ slow 2 $ sound "bd bd bd sn sn hh hh*2 cp" |+| speed (every 3 ((*0.8) <$>) "[1 3 0.5 1.5 1.2 2 4 5]/7") |+| delayfeedback "0.3" |+| delaytime "0.5" |+| delay "0.4"
+
+hush
