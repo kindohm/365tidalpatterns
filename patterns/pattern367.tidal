@@ -1,0 +1,5 @@
+cps 1.4
+
+d1 $ stack [ slow 8 $ sound "rev*4 ~ rev*4 ~ ~ rev*4 rev*4 rev*24" |+| cut "1" |+| speed "1", slow 4 $ sound (samples "~ sv/2 [sv, cp:1]/2 ~ ~ ~ sv [sv, cp:2]" "0"), chop 64 $ slow 2 $ sound (samples "drop*8?" (run 31)) |+| cut "3" |+| speed "[[5 5 5 2]/3, [10 15]/5]" |+| delay "0.3", slow 2 $ sound "~ [shard:11, cp:3]", whenmod 10 6 (slow 2 . spread' (chop) "[32 128 256 64]") $ slow 4 $ degradeBy 0.4 $ sound (samples "kh*4 [~ kh*2] kh*4 ~" "18") ] |+| delaytime "0.7" |+| delayfeedback "0.3"
+
+hush
