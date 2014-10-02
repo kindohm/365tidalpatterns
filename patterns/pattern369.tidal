@@ -1,0 +1,5 @@
+cps 1.6
+
+d1 $ retrig $ every 6 (slow 2) $ whenmod 8 2 (slowspread (chop) [16, 2048, 8, 32, 1048, 4, 128, 512]) $ every 2 (0.25 <~) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ every 5 (0.25 <~) $ stack [slow 2 $ sound "[~ kl]", sound "[~ hh:14]", slow 2 $ sound "[~ [~ kl:1/2 ~ kv:1/4]]", slow 4 $ sound (samples "~ [shard, cp, stite]" "11"), slow 2 $ sound (samples "{~ ~ hh*2 hh*2 hh*2}%4" "8"), slow 2 $ sound (samples "~ [~ b:0] ~ ~ ~ ~ b b/2" (run 13)) |+| cut "1"] 
+
+hush
