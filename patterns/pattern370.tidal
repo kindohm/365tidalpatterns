@@ -1,0 +1,5 @@
+cps 0.8
+
+d1 $ slow 32 $ (trunc 0.5 $ spread' (striate' 1024) (scale 0.01 0.3 $ slow 0.71131 sine1) $ sound "cp s k doosh") |+| speed (scale 0.25 3 $ slow 3.1 sine1) |+| shape "0.5" |+| cutoff (scale 0.01 0.2 $ slow 2.3 sine1) |+| resonance (scale 0.2 0.7 $ slow 2.9 sine1) |+| delay "0.2" |+| delayfeedback "0.3" |+| delaytime "0.5"
+
+hush
