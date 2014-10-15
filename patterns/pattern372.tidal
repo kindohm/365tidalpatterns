@@ -1,0 +1,5 @@
+bps (200/120)
+
+d1 $ retrig $ whenmod 32 24 (slow 1.25) $ whenmod 6 5 ((|+| cutoff (scale 0.01 0.1 $ slow 0.3 sine1)) . (|+| resonance "0.6")) $ whenmod 24 8 (slowspread ($) [trunc 0.25, trunc 0.25, iter 4, iter 4, slow 2 . rev . stut 8 0.25 0.25, striate 16, chop 32, (|+| speed "1.2"), (|+| speed "0.8"), striate 32] . every 3 (0.25 <~) . every 4 (0.25 <~)) $ stack [ (|+| coarse "[16 8 32 8 64 4 256 128]/3") $ whenmod 7 5 (slow 2) $ every 5 (density 2) $ every 3 (density 2) $ whenmod 13 9 (const $ sound "kh*8") $ sound "bd*16", sound (samples "~ shard" "[13 1]/8"), whenmod 3 2 (slow 0.75) $ every 2 (density 2) $ every 3 (density 2) $ every 4 (density 2) $ sound "hh:18*4" |+| gain "0.8", sound (samples "~ kl [~ kl] [~ ~ ~ kl*2]/4" "0"), whenmod 16 8 (const $ sound "~") $ sound "laz:1*2 laz [~ laz] ~" |+| cut "1" |+| speed "0.5" |+| gain "0.9", whenmod 32 16 (const $ sound "~") $ sound "ride*2" |+| cut "4" ] |+| shape (scale 0.01 0.5 $ slow 3.1 sine1)
+
+hush
