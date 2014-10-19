@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 30 20 (slow 0.75) $ stack [ every 8 (within (0, 1) (slow 3 . rev . stut 12 0.25 0.2)) $ whenmod 16 10 (iter 4) $ whenmod 5 4 (|+| vowel "e o") $ (|+| coarse "[12 16 512 32 128 24 64 256]/3") $ whenmod 13 7 (|+| speed (scale 0.8 2 $ slow 2 sine1)) $ every 5 (density 2) $ every 4 (density 2) $ every 3 (density 2) $ every 2 (density 2) $ sound (samples "bink*4" "0") |+| cut "1" |+| gain "0.9", every 6 (within (0, 1) (rev . stut 6 0.3 0.2)) $ whenmod 10 5 (every 3 (0.25 <~) . every 4 (0.25 <~)) $ sound "~ [stite:8, stite:10]" |+| shape "0.2", whenmod 7 4 (slow 0.75) $ whenmod 5 3 (slow 0.75) $ every 4 (slow 0.75) $ every 3 (slow 0.75) $ sound "hh:13*4" |+| gain "1" |+| speed "1.5" ]
+
+hush
