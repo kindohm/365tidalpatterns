@@ -1,0 +1,4 @@
+bps (170/120)
+
+d1 $ retrig $ whenmod 10 9 (within (0.25, 0.75) (slow 2 . rev . stut 8 0.25 0.25)) $ whenmod 5 4 (|+| coarse "64 128 32") $ whenmod 12 8 (iter 4) $ stack [ every 9 (|+| speed "0.6 1") $ sound "{~ sna [~ sna] ~ ~}%4", sound "{bink [~ bink] bink [~ bink] bink ~ ~}%4" |+| speed "0.9" |+| cut "1", sound "hh:4*2", slowspread (chop) [64, 32, 128, 16, 256] $ sound (samples "{keys2*4 [sea rev]/2 ~ mint [~ rev] pada keys2*4 peach*4}%4" (slow 0.7 $ run 22)) |+| speed (whenmod 6 4 ((*0.8) <$>) "1") |+| delay "0.3" ] |+| delaytime "0.5" |+| delayfeedback "0.2" |+| shape "0.2"
+
