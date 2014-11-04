@@ -1,0 +1,4 @@
+bps (105/120)
+
+d1 $ retrig $ whenmod 20 12 (slow 1.5) $ whenmod 9 7 (|+| speed (scale 0.7 3 $ slow 0.6 sine1)) $ every 6 (chop 64 . (|+| delay "0.45")) $ every 5 ((|+| speed "1 -1 1 -1")) $ every 4 ((|+| coarse "8 4")) $ every 3 ((|+| end "0.5")) $ stack [ retrig $ whenmod 14 7 (iter 7) $ sound (samples "[bd k] future gab [k bd] [bd k] ~ [bd*4]" (run 18)), retrig $ sound "~ [~ s:10] ~ ~ [~ s:10] ~ ~", retrig $ whenmod 20 12 (density (2)) $ whenmod 8 4 (density 2) $ sound (samples "{hh ~ ~ ~}%7" "31"), retrig $ slowspread (chop) [16, 8, 24, 4, 32] $ sound "~ ~ keys2 ~ ~ ~ [keys2:3 keys2:1 keys2:2 keys2:3]" |+| delay "0.2"] |+| delaytime "0.4" |+| delayfeedback "0.3"
+

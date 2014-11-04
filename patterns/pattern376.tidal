@@ -1,0 +1,6 @@
+bps (145/120)
+
+d1 $ whenmod 10 5 (iter 5) $ every 4 (|+| speed "0.9 0.8 -0.9") $ every 3 (rev) $ stack [ every 5 (slow 2) $ density 2 $ sound "vbk vblt vbk vbht vb8" |+| cut "1", slow 2 $ sound "{~ vbcp}%5", whenmod 15 10 (|+| speed "0.8") $ sound "{vbhh*4 vbhh*4 ~}%5", whenmod 6 3 (stut 4 0.25 0.25) $ sound (samples "{~ vbs ~ vbs ~ vbs ~}%5" "1"), slow 2 $ (slowspread (striate) [30, 40, 15, 60] $ sound "[voxs:3*20 voxs:6*40]/2") |+| delay "0.3" |+| speed "[0.7 0.35, [1.4 1.05]/2]" |+| shape "0.2"]  |+| delaytime "0.4" |+| delayfeedback "0.2"
+
+
+hush
