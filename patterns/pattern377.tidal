@@ -1,5 +1,5 @@
 bps (180/120)
 
-d1 $retrig $ slowspread ($) [id, rev, jux (iter 8), slow 2 . (|+| speed "0.5"), within (0, 1) (rev . slow 2), (|+| speed "1 1.2 1.5"), id, (|+| coarse "8 16"), (|+| vowel "a o u")] $ whenmod 15 10 (iter 4) $ whenmod 16 14 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ whenmod 14 13 (const $ sound "hitter thx:11 voxs run*2") $ stack [ sound "~ vbs", every 2 (density 2) $ every 3 (density 2) $ every 4 (density 2) $ sound "vbhh*4", sound "vb8*8?" |+| cut "1" |+| shape "0.9" |+| speed "0.5" |+| gain "0.8", slow 16 $ (striate' 256 (1/30) $ sound "thx:18*8") |+| gain "0.8" |+| speed "[1 0.5, [1.5 2]/2]" |+| delay "0.2"  ] |+| delayfeedback "0.3" |+| delaytime "0.5"
+d1 $ slowspread ($) [id, rev, jux (iter 8), slow 2 . (|+| speed "0.5"), within (0, 1) (rev . slow 2), (|+| speed "1 1.2 1.5"), id, (|+| coarse "8 16"), (|+| vowel "a o u")] $ whenmod 15 10 (iter 4) $ whenmod 16 14 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ whenmod 14 13 (const $ sound "hitter thx:11 voxs run*2") $ stack [ sound "~ vbs", every 2 (density 2) $ every 3 (density 2) $ every 4 (density 2) $ sound "vbhh*4", sound "vb8*8?" |+| cut "1" |+| shape "0.9" |+| speed "0.5" |+| gain "0.8", slow 16 $ (striate' 256 (1/30) $ sound "thx:18*8") |+| gain "0.8" |+| speed "[1 0.5, [1.5 2]/2]" |+| delay "0.2"  ] |+| delayfeedback "0.3" |+| delaytime "0.5"
 
 hush
