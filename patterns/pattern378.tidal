@@ -1,0 +1,5 @@
+cps (1.25)
+
+d1 $ whenmod 12 6 (iter 6) $ slowspread ($) [rev, id, within (0, 1) (rev . slow 3 . stut 4 0.25 0.25), const $ slow 8 $ (striate' 512 (1/40) $ sound "thx:1") |+| shape (scale 0.3 0.9 $ slow 0.38 sine1) |+| speed "0.7" |+| delay "0.4" |+| delaytime "0.4" |+| delayfeedback "0.3", id, jux (iter 3), id] $ slowspread (slow) [1, 0.9, 0.8, 0.7, 0.6, 0.7, 0.8, 0.9, 1] $ stack [ slow 16 $ (trunc 0.25 $ striate' 512 (1/50) $ sound "mint") |+| speed (whenmod 6 4 ((*0.8) <$>) "[0.5 0.25, [0.75 1]/2]") |+| gain "0.9" |+| cutoff (scale 0.01 0.1 $ slow 2.1 sine1) |+| resonance "0.1" |+| delay "0.5", whenmod 10 7 ((|+| coarse "[8 16 32 4 24]/2")) $ sound (samples "future bd k future ~ future" (run 22)) |+| shape "0.5", every 2 (density 2) $ every 3 (density 2) $  every 4 (density 2) $ slow 0.75 $ sound "hh:7"] |+| delaytime "0.4" |+| delayfeedback "0.3"
+
+hush

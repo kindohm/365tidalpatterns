@@ -1,0 +1,5 @@
+cps 2.5
+
+d1 $ whenmod 16 4 (iter 4) $ whenmod 20 18 (const $ slow 2 $ sound "{vb8 vbs vbp vblt [vbk peri] [vbk peri]}%8") $ slowspread ($) [id, trunc 0.25, trunc 0.25, id, (|+| speed "1.5 1.6 -1.4"), within (0, 1) (slow 2 . rev . stut 8 0.25 0.25), (|+| delay "0.4")] $  every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ every 5 ((|+| speed "1.5") . density 4) $ sound "up:1" |+| cut "1", slow 8 $ sound "[vbk peri]*2 [vbcp vbs:10] [vbp:1 vbhh*6] vbp:2 vbp:1 [~ vbk]*2 vbp:1 [~ vbk]*2", every 3 (density 2 ) $ every 2 (density 2) $ sound "vbhh*2" |+| speed "0.5" |+| end "0.4", sound (samples "[[~ ~ ktite*4 ~]/4 [stite]]/2" (run 17)) |+| speed "1.5" ] |+| delaytime "0.7" |+| delayfeedback "0.7" |+| shape (scale 0.1 0.5 $ slow 5.1 sine1)
+
+hush

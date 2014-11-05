@@ -1,0 +1,5 @@
+cps 1.75
+
+d1 $ iter 4 $ whenmod 6 4 (spin 0.75) $ whenmod 4 3 ((|+| speed "0.8 1.2 1.5 -1.5")) $  whenmod 5 4 (within (0.25, 0.75) (slow 4 . rev . stut 24 0.25 0.25)) $ every 4 (0.25 <~) $ every 3 (0.25 <~) $ stack [ slow 2 $ sound (samples "vbk*8 [vbs ~ vb8/3 ~]" (run 19)) |+| shape "0.2", whenmod 12 6 (const $ sound "untuned*4?") $ slow 2 $ sound (samples "{~ laz [~ laz] ~ laz}%4" "1") |+| speed "0.1" |+| cut "1" |+| shape "0.6" |+| gain "0.7", slow 2 $ sound (samples "{tite vbp tite vbhh robo tite vbhh}%8" (run 11)) |+| cut "5" ] 
+
+hush
