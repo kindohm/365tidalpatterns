@@ -1,0 +1,6 @@
+bps (120/120)
+
+d1 $ slowspread ($) [(|+| speed "1.5 -1.2 2 2.5"), spin 0.75, trunc 0.25, trunc 0.25, id, rev, id] $  every 8 (const $ sound "8cy 8ht*2 8ht*2 8lt*2 8ht*2 8ht*2 8bd*2 8bd:1") $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [ whenmod 10 5 (iter 4) $ whenmod 5 4 (within (0.25, 0.75) (slow 2 . rev . stut 8 0.25 0.25)) $ sound (samples "[vbk*2 vbk*4 [vbp:1 vbht] [vbs vb8/2] vbhh*2 [vbcp vblt] [vb8/3 vbhh] [vbs vbp]]" (run 13)) |+| shape "0.3" |+| speed "1", 
+sound "bass2:0*8?" |+| cut "2", sound "{8rs*2 8rs*2 8rs ~ ~ ~ ~}%8", sound "~ [~ 808sd/2 ~ ~] [~ 808cb] [~ 808sd/2 ~ ~]"]
+
+hush

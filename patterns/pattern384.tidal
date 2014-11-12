@@ -1,0 +1,5 @@
+bps (170/120)
+
+d1 $ whenmod 15 12 (slow 2 . (|+| speed "0.75")) $ whenmod 14 7 (slowspread ($) [id, spin 0.75, rev, striate 4 . slow 2 . rev, slow 8 . striate' 32 (1/5), echo 8, triple 6 . chop 8, (|+| speed "0.7 1.2 1.5 -1.2"), stut 4 0.2 0.1 . slow 2]) $ whenmod 16 14 (trunc 0.25) $ whenmod 12 6 (iter 4 . every 3 (0.25 <~) . every 4 (0.25 <~)) $ stack [ every 7 ((|+| begin "0") . (|+| end "1") . (|+| cut "1")) $ sound "loon*8?" |+| begin (scale 0.1 0.5 $ slow 1.7 sine1) |+| end (scale 0.2 0.6 $ slow 1.7 sine1) |+| speed (every 4 ((*0.8) <$>) $ every 3 ((*0.9) <$>) "1"), sound "~ stite ~ cp" , sound (samples "[k k*2] ~ k*4 k*4" (run 32)), slow 2 $ sound (samples "~ b/3 [~] ~ ~ [~ b:11/2] ~ ~" (run 26)) |+| cut "3"] |+| delayfeedback "0.3" |+| delaytime "0.3"
+
+hush

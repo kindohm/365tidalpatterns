@@ -1,0 +1,5 @@
+bps (190/120)
+
+d1 $ slowspread ($) [id, (|+| accelerate "3 -3"), rev, trunc 0.25, trunc 0.25, slow 4 . stut 8 0.25 0.25, stut 8 0.25 0.25, (|+| speed "1.2 -1.2 1.5 1.7"), degradeBy 0.5, spin 0.25, echo 2, echo 3, triple 3, id, (|+| speed "2 -2 0.5 -0.5"), (|+| speed "3") . density 2] $ whenmod 10 5 (iter 4) $ stack [ sound (samples "{s ~ k flkick/3 ktite/2}%8" "31") |+| shape "0.6" |+| gain "0.8", sound (samples "{~ ride ~ ride ~ ride ~}%8" "2") |+| cut "1", sound (samples "k*4 shard [~ k/2] [~ sub/3 k k]" (run 33)), whenmod 5 3 (|+| gain "0") $ slow 8 $ trunc 0.1225 $ (striate' 128 (1/20) $ sound "lessmel") |+| speed "0.5" |+| delay "0.3" ] |+| delaytime "0.4" |+| delayfeedback "0.5"
+
+hush

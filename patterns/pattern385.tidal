@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 22 12 (slowspread ($) [chop 16, trunc 0.25, trunc 0.25, smash 3 [3,1,2], spin 0.25, stut 3 0.33 0.33, (|+| speed "1.5 2 -1.25 0.8") . (|+| accelerate "1 -1")]) $ whenmod 16 12 (iter 4 . every 3 (0.25 <~) . every 4 (0.25 <~)) $ whenmod 8 6 ((|+| speed "0.9 0.8")) $ stack [ sound (samples "[k*2 gab] [doru gab] [s k] k*4?" (slow 0.9 $ run 28)), sound "vocad*4" |+| end "0.1" |+| speed "1", sound "~ gnome:3/3 ~ ~" |+| speed "1.1" |+| begin "0.2" |+| end "0.5" |+| delay "0.4" |+| gain "1.1" ] |+| delaytime "0.4" |+| delayfeedback "0.6"
+
+hush

@@ -1,0 +1,5 @@
+bps (130/120)
+
+d1 $ whenmod 20 12 (slowspread ($) [(|+| speed "1.2 0.8 -1"), (|+| speed "0.5") . slow 2 . (|+| delay "0.5"), (|+| accelerate "-3 3"), trunc 0.25, trunc 0.25]) $ stack [ (smash 4 [3,1,2,4] $ sound (samples "{bd*4 k*2 [ride taste] [stite flkick] salsa:1/2 [cp tite*2] doru*2 [8cy taste]}%4" (run 55))) |+| delay (scale 0.1 0.6 $ slow 2.1 sine1) |+| delayfeedback (scale 0.1 0.9 $ slow 2.7 sine1) |+| delaytime (scale 0.2 0.7 $ slow 2.88111 sine1), every 3 (smash 3 [3,1,2]) $ whenmod 11 7 (const $ stack [ sound (samples "~ pluck pluck pluck ~ [fran josie]/2 ~ pluck" (slow 0.7 $ run 23)), sound (samples "gretsch*12?" (slow 0.8 $ run 21))]) $ sound "~" ]
+
+hush 
