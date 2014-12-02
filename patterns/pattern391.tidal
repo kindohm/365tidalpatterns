@@ -1,0 +1,4 @@
+bps (140/120)
+
+d1 $ whenmod 20 15 (density 1.25) $ whenmod 12 9 (trunc 0.25) $ slowspread ($) [id, rev, within (0, 1) (slow 2 . rev . stut 8 0.1 0.1 . (|+| gain "0")), (|+| speed "[1, 0.8]"), jux ((|+| speed "0.8")), id, (|+| coarse "32 64 128"), id] $ every 3 (0.25 <~) $ every 4 (0.25 <~)$ stack [ whenmod 12 8 (const $ sound "~") $ every 2 (density 2) $ every 3 (density 2) $ every 4 (density 2) $ sound "vbhh*4" |+| gain "0.9", sound "~ [vbs:3, vbcp]" |+| speed "1", slow 2 $ sound "[~ ow1:1]*2 ~ ~ ~", slow 2 $ sound "~ pad ~ ~" |+| accelerate "1" |+| cut "1" |+| begin "0.25" |+| end "0.65", sound (samples "a2*4" "[0 2 ~ 1]*2") |+| delay "0.5", whenmod 5 3 (density 2) $ every 2 (density 2) $ sound "~ k:10*2", sound "[~ gnome]*2" |+| begin "0.85" |+| speed "1.2" ] |+| delaytime "0.22" |+| delayfeedback "0.5"
+

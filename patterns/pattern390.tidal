@@ -1,0 +1,5 @@
+bps (150/120)
+
+d1 $ whenmod 12 8 (|+| speed "[0.8, 0.5]") $ whenmod 8 4 (iter 4) $ whenmod 8 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ whenmod 14 12 (const $ slow 2 $ sound (samples "k*4 hh*3 k*6 hh*3 [sdeep ~ hh] hh*3 k*6 [hh*3 k*3]" "[5 7 9]*5")) $ stack [sound "[vbk1 ~ vbk1]*4", sound "{~ vbhh*3 ~}%4", sound "whi*12" |+| cutoff "0.1" |+| resonance "0.01" |+| speed "0.5" |+| gain "[0.7 0.6 0.6 0.6]*3", (|+| coarse "[16 128 32 64]/2") $ sound "~ ~ [vbs ~ vblt] [vbht vbp vblt]", sound "~ cpr" |+| speed "0.8" |+| shape "0.8" |+| gain "0.8" ]
+
+hush
