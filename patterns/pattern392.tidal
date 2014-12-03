@@ -1,0 +1,10 @@
+d1 $ whenmod 30 20 (stut 4 0.25 0.25 . slow 1.25 . (|+| speed "0.8")) $ slowspread ($) [trunc 0.25, trunc 0.25, iter 4, iter 4, id, rev, id, (|+| speed "1.2 1.5 -1.5 0.8"), (|+| accelerate "-1 1")] $ 
+	every 3 (0.25 <~) $ every 4 (0.25 <~) $ 
+	stack [
+	stack [
+	sound "k:22*8?", 
+	every 2 (density 2) $ every 3 (density 2) $ sound "hh:12*4" |+| gain "0.8",
+	whenmod 12 6 (density 2) $ sound "[~ cpr]/2" |+| shape "0.3" ] |+| speed "[1 2]/16",
+	slowspread ($) [id, rev, (|+| coarse "16 32 64"), trunc 0.25, id, within (0, 1) (slow 4 . rev . stut 8 0.25 0.1), (|+| speed "0.5"), (|+| speed "0.5"), chop 16] $ sound (samples "a1*8" (run 10))
+] |+| delayfeedback "0.5" |+| delaytime "0.37"
+
