@@ -1,0 +1,14 @@
+cps 1
+
+d1 $ whenmod 18 15 (iter 4) $ whenmod 4 3 (rev) $ whenmod 6 5 (|+| speed "1 0.8 1.2 -1.2") $ whenmod 8 6 (trunc 0.25) $ 
+every 3 (0.25 <~) $ every 4 (0.25 <~) $ 
+whenmod 15 13 (const $ stack [sound (samples "{k*2 k 8sd:3 k*2 k [k 8sd:3] k k 8sd:3 k 8sd:3}%8" "18") |+| coarse "32 16" |+| cutoff (scale 0.01 0.1 $ slow 1.1 sine1) |+| resonance "0.6", whenmod 8 6 (slow 1.5) $ whenmod 6 4 (slow 1.25) $ 
+spread (slow) [1, 8, 16, 4, 1.25, 8, 1] $ slow 1.25 $ sound "a2*128" 
+|+| begin "0.1" |+| end "[0.11 0.16 0.2 0.13 0.14 0.11 0.3 0.15]/3" |+| shape "0.5"]) $ stack [whenmod 20 15 (|+| gain "0") $ whenmod 8 6 (slow 1.5) $ whenmod 6 4 (slow 1.25) $ 
+whenmod 14 8 (|+| speed "0.5") $ spread (slow) [2, 3, 1, 16, 1.5, 4, 8, 1.25, 1] $ slow 1.25 $ sound "a2*128"
+|+| begin "0.1" |+| end "[0.11 0.16 0.2 0.13 0.14 0.11 0.3 0.15]/3" |+| shape "0.5",
+whenmod 16 8 ((|+| gain "0.7") . (|+| speed "1.2")) $ every 5 ((|+| speed "-0.8")) $ sound (samples "[~ k*2] k [k*2 k] k" "18") |+| gain "0.9" |+| cutoff "[1 1 1 1 0.01]/5" |+| resonance "0.1",
+sound "8sd:3 ~ ~ ~" |+| speed "1.25"]
+|+| delay "0.5" |+| delayfeedback "0.5" |+| delaytime "0.37"
+
+hush 

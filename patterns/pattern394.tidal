@@ -1,0 +1,5 @@
+cps 0.9
+
+d1 $ every 6 (|+| speed "1.2 1.5 -1.5 0.8") $ every 7 (within (0, 1) (rev . slow 2 . stut 8 0.25 0.25)) $ every 8 ((|+| speed "0.5") . slow 2) $ whenmod 15 10 (iter 4) $ whenmod 9 6 (trunc 0.25) $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ stack [every 3 (density 2) $ every 7 (density 2) $ slow 1 $ whenmod 16 8 ((|+| gain "0.75") . (|+| vowel "[o u a i]*7")) $ whenmod 20 16 (const $ sound (samples "k k*2 k*2 k*2" "23")) $ sound (samples "k [k? k] k*2 k*2" "[1 1 0 [0]]/32") |+| speed "2", sound "{~ ~ ~ cp ~}%8", sound (samples "{hh hh*2 hh*2 hh*2 hh hh*2 hh*2}%8" "17") |+| gain "0.8", whenmod 16 8 (|+| gain "0") $ sound (samples "{kl ~ ~ ~ kl ~ ~ kl ~}%4" "[0 2]/16"), slow 4 $ sound "~ cpr" |+| speed "0.7", whenmod 16 8 (const $ sound "~") $ sound "~ sdeep" |+| shape "0.2" ]
+
+hush
