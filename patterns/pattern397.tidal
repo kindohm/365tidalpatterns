@@ -1,0 +1,18 @@
+bps (180/120)
+
+d1  $ whenmod 18 15 (slow 2 . (|+| delay "0.2")) $ whenmod 20 16 (iter 4) $ whenmod 22 6 (slowspread ($) [id, rev, slow 1.5, (|+| coarse "16 32 64"), id, (|+| speed "1.2 1.5 -1.2 0.8"), trunc 0.25, trunc 0.25, id, within (0, 0.75) (rev . slow 3 . stut 8 0.2 0.1 . (|+| gain "0")), (|+| cutoff (scale 0.01 0.1 $ slow 1.21 sine1)) . (|+| resonance "0.5"), (|+| pan (scale 0 1 $ slow 0.25 sine1)) ] . every 3 (0.25 <~) . every 4 (0.25 <~) . whenmod 30 26 (smash 3 [3,1,2])) $ 
+stack [
+whenmod 12 8 (|+| gain "0") $ sound "~ lerm" |+| speed (whenmod 12 8 ((*0.8) <$>) "1"),
+slow 2 $ sound "~ cpr",
+slow 2 $ sound "~ ~ ~ b:9/4" |+| gain "0.9" |+| hcutoff "0.1" |+| hresonance "0.01",
+sound "~ stite:7",
+whenmod 15 10 (|+| gain "0") $ sound (samples "{tite*2 peri*2 [peri tite] tite tite*2 peri*2}%8" (run 20)) |+| speed "1.5",
+whenmod 5 3 (density 2) $ sound "~ [~ s:2] ~ s:2" |+| speed "2",
+whenmod 9 7 (|+| gain "0") $ sound "k*16?" |+| speed "3",
+whenmod 10 7 (|+| gain "0") $ every 3 (density 2) $ every 4 (density 2) $ every 2 (density 2) $ sound "hh:25*4" |+| gain "0.8",
+every 6 (|+| coarse "32") $ every 5 (|+| coarse "16") $ sound "[gron:2]/2" |+| cut "20" |+| cutoff "0.1" |+| resonance "0.001" |+| speed (whenmod 12 8 ((*0.8) <$>) "1"),
+whenmod 13 10 (|+| gain "0") $ every 4 (density 2) $ every 3 (spin 0.75) $ sound (samples "{~ k*2 [~ k] [~ k] k*2 k*2 k k}%4" "14"),
+whenmod 16 12 (|+| gain "0") $ whenmod 5 3 (density 2) $ slow 2 $ sound (samples "hoo ~ hoo hoo ~ hoo ~ hoo ~ ~ ~ ~ ~ ~ ~ ~" (run 10)) |+| speed (whenmod 12 8 ((*0.8) <$>) "[1 1 1 1 0.5]/3") |+| cutoff "0.07" |+| resonance "0.001"
+] |+| delaytime "0.3" |+| delayfeedback "0.6"
+
+hush

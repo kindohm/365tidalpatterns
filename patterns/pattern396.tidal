@@ -1,0 +1,14 @@
+bps (175/120)
+
+
+d1 $ every 7 (within (0, 0.5) (const $ sound "jake:3" |+| coarse "16")) $ every 9 (within (0, 0.5) (slow 2 . rev. stut 8 0.25 0.1)) $ 
+whenmod 8 6 (trunc 0.25 . (|+| speed "0.5")) $ 
+every 5 (|+| speed "1.2 1.5 -1.2 0.8") $ every 3 (0.25 <~) $ every 4 (0.25 <~) $ 
+stack [
+sound "~ [~ ow1:1] ~ ~" |+| speed (every 4 ((*0.75) <$>) "0.75") |+| coarse "32" |+| cut "2",
+sound "{~ [~ stite] ~ stite ~}%4",
+sound (samples "{~ hh*2 hh*2 hh*2 ~ ~}%4" "21"),
+sound "{k ~ ~ k ~ k*2? k*4?}%4",
+sound "ride:4*2" |+| cut "1" |+| gain "0.8"]
+
+hush
