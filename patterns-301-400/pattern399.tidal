@@ -1,0 +1,10 @@
+bps (130/120)
+
+d1 $ whenmod 10 7 ((|+| speed "0.75") . slow 2) $ every 6 (|+| accelerate "-1") $ foldEvery [3,4] (0.25 <~) $ stack [
+every 7 (|+| speed "0.5") $ iter 8 $ jux (|+| speed (scale 0.4 3 $ slow 2.61 sine1)) $ stut 2 0.5 1 $ every 8 (|+| coarse "64 128 256 512") $
+gap 4 $ (|+| speed (scale 0.5 2 $ slow 2 sine1)) $ (rev $ stut 32 0.25 0.5 $ every 3 (density 2) $ sound "thx:20 thx:35/3")
+|+| coarse "{24 16 32}%4",
+whenmod 5 3 (stut 4 0.5 0.25) $ sound "~ teks" |+| speed "[1, -0.75, -0.5]",
+sound "{ktite:1*4? [~ 8ch*2] 8cp/2}%4" |+| crush "-7" |+| shape "{0 0.3 0.3}%4" |+| speed "[1, 5]"]
+
+hush
