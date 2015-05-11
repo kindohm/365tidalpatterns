@@ -1,0 +1,18 @@
+
+bps (150/120)
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
+let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+let up = speed . ((1.059466**) <$>)
+
+d1 $ whenmod 10 8 (trunc 0.25) $ foldEvery [3,4] (0.25 <~) $ stack [
+sound "~ b1*4 ~ ~",
+every 3 ((|+| speed "0.5") . slow 2) $ whenmod 6 4 (jux (iter 8)) $
+whenmod 5 3 (slow 2) $ sound "~ [cp*4 ~]",
+slowcat [sound (samples "[[s ~ ~ drum] k*2] [k*16]" (run 36)),
+sound (samples "[numbers thx/2] sea ul*4 [peri feel]*4" ((0.25 <~) $ run 10)) |+| accelerate "0.5",
+stack [sound (samples "a1*16?" (run 20)), sound "{hh [~ [8mt*4 ~]/2] ~}%16"],
+jux (iter 4) $ (slowspread (striate) [4, 3, 8, 6] $
+sound (samples "[sub ride]*2 b*4?" (run 20))) |+| speed "[1 -1]/5" ]]
+
+hush
