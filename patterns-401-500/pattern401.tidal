@@ -1,0 +1,11 @@
+bps (130/120)
+
+d1 $ iter 4 $ foldEvery [3,4] (0.25 <~) $ stack [
+whenmod 10 5 (const $ sound "~") $ sound "{pson:2 ~ pson:3/3}%8" |+| speed "0.25",
+sound "{kfm:1 [~ kfm:1] ~ ~ k*2 ~ k:1*4}%4",
+slowspread (slow) [(4/3), (8/3)] $ whenmod 12 6 (|+| gain "0") $
+stut 4 0.25 0.25 $ sound "{hh ~ ~}%16" |+| gain "0.75",
+whenmod 7 4 (jux (|+| speed "[-1 -2]*3")) $ whenmod 5 3 (stut 4 0.25 0.25) $
+sound "{~ [~ mt] ~ ht*2 mt:1*4}%4" |+| shape "0.3"]
+
+hush

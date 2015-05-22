@@ -1,0 +1,12 @@
+bps (140/120)
+
+d1 $ slowspread ($)[id, rev, slow 2 . rev . stut 4 0.2 0.1, (|+| coarse "8 6 12"), slow (4/3) . (|+| speed "1 0.8 0.7 0.5"),
+iter 4, iter 4, iter 4, const $ sound "cpr kl(5/8)" |+| cut "1", (|+| speed "-1 -2 -3 -4"), (|+| unit "c")]
+$ foldEvery [3,4] (0.25 <~) $ stack [
+sound (samples "[{kl sub/2 ~}%16 ~ ~ ~ ~]/5" (run 10)) |+| cut "2" |+| accelerate "-1",
+foldEvery [2,3,4,5,6,7,8,9] (density (4/3)) $ sound ("1*16" <~> samples "a1*16" (run 34)) |+| begin (scale 0.02 0.1 $ slow 2 sine1)
+|+| speed "{1 2 -1 [-0.75,3] [0.5,2]}%4",
+every 3 (|+| accelerate "-1") $ whenmod 5 3 (jux (iter 4)) $
+foldEvery [3,4] (0.25 <~) $ sound (samples "{ch*12 oh/2 ~ [ch oh]*2 ch*12}%4" (run 16)) |+| cut "1" ]
+
+hush
