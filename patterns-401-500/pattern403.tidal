@@ -1,0 +1,22 @@
+bps (140/120)
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
+let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+
+d1 $ every 17 (const $ sound (samples "voxs:6*8?" (run 10)) |+| gain "1.2" |+| speed "1" |+| cut "1") $
+whenmod 16 14 (trunc 0.25) $ every 10 (rip' 0 1 8 0.2 0.1) $ whenmod 7 5 (|+| speed "{1.5 2 -1.25}%8") $
+every 9 (chop 16) $ every 8 (rev) $ every 5 (gap 4) $ every 6 (|+| accelerate "-1 1") $ every 7 (|+| coarse "16 64 32") $
+whenmod 12 8 (iter 4) $ foldEvery [3,4] (0.25 <~) $ every 6 (rip 0.2 0.1) $
+stack [
+sound (samples "fall*16?" (run 18)) |+| end "0.25" |+| speed "4" |+| cut "8"
+|+| cutoff (scale 0.01 0.1 $ slow 4.1 sine1) |+| resonance "0.3",
+whenmod 20 15 (const $ sound "~") $ slow 4 $ slowcat [
+density 4 $ every 3 (|+| speed "3") $ sound "fall:3*4?" |+| cut "1" |+| unit "c" |+| speed "2" |+| accelerate "-0.25",
+density 4 $ slow 2 $ sound "{fall:9 fall:4*3 fall:7}%8" |+| accelerate "{-1 -1.5 -1 -2 -1.5}%4" |+| speed "2" |+| cut "1",
+density 4 $ sound "{[fall:5 fall:14] fall:12 ~}%4" |+| speed "1" |+| cut "1",
+density 4 $ sound "fall:1*8?" |+| accelerate "0.5" |+| unit "c" |+| speed "4" |+| cut "1" ],
+sound (samples "[~ ht ~ btl?] gunk*4? [lls guns]/2 [~ btl? ~ ht]" (run 12)) |+| cut "3",
+degrade $ sound (samples "toekit*16" (irand 12)) |+| cut "5" |+| speed "2",
+sound "cpr/2" ]
+
+hush
