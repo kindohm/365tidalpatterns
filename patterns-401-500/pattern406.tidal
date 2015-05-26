@@ -1,0 +1,19 @@
+bps (170/120)
+
+let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
+let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+
+d1 $ whenmod 30 20 (density 1.25) $ every 9 (stut 16 0.1 2) $ every 6 (gap 6 . rev) $ every 8 ((|+| speed "0.5") . slow (2/3)) $
+every 7 (|+| coarse "64 32 128") $ whenmod 12 7 (iter 4) $ foldEvery [3,4] (0.25 ~>) $
+whenmod 20 12 (const $ stack [sound (samples "~ kl*4 [~ cp] [~ pson]*2" (slow 0.81 $ run 32)) |+| cut "1",
+sound "{fall:13 ~ fall:8}%4" |+| coarse "32" |+| cut "5" |+| speed "1 2 -1.5"]) $
+stack [
+whenmod 7 4 (slow 2) $ whenmod 10 5 (|+| speed "[0.5 0.25]") $
+sound "~ fall*4 fall ~" |+| cut "1" |+| speed "[1 0.5]" |+| coarse "0 0 16 0",
+sound (samples "fall2:28? fall2:28? ~ k*4" (run 16)) |+| cut "3" |+| end "0.25",
+sound "{~ cp ~}%8" |+| speed "2",
+sound "s2" |+| speed "[1.2]",
+whenmod 15 10 (const $ sound "~") $ sound "{ch*12 oh [ch oh]*4}%2" |+| cut "2" |+| speed "0.5" |+| coarse "16"
+|+| pan "[0 1]*8" ]
+
+hush
