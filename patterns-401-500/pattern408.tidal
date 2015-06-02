@@ -1,0 +1,12 @@
+bps (160/120)
+
+let up = speed . ((1.059466**) <$>)
+
+d1 $ whenmod 4 2 (palindrome) $
+stack [
+jux (iter 16) $ sound "~ [ht*2 ~] [s2:3 ~ ~ kl:3/4] ~",
+sound (samples "kl*16" (run 12))
+|+| up (foldEvery [2,3,4] ((+4) <$>) (run 32))
+|+| coarse "4" |+| cut "3"]
+
+hush

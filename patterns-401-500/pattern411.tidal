@@ -1,0 +1,9 @@
+bps (130/120)
+
+let up = speed . ((1.059466**) <$>)
+
+d1 $ (jux (slow 2 . spread' (striate' 8) ((+0.1) <$> slow 2 sine1)) $ every 2 (density 2) $
+sound (samples "[k kl]/2 k2*4 [s2 jvbass*8] [ch oh/2]*2" (run 12)))
+|+| up (density 4 $ (run 32))
+
+hush

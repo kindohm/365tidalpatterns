@@ -1,0 +1,10 @@
+bps (120/120)
+
+d1 $ jux (slow 2 . zoom (0, 0.5) . spread' (striate' 8) ((+0.1) <$> slow 3 sine1)) $
+density 4 $
+sound "ow1*3"
+|+| end "0.5"
+|+| up (whenmod 16 8 (subtract 20 <$>) $
+whenmod 8 6 (0.25 <~) $ whenmod 6 4 (0.25 <~) $ whenmod 5 3 (0.25 <~) $ run 36)
+
+hush

@@ -1,0 +1,16 @@
+bps(140/120)
+
+d1 $ foldEvery [3,4] (0.25 <~) $
+jux (slowspread (slow) [2,4,3,(4/3)] . zoom (0, 0.5) . spread' (striate' 32) ((+0.05) <$> slow 3 sine1)) $
+stack [sound "{la*2 la la*2}%4" |+| up (whenmod 8 4 ((+2) <$>) "{[4 -1] 0 [[-5, [~ ~ ~ 7]/4] 2]}%4"),
+sound "{la ~ ~}%2" |+| up (whenmod 8 4 ((+2) <$>) "-24 -36") |+| cut "1"]
+
+
+
+d1 $ foldEvery [3,4] (0.25 <~) $
+jux (foldEvery [2,3,4] (slow 1.5) . zoom (0, 0.5) . spread' (striate' 32) ((+0.05) <$> slow 3 sine1)) $
+stack [sound "{la*2 la la*2}%4" |+| up (foldEvery [2,3,4,5] ((+2) <$>) "{[4 -1] 0 [[-5, [~ ~ ~ 7]/4] 2]}%4"),
+sound "{la ~ ~}%2" |+| up (foldEvery [2,3,4,5] ((+2) <$>) "-24 -36") |+| cut "1"]
+
+
+hush

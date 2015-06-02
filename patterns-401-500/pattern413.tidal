@@ -1,0 +1,16 @@
+bps (120/120)
+
+d1 $ whenmod 11 7 (iter 4) $ slowspread ($) [id, rev, (|+| accelerate "-1 1"), (|+| coarse "16  24 32"),
+trunc 0.25, trunc 0.25,
+(|+| unit "c"), gap 4, chop 16, id, (|+| speed "1.2 1.5 -1.2 0.8")] $
+foldEvery [3,4] (0.25 <~) $ stack [
+sound "~ ow1/2 ~ ~",
+sound "{gunrs ~ ~}%8" |+| speed "1",
+sound "~ ~ ~ cpr:1/4",
+jux (|+| speed "1.3") $ sound (samples "numbers*2" "[5 4 8]/8") |+| speed "-1.2",
+sound (samples "k*16 shard2:1" (run 40)) |+| shape "0 0.2" |+| speed "1 0.8",
+density 2 $ sound "s2:4(3,8)" |+| speed "2" |+| shape "0.5",
+sound (samples "~ fall2 fall*3 [~ fall2]" (run 20)) |+| cut "3893",
+density 2 $ sound (samples "~ [k kl:2/2]" (run 30))]
+
+hush

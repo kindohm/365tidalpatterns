@@ -1,0 +1,11 @@
+bps (170/120)
+
+let up = speed . ((1.059466**) <$>)
+
+d1 $ slow 2 $
+foldEvery [1,2,3] (density 2) $ sound (samples "la2*32" (run 32))
+|+| up (whenmod 8 4 (negate <$>) $ palindrome $ whenmod 6 3 ((+12) <$>) (run 32)) |+| pan (slow 2 $ saw1)
+|+| coarse "16"
+|+| end "0.5"
+
+hush

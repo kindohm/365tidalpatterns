@@ -1,0 +1,14 @@
+bps (150/120)
+
+let rip'' a b c d e s p = within (a, b) (slow s . rev . stut c d e) p
+
+d1 $ whenmod 16 8 (iter 4) $ stack [
+whenmod 8 4 (0.25 <~) $ sound "~ ~ ~ kl",
+every 4 (|+| pan "[1 0]*16") $
+every 3 (density 2) $ (stut 8 0.2 0.5 $ sound (samples "{~ cp ~ cp ~ cp ~}%4" "1")) |+| speed "[4 2]*4" |+| gain "0.8",
+whenmod 12 6 (0.25 ~>) $ sound "kl:1*2 ~ ~ ~",
+slowspread (slow) [4, 4, 2, 4, 4, 2, 1] $ sound (samples "{~ ch*6 ch*8 [ch*8 ~] ~}%8" (run 20))
+|+| speed (scale (-1) (-2) $ density 2 sine1),
+sound (samples "{~ [lt*2 ~] [ht ~ mt] [~ mt ~] [~ ht]*2}%4" (run 10)) |+| shape "0.5" |+| crush "-8" ]
+
+hush
