@@ -1,0 +1,5 @@
+bps (130/120)
+
+d1 $ sound "ambshot*8?" |+| begin "0.3" |+| end "0.4"
+
+hush

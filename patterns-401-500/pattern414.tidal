@@ -2,11 +2,11 @@ bps (100/120)
 
 d1 $ whenmod 20 16 (iter 4) $ whenmod 10 8 (trunc 0.25) $
 stack [
-sometimes (jux (|+| speed "0.8")) $ sound "k2:6*8? [~ [k2:6*8? ~]/2]",
+sometimes (jux (|+| speed "0.8")) $ sound "k:6*8? [~ [k:6*8? ~]/2]",
 every 3 (rip' 0 1 8 0.2 0.1) $ sound "~ cp:1",
-whenmod 6 3 (|+| nudge (scale 0 0.2 $ density 1.71 sine1)) $ foldEvery [3,4] (density 2) $ sound "ch:6*4" |+| gain "1.2",
-sometimes (jux (|+| speed "0.8")) $ whenmod 8 4 (|+| nudge ((negate <$>) (scale 0.01 0.4 $ density 2.1 sine1))) $ sound "~ s2:1",
-sound "untuned*128" |+| cut "8"
+whenmod 6 3 (|+| nudge (scale 0 0.2 $ density 1.71 sine1)) $ foldEvery [3,4] (density 2) $ sound "ch:6*4" |+| gain "0.7",
+sometimes (jux (|+| speed "0.8")) $ whenmod 8 4 (|+| nudge ((negate <$>) (scale 0.01 0.4 $ density 2.1 sine1))) $ sound "~ s:7",
+sound "percg:7*32" |+| cut "8" |+| gain "0.9"
 |+| speed (slow 4 "{0.8 1 -1 0.5 [1.5 2]}%1")
 |+| cutoff (scale 0.0001 0.1 $
   (within (0.5,1) (every 2 (rev . density (4/3))) . within (0.25, 0.5) (slow 2) . within (0, 0.25) (every 3 (slow (4/3)) . every 2 (density 2)) $ density 8 saw1)) |+| resonance "0.1"]
