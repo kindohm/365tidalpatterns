@@ -1,5 +1,22 @@
-bps (130/120)
+bps (100/120)
 
-d1 $ sound "ambshot*8?" |+| begin "0.3" |+| end "0.4"
+let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
+let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+
+d1 $ whenmod 16 10 (slow (4/3)) $
+every 6 (|+| accelerate "-0.25 0.25") $
+every 9 (rip 0.25 0.333) $
+every 7 (rev) $
+every 5 (chop 8) $
+whenmod 12 8 (foldEvery [3,4] (3.75 ~>)) $
+stack [
+sound "{[~ 8bd/2 ~ ~] ~ ~}%2",
+slow 24 $ (zoom (0, 0.25) $ spread' (striate' 1024) (scale 0.001 0.01 $ sine1) $ sound "ambshot:2") |+| speed "0.5" |+| gain "0.5" |+| delay "0.4",
+sometimes (density 4) $ sound "ambshot:2*6"
+|+| begin rand |+| cut "1" |+| coarse "{4 8 6 2 10}%16" |+| speed "[1 0.9/2]/4",
+rip' 0 1 16 0.2 0.1 $ slow 2 $ sound (samples "{[~ k]*3 ~ ~}%8" (run 20)) |+| speed "2",
+sometimes rev $ slow 2 $ sound "{[~ sc]*3 ~ sc(5,12) sc*3 sc*6}%4" |+| speed "2",
+sound (samples "{percg*6 ~ [~ percg]*3}%4" (run 20)) |+| gain "0.8" |+| speed "[2]"]
+|+| delaytime "0.5" |+| delayfeedback "0.5"
 
 hush

@@ -1,0 +1,11 @@
+bps (200/120)
+
+brute $ note ((+44) <$> (every 3 ((subtract 4) <$>) . every 2 ((subtract 3) <$>)) ("{0 2 0 -1 -6*2}%8"))
+
+d1 $ whenmod 6 3 (iter 4) $ foldEvery [3,4] (0.25 <~) $ stack [
+foldEvery [2,3,4] (5.75 ~>) $ slow 4 $ sound (samples "{brkh3*8 nu*8 think*8 funky*8}%4" (irand 16))
+|+| speed "{1 1 2 2}%4" |+| shape "{0 0.1 0.3 0.3}%4",
+sound "{heem ~ ~}%1" |+| shape "0.3" |+| speed "0.1225",
+sound "cpr/2" |+| coarse "{16 24 32}%8" |+| speed "{0.9 0.8 1 0.75 0.85}%16",
+slow 4 $ sound "~ ~ ~ melt" |+| coarse "32" |+| cut "1" |+| gain "0.8",
+jux (iter 4) $ slow 2 $ sound (samples "fk*16 shard:8" (run 30)) ]

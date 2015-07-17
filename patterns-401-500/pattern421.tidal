@@ -1,0 +1,9 @@
+bps (155/120)
+
+d1 $ stack [
+sometimes (slow 2) $ superimpose (|+| coarse "{8 16 24}%4") $ sound "electrowave*8"
+|+| begin (scale 0 0.7 $ rand) |+| cut "1"
+|+| speed "0.9",
+sound "fk:1*8?",
+sound "~ cp:1",
+sound "ch:4*4" |+| gain "0.8"]

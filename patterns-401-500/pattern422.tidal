@@ -1,0 +1,8 @@
+bps (165/120)
+
+d1 $ jux (iter 4 . every 3 (slow 2 . rev) . striate 4 . every 2 (slow 2)) $
+stack [
+slow 2 $ sound "~ laz:1(3,8)" |+| end "0.1" |+| speed "[0.061225]",
+sound "fk*8 ~" ]
+
+hush

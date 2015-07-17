@@ -1,0 +1,6 @@
+bps (170/120)
+
+d1 $ stack [
+jux (iter 4) $
+slowspread (superimpose) [(|+| speed "-2"), (|+| coarse "{8 32 16}%16")] $ 
+slow 2 $ sound "[[kl:3*2, ch:6*2] [kl:3(3,8), ch:6(3,8)]]" ]
