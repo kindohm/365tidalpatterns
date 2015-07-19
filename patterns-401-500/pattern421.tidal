@@ -5,5 +5,7 @@ sometimes (slow 2) $ superimpose (|+| coarse "{8 16 24}%4") $ sound "electrowave
 |+| begin (scale 0 0.7 $ rand) |+| cut "1"
 |+| speed "0.9",
 sound "fk:1*8?",
-sound "~ cp:1",
+jux (iter 8) $ stut 2 0.5 0.25 $ sound "~ cp:1",
 sound "ch:4*4" |+| gain "0.8"]
+
+hush

@@ -2,3 +2,5 @@ bps (130/120)
 
 d1 $ slow 4 $ spread (foldEvery [2,3,4]) [density 2, slow (8/3), density (4/3), slow (4/3)] $
 sound (samples "[~ fk*2]*2 fall*32" (run 30)) |+| cut "1" |+| speed "[1 0.5]"
+
+hush

@@ -1,6 +1,6 @@
 bps (200/120)
 
-brute $ note ((+44) <$> (every 3 ((subtract 4) <$>) . every 2 ((subtract 3) <$>)) ("{0 2 0 -1 -6*2}%8"))
+bass $ note ((+44) <$> (every 3 ((subtract 4) <$>) . every 2 ((subtract 3) <$>)) ("{0 2 0 -1 -6*2}%8"))
 
 d1 $ whenmod 6 3 (iter 4) $ foldEvery [3,4] (0.25 <~) $ stack [
 foldEvery [2,3,4] (5.75 ~>) $ slow 4 $ sound (samples "{brkh3*8 nu*8 think*8 funky*8}%4" (irand 16))
