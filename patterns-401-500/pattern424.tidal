@@ -1,0 +1,12 @@
+bps (140/120)
+
+bass $ note (((+60) . (*2)) <$> (every 2 ((subtract 4) <$>) . every 3 (rev)) "[0 [~ -6/3] [~ -12/2] [[12 14 23 17] 20 8 [16 32]]/4]")
+|+| lforate (scale 0.1 1 $ slow 6 sine1)
+|+| lfoint (scale 0.5 1 $ slow 4 sine1)
+|+| decay (scale 0.95 1 $ slow 2.1 sine1)
+|+| dur "{0.5 0.01 0.1}%1"
+|+| slide "[0 0.2]/6"
+|+| decay "1"
+|+| pitch1 "0"
+|+| pitch2 "0.07"
+|+| pitch3 "1"
