@@ -1,6 +1,6 @@
 bps (170/120)
 
-d1 $ (sometimes (|+| cut "1")) $ stack [
+d1 $(sometimes (|+| cut "1")) $ stack [
 whenmod 6 4 (slow 4 . trunc 0.125) $
 slowcat [
 sound (samples "teeny1*8" (run 32)),

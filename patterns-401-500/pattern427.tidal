@@ -1,0 +1,9 @@
+bps (150/120)
+
+d1 $ iter 4 $
+every 5 (chop 16 . slow 8) $
+every 3 (zoom (0, 0.5) . striate 4 . slow 2 . jux (|+| speed "0.75")) $
+stack [
+sound (samples "[kg*4 ~]/2 sc" "10"),
+sound "[melt shoe/2]*4" |+| cut "1" |+| begin rand,
+sound (samples "{[~ cp]*2 k*4 [~ s] [~ ch*2] [peri feel]*2}%4" (run 25)) ]
