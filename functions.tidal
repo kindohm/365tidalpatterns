@@ -16,3 +16,10 @@ import Sound.Tidal.Rytm
 
 keyStreams <- keyproxy 1 "Scarlett 18i8 USB" [(keys, 1),(keys, 2),(keys, 3),(keys, 4),(keys, 5),(keys, 6),(keys, 7),(keys, 8),(keys, 9),(keys, 10),(keys, 11),(keys, 12),(keys, 13),(keys, 14),(keys, 15),(keys, 16)]
 [bd,sd,rs,cp,bt,lt,mt,ht,ch,oh,cy,cb,k13,k14,k15,k16] <- sequence keyStreams
+
+
+import Sound.Tidal.MIDI.Output
+import Sound.Tidal.VolcaBass
+
+keyStreams <- midiproxy 1 "Scarlett 18i8 USB" [(bass, 1)]
+[volca] <- sequence keyStreams

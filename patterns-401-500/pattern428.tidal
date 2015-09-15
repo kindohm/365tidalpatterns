@@ -1,0 +1,10 @@
+
+volca $ every 4 ((|+| dur "{1 0.5 0.75}%8") . slow 4) $ foldEvery [2,4,6] (slow (4/3)) $
+note ((+54) <$> (sometimes ((negate) <$>) . foldEvery [2,3,4,5] (((subtract 5) . (*2)) <$>)) "0 2 4 5 7 9 11 12 14 16 17 19 21 23 24")
+|+| dur (scale 0.001 0.5 $ slow 4.21 sine1)
+|+| lforate (sometimes (rev) $ scale 0 1 $ slow 7.17 sine1)
+|+| lfoint "1"
+|+| pitch1 (foldEvery [2,3] (3.75 ~>) $ sometimes (density 2) $ scale 0 1 $ slow 5.971 sine1)
+|+| slide (scale 0.1 0.5 $ slow 5.99 sine1)
+
+volca silence

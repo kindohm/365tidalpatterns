@@ -1,11 +1,18 @@
-bps (150/120)
+bps (100/120)
 
-d1 $ foldEvery [2,3,4] (iter 4) $
-every 5 (chop 16 . slow 8) $
-every 3 (zoom (0, 0.5) . striate 4 . slow 2 . jux (|+| speed "0.75")) $
-stack [
-sound (samples "[kg*4 ~]/2 sc" "10"),
-sound "[melt shoe/2]*4" |+| cut "1" |+| begin rand,
-sound (samples "{[~ cp]*2 k*4 [~ s] [~ ch*2] [peri feel]*2}%4" (run 25)) ]
+d1 $ whenmod 16 8 (density 2) $
+whenmod 12 5 (|+| accelerate "{1 -1 2 -2 4 -4 8 -8 16 -16}%17") $
+sometimes (jux (iter 8)) $
+superimpose ((0.25 <~) . (|+| speed "[0.5 0.75 0.25]/2")) $
+foldEvery [2,3,4] (density (4/3)) $
+sound (samples "[minc b amenall fur1]" (irand 16))
+|+| cut "-1"
+|+| shape "0.4 0.3 0 0"
+|+| speed "{1 0.75 0.5 0.5 0.25}%33"
+|+| loop "{15 20 5 30 10}%29"
+|+| end (scale 0.01 0.1 $ density 4.31 sine1)
+|+| delay (scale 0.1 0.5 $ slow 1.9 sine1)
+|+| delaytime (scale 0.001 0.5 $ slow 3.1 sine1)
+|+| delayfeedback (scale 0.4 0.98 $ slow 3.717 sine1)
 
 hush
