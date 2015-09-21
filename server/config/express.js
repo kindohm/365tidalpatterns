@@ -3,8 +3,10 @@ var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
 
+var bowerDir = path.resolve(__dirname + '/../../bower_components');
+app.use('/bower_components', express.static(bowerDir));
+
 var browserDir = path.resolve(__dirname + '/../../browser');
-log.info('browserDir', browserDir);
 app.use('/browser', express.static(browserDir));
 
 app.set('view engine', 'ejs');
