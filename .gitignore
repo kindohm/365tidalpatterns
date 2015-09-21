@@ -1,3 +1,4 @@
 *.tidal~
 *.tidal#
 node_modules
+.idea

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "This is a collection of 365 Tidal patterns created over 365 days,\r beginning 2013-12-30.",
   "scripts": {
-    "start": "./app/server/server.js"
+    "start": "app/server/app.js"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,9 @@
   },
   "homepage": "https://github.com/kindohm/365tidalpatterns",
   "dependencies": {
+    "bluebird": "^2.10.0",
+    "body-parser": "^1.14.0",
+    "ejs": "^2.3.4",
     "express": "^4.13.3",
     "moment": "^2.10.6",
     "winston": "^1.0.1"
