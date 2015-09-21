@@ -1,13 +1,18 @@
-var environment = "development";
-var config = {
+var settings = {
   consoleLogLevel: "debug",
-  environment: environment
+  environment: "development"
 };
 
-config.express = {
+settings.express = {
 	hostName: 'localhost',
 	port: 9005,
 	ip: '127.0.0.1'
 };
 
-module.exports = config;
+settings.db = {
+	host: 'localhost',
+	name: '365tidalpatterns',
+	port: '27017'
+};
+
+module.exports = settings;
