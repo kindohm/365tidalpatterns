@@ -1,7 +1,7 @@
 # 365 Tidal Patterns
 
 This is a collection of 365 Tidal patterns created over 365 days,
-beginning 2013-12-38.
+beginning 2013-12-30.
 
 Patterns are available for listening at:
 
@@ -18,4 +18,3 @@ Patterns are available for listening at:
 These patterns use custom samples that aren't availble with the stock
 Dirt synthesizer. They originate from older electronic material I've
 produced in the past, alone with some other one-off samples.
-
