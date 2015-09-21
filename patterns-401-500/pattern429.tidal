@@ -1,0 +1,15 @@
+bps (140/120)
+
+d1 $
+whenmod 10 6 (degradeBy 0.7) $
+sometimes (jux (iter 8)) $
+(|+| cutoff (scale 0.001 0.2 $ slow 4.1 sine1)) $
+(|+| resonance "0.5") $
+(|+| crush (scale 10 40 $ slow 4.2 sine1)) $
+whenmod 5 3 (|+| accelerate "{1 -1 2 -2 3}%10") $
+sound (samples "{b paddark toys/2}%5" (irand 50))
+|+| speed "[{1 2 1.5 -1 0.5 0.75}%6, {1.25 -0.5 0.75}%9]/4"
+|+| cut "-1" |+| loop "{30 20 10}%20"
+|+| end "{0.1 0.01 0.2 0.05}%32"
+
+hush
