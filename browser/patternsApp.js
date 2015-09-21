@@ -5,10 +5,10 @@ window.app = angular.module('patternsApp', [
 
 app.config(function ($stateProvider, $urlRouterProvider) {
 
-	//$urlRouterProvider.otherwise('/');
+	$urlRouterProvider.otherwise('/');
 
 	$stateProvider
-		.state('pattern.list', {
+		.state('home', {
 			url: '/',
 			templateUrl: '/browser/home/pattern-list.html',
 			controller: 'PatternListController',
