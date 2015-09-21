@@ -1,0 +1,22 @@
+{
+  "name": "365tidalpatterns",
+  "version": "1.0.0",
+  "description": "This is a collection of 365 Tidal patterns created over 365 days,\r beginning 2013-12-38.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kindohm/365tidalpatterns"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kindohm/365tidalpatterns/issues"
+  },
+  "homepage": "https://github.com/kindohm/365tidalpatterns",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
