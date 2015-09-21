@@ -81,10 +81,16 @@ module.exports = {
 					var plainName = path.basename(file.fullPath, '.tidal');
 					var fileName = path.basename(file.fullPath);
 					var number = plainName.substr(7);
+					var filePath = (path.relative(__dirname, file.fullPath)
+						.replace('..' + path.sep, '')
+						.replace('..' + path.sep, '')
+						.replace('..' + path.sep, ''));
+
 					return {
 						fileName: fileName,
 						number: +number,
-						plainName: plainName
+						plainName: plainName,
+						filePath: filePath
 					};
 				});
 			}).then(function (patterns) {
