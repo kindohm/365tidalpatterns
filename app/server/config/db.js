@@ -1,8 +1,9 @@
 var Promise = require("bluebird");
 var mongoose = require('mongoose');
-
 var settings = require("./settings");
 var url = "mongodb://" + settings.db.host + ":" + settings.db.port + "/" + settings.db.name;
+
+Promise.promisifyAll(mongoose);
 
 module.exports.connectToMongoose = function () {
 	return new Promise(function (resolve, reject) {
