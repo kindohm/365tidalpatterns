@@ -1,0 +1,16 @@
+{
+  "name": "365tidalpatterns",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kindohm/365tidalpatterns",
+  "authors": [
+    "Mike Hodnick <mike.hodnick@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

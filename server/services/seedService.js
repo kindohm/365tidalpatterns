@@ -58,47 +58,52 @@ var insertAllPatterns = function (patterns) {
 
 };
 
-module.exports = {
-	run: Promise.method(function () {
-
-		var patternsPath = __dirname + '/../../../patterns';
-
-		return dropCollection('pattern')
-			.then(function () {
-				log.info('loading patterns from path', patternsPath);
-				return recursiveAsync(patternsPath, []);
-			})
-			.then(function (files) {
-				return Promise.map(files, function (file) {
-					return fs.readFileAsync(file, 'utf8')
-						.then(function (contents) {
-							return {fullPath: file, contents: contents};
-						});
-				});
-			})
-			.then(function (files) {
-				return _.map(files, function (file) {
-					var plainName = path.basename(file.fullPath, '.tidal');
-					var fileName = path.basename(file.fullPath);
-					var number = plainName.substr(7);
-					var filePath = (path.relative(__dirname, file.fullPath)
-						.replace('..' + path.sep, '')
-						.replace('..' + path.sep, '')
-						.replace('..' + path.sep, ''));
-
-					return {
-						fileName: fileName,
-						number: +number,
-						plainName: plainName,
-						filePath: filePath
-					};
-				});
-			}).then(function (patterns) {
-				return insertAllPatterns(patterns);
-			}).then(function (result) {
-				log.info('bulk insert success', {insertedCount: result.insertedCount});
-				return;
-			});
-	})
+var exports = {
+	patternCount: 0
 };
 
+exports.run = Promise.method(function () {
+
+	var patternsPath = __dirname + '/../../patterns';
+
+	return dropCollection('pattern')
+		.then(function () {
+			log.info('loading patterns from path', patternsPath);
+			return recursiveAsync(patternsPath, []);
+		})
+		.then(function (files) {
+			return Promise.map(files, function (file) {
+				return fs.readFileAsync(file, 'utf8')
+					.then(function (contents) {
+						return {fullPath: file, contents: contents};
+					});
+			});
+		})
+		.then(function (files) {
+			return _.map(files, function (file) {
+				var plainName = path.basename(file.fullPath, '.tidal');
+				var fileName = path.basename(file.fullPath);
+				var number = plainName.substr(7);
+				var filePath = (path.relative(__dirname, file.fullPath)
+					.replace('..' + path.sep, '')
+					.replace('..' + path.sep, '')
+					.replace('..' + path.sep, ''));
+
+				return {
+					fileName: fileName,
+					number: +number,
+					plainName: plainName,
+					filePath: filePath
+				};
+			});
+		}).then(function (patterns) {
+			return insertAllPatterns(patterns);
+		}).then(function (result) {
+			exports.patternCount = result.insertedCount;
+			log.info('bulk insert success', {insertedCount: result.insertedCount});
+			return;
+		});
+});
+
+
+module.exports = exports;
