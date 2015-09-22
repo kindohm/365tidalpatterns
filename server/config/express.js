@@ -9,17 +9,19 @@ app.use('/bower_components', express.static(bowerDir));
 var browserDir = path.resolve(__dirname + '/../../browser');
 app.use('/browser', express.static(browserDir));
 
+var viewsDir = path.resolve(__dirname + '/../views');
+
 log.info("paths",
 	{
 		dirname: __dirname,
 		cwd: process.cwd(),
 		browserDir: browserDir,
-		viewsDir: process.cwd() + '/views'
+		viewsDir: viewsDir
 	});
 
 
 app.set('view engine', 'ejs');
-app.set('views', process.cwd() + '/views');
+app.set('views', viewsDir);
 app.use(bodyParser.json());
 
 // setup routes
