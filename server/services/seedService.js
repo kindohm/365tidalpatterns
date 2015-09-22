@@ -83,6 +83,7 @@ exports.run = Promise.method(function () {
 			return _.map(files, function (file) {
 				var plainName = path.basename(file.fullPath, '.tidal');
 				var fileName = path.basename(file.fullPath);
+				var audioPath = "/audio/" + plainName + ".mp3";
 				var number = plainName.substr(7);
 				var filePath = (path.relative(__dirname, file.fullPath)
 					.replace('..' + path.sep, '')
@@ -93,7 +94,9 @@ exports.run = Promise.method(function () {
 					fileName: fileName,
 					number: +number,
 					plainName: plainName,
-					filePath: filePath
+					filePath: filePath,
+					audioPath: audioPath,
+					code: file.contents
 				};
 			});
 		}).then(function (patterns) {

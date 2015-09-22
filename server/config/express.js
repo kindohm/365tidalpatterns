@@ -9,15 +9,10 @@ app.use('/bower_components', express.static(bowerDir));
 var browserDir = path.resolve(__dirname + '/../../browser');
 app.use('/browser', express.static(browserDir));
 
-var viewsDir = path.resolve(__dirname + '/../views');
+var audioDir = path.resolve(__dirname + '/../../audio');
+app.use('/audio', express.static(audioDir));
 
-log.info("paths",
-	{
-		dirname: __dirname,
-		cwd: process.cwd(),
-		browserDir: browserDir,
-		viewsDir: viewsDir
-	});
+var viewsDir = path.resolve(__dirname + '/../views');
 
 app.set('view engine', 'ejs');
 app.set('views', viewsDir);
