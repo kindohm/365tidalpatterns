@@ -1,0 +1,12 @@
+ul.pattern-list {
+	margin-left: 0px;
+	padding-left: 0px;
+	margin-top: 20px;
+}
+
+li.pattern {
+	list-style-type: none;
+	padding: 10px;
+	margin: 0px;
+	border-bottom: solid 1px #333;
+}

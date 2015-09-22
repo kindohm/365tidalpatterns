@@ -3,23 +3,34 @@
 <head lang="en">
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/browser/styles.css">
 </head>
 <body>
 
-<div class="container">
-	<header></header>
-	<main>
-		<h1>hi</h1>
+<div>
+	<header class="bg-primary">
+		<div class="container"><h1>365 Tidal Patterns</h1></div>
+	</header>
+	<main class="container">
 		<div ui-view></div>
 	</main>
 
-	<footer></footer>
+	<footer class="container">
+		<hr/>
+		<p class="text-center">
+			<small>365 Tidal Patterns was originally produced by
+				<a href="//kindohm.com">Mike Hodnick</a>. Unauthorized
+				duplication may result in sudden death or dismemberment.
+			</small>
+		</p>
+	</footer>
 </div>
 <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
 <script type="text/javascript" src="/bower_components/angular-resource/angular-resource.min.js"></script>
 <script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
 
 <script type="text/javascript" src="/browser/patternsApp.js"></script>
+<script type="text/javascript" src="/browser/patternsApi.js"></script>
 <script type="text/javascript" src="/browser/home/PatternListController.js"></script>
 
 </body>

@@ -1,2 +1,7 @@
-<h3>pattern list</h3>
-<p>{{ list.message }}</p>
+<ul class="pattern-list">
+	<li ng-repeat="pattern in list.patterns" class="pattern">
+		<div>
+			<h3><span>{{ pattern.number }}</span>&nbsp;<span class="glyphicon glyphicon-play"></span></h3>
+		</div>
+	</li>
+</ul>
