@@ -9,6 +9,15 @@ app.use('/bower_components', express.static(bowerDir));
 var browserDir = path.resolve(__dirname + '/../../browser');
 app.use('/browser', express.static(browserDir));
 
+log.info("paths",
+	{
+		dirname: __dirname,
+		cwd: process.cwd(),
+		browserDir: browserDir,
+		viewsDir: process.cwd() + '/views'
+	});
+
+
 app.set('view engine', 'ejs');
 app.set('views', process.cwd() + '/views');
 app.use(bodyParser.json());
