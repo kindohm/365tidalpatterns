@@ -19,7 +19,6 @@ log.info("paths",
 		viewsDir: viewsDir
 	});
 
-
 app.set('view engine', 'ejs');
 app.set('views', viewsDir);
 app.use(bodyParser.json());
