@@ -1,7 +1,12 @@
 <ul class="pattern-list">
-	<li ng-repeat="pattern in list.patterns" class="pattern">
+	<li ng-repeat="pattern in list.patterns" ng-controller="PatternItemController" class="pattern">
 		<div>
-			<h3><span>{{ pattern.number }}</span>&nbsp;<span class="glyphicon glyphicon-play"></span></h3>
+			<strong><span>Pattern {{ pattern.number }}</span>&nbsp;
+				<button ng-click="togglePlay()">
+					<span ng-show="!playing" class="glyphicon glyphicon-play"></span>
+					<span ng-show="playing" class="glyphicon glyphicon-pause"></span>
+				</button>
+			</strong>
 		</div>
 	</li>
 </ul>
