@@ -2,10 +2,7 @@
 	<li ng-repeat="pattern in list.patterns" ng-controller="PatternItemController" class="pattern">
 		<div>
 			<strong><span>Pattern {{ pattern.number }}</span>&nbsp;
-				<button ng-click="togglePlay()">
-					<span ng-show="!playing" class="glyphicon glyphicon-play"></span>
-					<span ng-show="playing" class="glyphicon glyphicon-pause"></span>
-				</button>
+				<audio src="{{pattern.audioPath}}" controls></audio>
 			</strong>
 		</div>
 	</li>

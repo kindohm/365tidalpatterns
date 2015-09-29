@@ -14,6 +14,7 @@ module.exports.run = function (cb) {
 	db.connectToMongoose()
 		.then(seedService.run)
 		.then(function () {
+			log.info('server listening on port', settings.express.port);
 			return app.listenAsync(settings.express.port);
 		}).then(cb);
 };

@@ -5,7 +5,7 @@ module.exports = {
 	getPatterns: function (req, res) {
 		var descending = req.query.desc ? req.query.desc === "true" : true;
 		var start = req.query.start ? +req.query.start : (descending ? seedService.patternCount : 0);
-		var limit = 50;
+		var limit = 25;
 
 		var query = {number: {}};
 		if (descending) {
