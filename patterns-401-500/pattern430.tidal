@@ -1,0 +1,19 @@
+cps (160/120)
+
+d1 $ every 6 ((|+| delay (scale 0.4 0.7 $ slow 3.1 sine1)) .
+(|+| delaytime (scale 0.001 0.3 $ slow 3.871 sine1)) .
+(|+| delayfeedback (scale 0.7 0.98 $ slow 4.1 sine1))) $
+whenmod 11 9 (slow (4/3)) $
+whenmod 10 8 (rip' 0 1 16 0.1 0.25) $
+every 7 (|+| accelerate "[0.25 -0.25]*2") $
+every 5 (|+| speed "{1.2 1.5 -0.8}%8") $
+every 4 (slow 2 . (|+| speed "[0.8 0.7 0.6]")) $
+foldEvery [3,4] (5.25 <~) $
+stack [whenmod 30 22 (const $ sound "~") $ whenmod 4 2 (slow 2) $ slow 4 $ sound "josie:9*16" |+| cut "1"
+|+| speed "1.25",
+degrade $ sound (samples "[k:0*16 bb2*16 b:0*16 sub*16]/8" (run 64)) |+| cut "2",
+sound "cp:1*2",
+density 2 $ sound "~ ch",
+jux (iter 4) $ sometimes (rev) $ slow 8 $ striate 64 $ sound "nose"]
+
+hush
