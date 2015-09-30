@@ -1,3 +1,13 @@
 bps (160/120)
 
-d1 $ sound (samples "[]")
+d1 $
+density 2 $
+superimpose (e 3 8 . slow 4 . (|+| speed "[{2 3 4 1 5}%4]") . (|+| shape "0.2")) $
+sound "a1*32" |+| up (every 4 ((*2) <$>) $ every 5 ((subtract 6) <$>) $
+every 3 ((negate) <$>) $ every 2 ((subtract 6) <$>) (run 32))
+|+| coarse "{8 4 64 12 32 16 24}%1"
+|+| delay "0.5"
+|+| delaytime "0.37"
+|+| delayfeedback "0.3"
+
+hush
