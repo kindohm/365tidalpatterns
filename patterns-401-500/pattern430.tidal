@@ -9,7 +9,7 @@ every 7 (|+| accelerate "[0.25 -0.25]*2") $
 every 5 (|+| speed "{1.2 1.5 -0.8}%8") $
 every 4 (slow 2 . (|+| speed "[0.8 0.7 0.6]")) $
 foldEvery [3,4] (5.25 <~) $
-stack [whenmod 30 22 (const $ sound "~") $ whenmod 4 2 (slow 2) $ slow 4 $ sound "josie:9*16" |+| cut "1"
+stack [whenmod 30 22 (const $ sound "~") $ rarely ((|+| speed "-0.75")) $ whenmod 4 2 (slow 2) $ slow 4 $ sound "josie:9*16" |+| cut "1"
 |+| speed "1.25",
 degrade $ sound (samples "[k:0*16 bb2*16 b:0*16 sub*16]/8" (run 64)) |+| cut "2",
 sound "cp:1*2",
