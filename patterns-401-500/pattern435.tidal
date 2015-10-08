@@ -1,0 +1,18 @@
+import Sound.Tidal.MIDI.Output
+import Sound.Tidal.MidiRack
+keyStreams <- midiproxy 1 "Scarlett 18i8 USB" [(rack, 1),(rack, 2),(rack, 3),(rack, 4),(rack, 5),(rack, 6),(rack, 7),(rack, 8),(rack, 9),(rack, 10),(rack, 11),(rack, 12),(rack, 13),(rack, 14),(rack, 15),(rack, 16)]
+[bd,sd,rs,cp,bt,lt,mt,ht,ch,oh,cy,cb,k13,brute,bass,keys] <- sequence keyStreams
+
+bps (180/120)
+
+brute $ note ((+41) <$> (foldEvery [2,3,4,5] ((subtract 2) <$>)) "0 [0 11/2] [12 14] [15 17]")
+|+| dur "0.05"
+
+bd $ whenmod 8 6 (trunc 0.25) $ whenmod 12 8 (iter 4) $ every 3 (|+| nudge (scale 0 0.1 $ slow 2.1 sine1)) $
+every 3 (rev) $ note "[0(3,8) [1 [8 9]*2], [10 11]/2 [8 9]*2 [4 [2*2 ~]/2] 3/2]"
+|+| perf1 (scale 0 1 $ slow 4 sine1)
+|+| perf2 (scale 0 1 $ slow 3 sine1)
+|+| perf3 (scale 0 1 $ slow 2.5 sine1)
+
+brute silence
+bd silence
