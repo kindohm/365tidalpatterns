@@ -1,0 +1,23 @@
+bps (150/120)
+
+d1 $ slowspread (\x -> stut' x (2/3) ((|*| speed "{1.5 2 3 1 4}%8"))) [8,16,4,2] $
+slowspread (\y -> spread' (striate' y) ((*0.5) <$> slow 1.71 sine1)) [32,64,16] $
+sound (samples "arpy" (irand 16))
+|+| speed "{1 0.75 1.5}%8"
+
+d1 $ slow 2 $
+sound "pink" |+| cut "1" |+| unit "c" |+| speed "0.5"
+
+d2 $ density 2 $  sound "k [ch*2] [k,s] ch"
+
+d3 $ slowcat [
+sound (samples "amenall*8" (irand 32)) |+| unit "c" |+| speed "7.9" |+| gain "1.4",
+sound (samples "funky*8" (irand 32)) |+| unit "c" |+| speed "7.9" |+| gain "1.4",
+sound (samples "think*8" (irand 32)) |+| unit "c" |+| speed "4" |+| gain "1.7",
+sound (samples "teeny1*8" (irand 32)) |+| unit "c" |+| speed "7.9" |+| gain "1" ]
+
+
+
+
+
+hush

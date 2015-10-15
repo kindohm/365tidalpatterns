@@ -16,4 +16,7 @@ sound "s2" |+| speed "[1.2]",
 whenmod 15 10 (const $ sound "~") $ sound "{ch*12 oh [ch oh]*4}%2" |+| cut "2" |+| speed "0.5" |+| coarse "16"
 |+| pan "[0 1]*8" ]
 
+
+
+
 hush

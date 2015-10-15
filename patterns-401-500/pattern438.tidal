@@ -1,0 +1,25 @@
+bps (85/120)
+
+let squish l e p = (p |+| cut "-1" |+| loop l |+| end e)
+let ring d l f p = (p |+| delay d |+| delaytime l |+| delayfeedback f)
+
+d1 $ whenmod 30 8 (
+every 10 (ring "0.4" (scale 0.001 0.05 $ slow 2 sine1) (scale 0.7 0.99 $ slow 3 sine1)) .
+every 7 (rev . striate 8 . spread (slow) [4,(4/3),1]) .
+every 6 (gap 8 . rev) .
+every 5 (chop 8) .
+slowspread ($) [id, rev, (|+| coarse "32 16 24"), (|+| accelerate "-1 1"),
+trunc 0.25, trunc 0.25, iter 4, iter 4, iter 4, gap 4, chop 16,
+stut' 1 0.125 (|*| speed "1.25"), rip 0.2 0.1] .
+foldEvery [3,4] (3.25 <~) ) $
+stack [
+whenmod 7 4 (jux (rev)) $
+squish "{5 10 15}%8" "{0.1 0.01 0.05}%4" $
+ring "0.3" (scale 0.001 0.05 $ slow 2 sine1) (scale 0.7 0.99 $ slow 3 sine1) $
+stut' 4 (0.125/4) ((|*| speed "2") . (|*| coarse "16")) $
+sound (samples "sqr*16" (sometimes (rev) $ every 2 (rev) $ run 16)),
+whenmod 6 4 (jux (iter 4)) $ sound "kl:1*16?" |+| cut "2" |+| speed "[1 0.85]/8",
+density 2 $ sound "[~ ~ ~ [cp*4 cpr]]/4 zz" |+| shape "0.5 0.4" |+| coarse "4"]
+
+
+hush
