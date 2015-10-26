@@ -1,0 +1,11 @@
+bps (120/120)
+
+let spray p = ((# delayfeedback (scale 0.7 0.98 $ slow 3.1 sine1)) . (#delaytime (scale 0.01 0.3 $ slow 4.3 sine1)) . (#delay "0.4") ) p
+
+d1 $ foldEvery [2,3,4,5,6] (slow 2) $ spray $
+whenmod 8 4 (rev) $
+slowspread (\x -> stut' 7 (x) ((|*| up "[4 2 3 -2 12 -6]/2") . (|*| gain "0.95") . (|*| coarse "8"))) [0.125, 0.5, 0.25, (0.125/2), 0.75] $
+slowspread (striate) [16,4,8,32] $
+sound (samples "a1(3,8)" (run 20)) # speed "[1, 0.5]"
+
+hush
