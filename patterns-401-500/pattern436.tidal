@@ -1,23 +1,13 @@
-bps (150/120)
+bps (60/120)
 
-d1 $ slowspread (\x -> stut' x (2/3) ((|*| speed "{1.5 2 3 1 4}%8"))) [8,16,4,2] $
-slowspread (\y -> spread' (striate' y) ((*0.5) <$> slow 1.71 sine1)) [32,64,16] $
-sound (samples "arpy" (irand 16))
-|+| speed "{1 0.75 1.5}%8"
-
-d1 $ slow 2 $
-sound "pink" |+| cut "1" |+| unit "c" |+| speed "0.5"
-
-d2 $ density 2 $  sound "k [ch*2] [k,s] ch"
-
-d3 $ slowcat [
-sound (samples "amenall*8" (irand 32)) |+| unit "c" |+| speed "7.9" |+| gain "1.4",
-sound (samples "funky*8" (irand 32)) |+| unit "c" |+| speed "7.9" |+| gain "1.4",
-sound (samples "think*8" (irand 32)) |+| unit "c" |+| speed "4" |+| gain "1.7",
-sound (samples "teeny1*8" (irand 32)) |+| unit "c" |+| speed "7.9" |+| gain "1" ]
-
-
-
-
+d1 $ every 3 rev $
+whenmod 5 3 (slow 1.25 . (|*| up "-2")) $
+slowspread (\x -> stut' x (0.125/4) ((|*| up "2"))) [8,1,4,2] $
+slowspread (\y -> spread' (striate' y) ((*0.5) <$> slow 1.71 sine1)) [4,8,16] $
+sound (samples "nyanx2" ("0"))
+|=| up "0"
+|+| delay "0.5"
+|+| delaytime (scale 0.01 0.3 $ slow 1.51 sine1)
+|+| delayfeedback (scale 0.7 0.98 $ slow 1.1 sine1)
 
 hush

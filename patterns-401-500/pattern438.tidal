@@ -18,8 +18,8 @@ squish "{5 10 15}%8" "{0.1 0.01 0.05}%4" $
 ring "0.3" (scale 0.001 0.05 $ slow 2 sine1) (scale 0.7 0.99 $ slow 3 sine1) $
 stut' 4 (0.125/4) ((|*| speed "2") . (|*| coarse "16")) $
 sound (samples "sqr*16" (sometimes (rev) $ every 2 (rev) $ run 16)),
-whenmod 6 4 (jux (iter 4)) $ sound "kl:1*16?" |+| cut "2" |+| speed "[1 0.85]/8",
-density 2 $ sound "[~ ~ ~ [cp*4 cpr]]/4 zz" |+| shape "0.5 0.4" |+| coarse "4"]
+whenmod 6 4 (jux (iter 4)) $ sound "kl:1*16?" |+| gain "0.9" |+| cut "2" |+| speed "[1 0.85]/8",
+density 2 $ sound "[~ ~ ~ [cp*4 cpr]]/4 zz" |+| shape "0.5 0.6" |+| coarse "4"]
 
 
 hush

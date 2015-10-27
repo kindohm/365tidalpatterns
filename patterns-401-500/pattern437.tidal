@@ -1,0 +1,11 @@
+bps (120/120)
+
+d1 $ every 3 (stut 4 0.25 0.25) $ every 5 (trunc 0.25) $
+every 6 (chop 8) $
+stack [
+stut' 7 (0.125/4) (|*| speed "-1.5") $ sound "sqr(3,8)" |=| shape "0.3",
+every 2 (# speed "-1") $ sound "cpr/3" |+| delay "0.5",
+sound "~ [ktite*2 sub/4] ~ ~" ]
+|+| delaytime "0.5" |+| delayfeedback "0.5"
+
+hush
