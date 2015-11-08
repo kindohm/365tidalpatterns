@@ -1,0 +1,33 @@
+bps (120/120)
+
+let remPos num den = if x<0 then x+den else x where x = rem num den
+let scaleElt scale n = fromIntegral . (scale !!) $ fromIntegral $ remPos n (fromIntegral $ length scale)
+let scaleOctave scale n = (12 *) . fromIntegral . floor . ((fromIntegral n) /) $ fromIntegral $ length scale
+let sc s n = scaleOctave s n + scaleElt s n
+let lydian = [0,2,4,6,7,9,11]
+
+keys $ whenmod 30 20 (density 1.2) $ whenmod 18 14 (const $ note "~") $
+(|+| note "42") $ note (degradeBy 0.1 $ foldEvery [3] (density 2) $ slow 4 $ foldEvery [2,3,4] (7.25 ~>) $
+sometimes ((+24) <$>) $ rarely (rev) $ sc lydian <$> run 16)
+|+| kdetune (scale 0 0.1 $ slow 5.1 sine1)
+|+| kslide (scale 0 0.5 $ slow 4.3 sine1)
+|+| kcutoff (scale 0 0.6 $ density 1.31 sine1)
+|+| kvcfegint (scale 0.5 1 $ slow 4.1 sine1)
+|+| kdecay (scale 0 0.5 $ slow 5.13 sine1)
+|+| ksustain (scale 0 1 $ slow 3.38 sine1)
+|+| dur (scale 0.1 4 $ density 3.71 sine1)
+|+| kvoice (scale 0 1 $ slow 1.9 sine1)
+|+| kdelaytime (scale 0 1 $ density 2.1 sine1)
+|+| kdelayfeedback (scale 0.5 1 $ density 1.31 sine1)
+|+| klforate (scale 0 1 $ slow 3.871 sine1)
+|+| klfocutoffint (scale 0 1 $ slow 2.81 sine1)
+|+| klfopitchint (scale 0 1 $ slow 1.81 sine1)
+
+bd $ whenmod 30 20 (density 1.2) $ whenmod 12 9 (const $ note "~") $ note (degradeBy 0.3 $ foldEvery [2,3] (density 2) $ foldEvery [2,3,4] (7.25 ~>) $
+rarely (rev) $ "{0 1 2 3 4 5 6 7 8 9 10 11 12}%4")
+|+| perf1 (scale 0 1 $ slow 3.4 sine1)
+|+| perf2 (scale 0 1 $ slow 2.817 sine1)
+|+| perf3 (scale 0 1 $ slow 4.3771 sine1)
+
+bd silence
+keys silence
