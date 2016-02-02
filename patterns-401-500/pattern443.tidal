@@ -1,10 +1,19 @@
 bps (100/120)
 
 -- 1m bank 2 preset 3
-bd $ (|+| note "45") $ (|+| note "[0 0 0 [-24 0]]") $
+m $whenmod 16 12 (|+| note "-5") $ (|+| note "45") $ (|+| note "[0 0 0 [-24 0]]") $
 mel m13 5 "[0 0 [~ 0] [0/2 0]]"
 
 -- nord p4.14
-ch $ rarely (stut' 4 (0.125/4) (|*| vel "0.8")) $
+k10 $ rarely (stut' 4 (0.125/4) (|*| vel "0.8")) $
 every 3 (stut' 1 (0.125/4*3) (|+| note "1")) $ foldEvery [3,4] (1.25 <~) $ every 5 (const $ note "~") $
 note "{[60 62] [~ 62] [61 63 64 65] ~ [65 63*2] [~ 60] 61 ~}%4"
+
+-- added some uppers...
+brute $ whenmod 16 12 (|+| note "-5") $ stut' 2 (0.125/2) (|+| note "[12 -12 -24]*5") $ (|+| note "84") $
+note "{~ ~ 0 [~ -1] [~ -5] ~ ~ -5 [-8 -5] ~}%4"
+
+brute silence
+k10 silence
+
+m silence

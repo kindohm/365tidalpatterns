@@ -1,0 +1,19 @@
+bps (170/120)
+
+d1 $ density 2 $ whenmod 17 14 (iter 4) $ 
+every 9 (rip' 0 1 8 0.2 0.1) $ whenmod 10 8 (|+| crush "-5 4 -3 7") $
+every 12 (# speed "-1") $
+whenmod 16 14 (spike') $
+every 13 (jux (iter 4)) $
+every 7 (|+| coarse "32 16 8") $ every 5 (gap 4) $ every 6 (chop 4) $ every 8 (|+| accelerate "-1 1") $
+slow 2 $
+whenmod 11 9 (const $ stack [sound (samples "{seq2 ch k}%16" (run 20)) |+| cut "-1"]) $
+stack [
+shift $
+sometimes (density 2) $ shift $ rarely (|+| begin "0.5") $ shift $ sometimes (0.125 ~>) $ slow 1 $ sound (samples "seq1" (irand 20)) |+| cut "4",
+sound (samples "{[ch]*2 k*4? [s cp] ch*2 cp/2}%4" (run 30)),
+sound (samples "{~ seq2 ~}%2" (irand 20)) |+| cut "2" |+| speed "{1 -1 1}%16",
+sound (samples "{seq3 ~ ~ ~ ~}%2" (irand 20)) |+| cut "5"]
+
+d2 $ spike' $ sometimes (jux (iter 4)) $ shift $ sometimes (|=| speed "[0.5 0.25]*3") $
+(|=| cutoff (scale 0.01 0.2 $ sine1)) $ slow 16 $ striate 128 $ sound (samples "dr" "[0 1]/8") |+| resonance "0.1" |+| gain "0.9"

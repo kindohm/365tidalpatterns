@@ -1,8 +1,11 @@
 let rip a b p = within (0.25, 0.75) (slow 2 . rev . stut 8 a b) p
-let rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
-let up = speed . ((1.059466**) <$>)
-let screw = slowspread ($) [id, rev, (|+| accelerate "-0.5 0.5"), (|+| coarse "32 64 16"), rip 0.2 0.1, gap 4, (|+| unit "c"), rip' 0 1 8 0.2 0.1, (|+| speed "1.2 1.5 -1.2 0.8"), chop 16, stut 4 0.25 0.25]
-let screwsafe = slowspread
+    rip' a b c d e p = within (a, b) (slow 2 . rev . stut c d e) p
+    spike p = ((|+| delaytime (scale 0.001 0.3 $ slow 7.1 sine1)) . (|+| delayfeedback (scale 0.7 0.99 $ slow 6.71 sine1))) $ p
+    spike' p = (|+| delay "0.3") $ spike $ p
+    ghost'' a f p = superimpose (((a/2 + a*2) ~>) . f) $ superimpose (((a + a/2) ~>) . f) $ p
+    ghost' a p = ghost'' a ((|*| gain "0.7") . (|=| end "0.2") . (|*| speed "1.25")) p
+    ghost p = ghost' 0.125 p
+    jit start amount p = within (start, (start + 0.5)) (trunc (amount)) p
 
 import Sound.Tidal.MIDI.Output
 import Sound.Tidal.VolcaBass
@@ -24,7 +27,7 @@ import Sound.Tidal.VolcaBass
 keyStreams <- midiproxy 1 "Scarlett 18i8 USB" [(bass, 1)]
 [volca] <- sequence keyStreams
 
--- requires 0.6-dev branch
-let stut'::Integer->Time->(OscPattern->OscPattern)->OscPattern->OscPattern
-    stut' steps steptime f p | steps <= 0 = p
-                             | otherwise = overlay (f (steptime ~> stut' (steps-1) steptime f p)) p
+import Sound.Tidal.MIDI.Output
+import Sound.Tidal.MidiRack2
+keyStreams <- midiproxy 1 "Scarlett 18i8 USB" [(rack, 1),(rack, 2),(rack, 3),(rack, 4),(rack, 5),(rack, 6),(rack, 7),(rack, 8),(rack, 9),(rack, 10),(rack, 11),(rack, 12),(rack, 13),(rack, 14),(rack, 15),(rack, 16)]
+[m,k2,k3,k4,k5,k6,k7,k8,nord,k10,k11,k12,k13,brute,bass,keys] <- sequence keyStreams
