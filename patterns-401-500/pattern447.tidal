@@ -1,0 +1,18 @@
+bps (130/120)
+
+-- ML
+-- vco1: triangle, octave 2. some shape for beef.
+-- vco2: square, octave 2
+m $ sometimes (stut' 2 (0.0625*3) (|+| note (shift' 7 $ choose[-12,12,5,7,-5,-7]))) $ (|+| note "0") $ note "51 [~ 46/2] [66 63 ~ ~] [~ 39/3]"
+|=| mvoicedepth (scale 0 0.5 $ slow 3 sine1)
+
+-- erebus
+k7 $ rarely (stut' 3 (0.0625) (|+| note (shift' 8 $ choose[5,7,-5,-7,12,-12]))) $ shift' 4 $ sometimes (|+| note "-12") $ note "{~ [~ 78] ~}%8"
+
+-- rytm. FM kick and snare
+k1 $ stack [
+note "{0(3,8) [1 0*2?] [0*4? 1] [~ 0*4?] [1 0*2] [~ 1] 0*8?}%2",
+foldEvery [2,3,4,5] (density (4/3)) $ note "[~ 8]*2",
+note "~ 3/2 ~ ~",
+note "10/6",
+whenmod 6 3 (density 2) $ note "2*8?" ]
