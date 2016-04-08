@@ -1,0 +1,11 @@
+d1 $ foldEvery [2,3] (1.25 <~) $ 
+every 5 (|=| coarse "16 32 24") $
+every 6 (|=| accelerate "-0.5 0.5") $
+every 8 (|=| crush "5 -4 3 -6") $
+whenmod 11 8 (iter 4) $
+whenmod 12 10 (trunc 0.25) $
+stack [
+ every 6 (const $ sound (samples "{hop ~ ~}%16" "{220 221 222 223}%6") |=| cut "77") $ degradeBy 0.25 $
+ every 4 (const $ sound "hop:120 hop:129 hop:135 hop:132" |=| cut "77") $ whenmod 12 8 (const $ sound "~") $ sound "hop:119(3,8)" |=| cut "77" |=| speed "1",
+ degradeBy 0.25 $ shift' 4 $ sound "hop:200*16" |=| gain "0.8" |=| speed "30",
+stut' 16 (0.0625/4) (|*| gain "0.9") $ slow 2 $ sound "~ hop:299" |=| speed "20" |=| gain "0.8" |=| cut "10" ]
