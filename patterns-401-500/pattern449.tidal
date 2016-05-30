@@ -1,25 +1,22 @@
-bps (150/120)
+bps (140/120)
 
 let one p = stut' 1 (0.125/2) (|*| gain "1") $ p
 let one' p = rarely (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
-
-c1 $ every 3 (rev) $ one' $ foldEvery [2,3] (0.25 <~) $
-slowspread (\(x,y) -> e x y) [(3,8),(11,16),(5,8),(9,16),(7,8),(6,8),(7,16)] $ shift' 1024 $
-whenmod 8 4 (const $ sound (samples "kf s" "[0 1]/2")) $
-sound (samples "ka s" "[0 1]/4")
-
 let rep n p = stut' (n-1) (0.125*3) (|*| gain "1") $ p
 let rep' n p = stut' (n-1) (0.125/2*3) (|*| gain "1") $ p
 
-c1 $ whenmod 9 7 (jux (iter 4)) $
-every 5 (chop 4) $ every 6 (|=| coarse "8 16 24") $
-every 7 (|=| accelerate "-0.5 1 -1 0.5") $
-every 8 (rip 0.25 0.125) $
-every 9 (|*| speed "-1 1.25 0.75") $
-whenmod 12 10 (striate' 8 (1/10) . slow 4) $
-foldEvery [2,3] (0.25 <~) $
-stack [ stut' 1 (0.125/2*3) (|=| up "-4") $
-rep 8 $ sound "kf/2" |=| cut "-1",
-rarely (rep' 2) $ shift' 1 $ rarely (rep' 2) $ sound "~ s",
-rep 2 $
-sound "{cp ch ~ [~ oh] ch rs? ~ ~ lt ~ ~}%8" |=| gain "0.9" # cut "1" ]
+c1 $ every 12 (slow (4/3) . (|=| coarse "24 64 128 256")) $
+every 7 (stut' 2 (0.25*3) (|*| speed "1.5")) $
+whenmod 10 5 (foldEvery [3,4] (0.25 <~)) $
+stack [
+rarely (one') $ rarely (one') $ rep 5 $ sound "kr/2" |=| shape "0.5" |=| gain "0.8",
+every 2 (rev) $
+rarely (stut' 1 (0.125*3) (|=| up "6")) $ rep' 4 $ sound (samples "~ bf ~ ~" (foldEvery [2,3] (0.25 <~) $ run 10)) |=| cut "-1",
+sound "{~ k*2 zz/2 ~ ~ [~ ch] [~ ch]}%8",
+every 3 (rev) $ jux (iter 8) $ stut' 4 (0.0625) (|*| gain "0.8") $ sound (samples "~ s" (run 5)),
+degrade $ sound "{[~ bfr] ~ ~}%4" |=| up "{-12 -5 -7}%17",
+whenmod 12 8 (gtfo) $ sound "{k k k*4 ~ ~ ~}%4" |=| speed "0.8" |=| shape "0.8"]
+
+c2 $ sound "padf/32" |=| gain "0.8" |=| cut "-1"
+
+hush
