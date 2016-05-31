@@ -9,7 +9,7 @@ let rep' n p = stut' (n-1) (0.125/2*3) (|*| gain "1") $ p
 c1 $ whenmod 14 11 (iter 4) $
 whenmod 9 6 (superimpose (chop 8 . slow 4)) $
 whenmod 10 5 (foldEvery [3,4] (0.25 <~)) $
-stack [
+stack [ 
 one' $
 every 3 (rev) $
 rep 4 $ sound "ker/2",
@@ -28,7 +28,6 @@ whenmod 13 8 (gtfo) $
 whenmod 8 6 (density 2) $
 sound "ht(3,8)" |=| gain "0.7" |=| shape "0.5",
 every 4 (sometimes (|=| speed "0.5")) $
-rarely (rip' 0 1 8 0.25 0.125) $
 one' $ one' $ sound "sefm([3 5 2 4 6]/4,8)" |=| cut "1" ]
 
 hush

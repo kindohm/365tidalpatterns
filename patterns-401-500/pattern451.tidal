@@ -1,0 +1,34 @@
+bps (140/120)
+
+let one p = stut' 1 (0.125/2) (|*| gain "1") $ p
+let one' p = rarely (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let one'' p = sometimes (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let rep n p = stut' (n-1) (0.125*3) (|*| gain "1") $ p
+let rep' n p = stut' (n-1) (0.125/2*3) (|*| gain "1") $ p
+
+
+c1 $ stack [
+n "[0 1 2 3]/16" # s "prog1" |=| gain "1",
+sound "~ [~ cbgr/5] ~ ~",
+sound "~ shake"]
+
+hush
+
+c1 $
+every 7 (rip 0.25 0.125) $
+every 8 (# coarse "8 4 16") $
+every 9 (# accelerate "-0.5 0.5 1 -1") $
+every 11 (sometimes (# vowel "a")) $
+stack [
+whenmod 12 8 (gtfo) $
+every 3 (rarely (stut' 4 (0.0625/4) (|*| gain "0.99"))) $
+slowspread (rep') [5,4,6,3] $ s "{sfm:1 ~ ~ ~ ~ ~ ~}%4" # cut "-1",
+whenmod 14 10 (gtfo) $ rarely (one) $
+rep 6 $ s "kf:1/3",
+sound "~ [~ cbgr/5] ~ ~",
+sound "~ shake",
+(0.25 ~>) $ sound "cp:1/2",
+s "{chmet chmet*2 ~ [~ ohmet/2] chmet/3 chmet ~ ~}%8" |=| cut "1",
+n "[0 1 2 3]/16" # s "prog1" |=| gain "1"]
+
+hush
