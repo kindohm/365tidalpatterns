@@ -1,0 +1,33 @@
+bps (150/120)
+
+let one p = stut' 1 (0.125/2) (|*| gain "1") $ p
+let one' p = rarely (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let one'' p = sometimes (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let rep n p = stut' (n-1) (0.125*3) (|*| gain "1") $ p
+let rep' n p = stut' (n-1) (0.125/2*3) (|*| gain "1") $ p
+
+
+c1 $ slowspread (\x -> stut' x (0.0625*3) (# cutoff "0.01")) [1,3,2,5] $
+rarely ((0.0625*3) ~>) $
+degradeBy 0.2 $
+sound "b452 b452:1" # resonance "0.2"
+
+c1 $ whenmod 11 9 (slow (1.5)) $
+every 8 (|=| coarse "8 4 16") $
+every 5 (rev) $
+every 7 (rip 0.125 0.125) $
+every 8 (rip' 0 1 8 0.25 0.25) $
+every 9 (chop 8 . slow 2) $
+every 6 (|=| up "-2") $
+every 12 (stut' 2 (0.125*3) (|*| speed "1.5")) $
+stack [
+slowspread (\x -> stut' x (0.0625*3) (# cutoff "0.01")) [1,3,2,5] $
+rarely ((0.0625*3) ~>) $
+degradeBy 0.2 $
+sound "b452 b452:1" # resonance "0.2",
+one' $ slowspread (rep') [5,4,6,3,7] $ s "~ kit452/2",
+every 4 (rarely (|=| up "-12")) $
+sound (samples "{~ kit452:1 ~ kit452 kit452*2 ~ kit452*2 ~}%4" (run 10)) |=| cut "-1",
+sometimes (0.125 <~) $ one' $ one' $ one' $ s "kit452*4" # n "{4 5 4 4 4}%16" |=| cut "1" ]
+
+hush

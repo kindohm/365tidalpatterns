@@ -1,0 +1,27 @@
+bps (130/120)
+
+let one p = stut' 1 (0.125/2) (|*| gain "1") $ p
+let one' p = rarely (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let one'' p = sometimes (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let rep n p = stut' (n-1) (0.125*3) (|*| gain "1") $ p
+let rep' n p = stut' (n-1) (0.125/2*3) (|*| gain "1") $ p
+
+c1 $ whenmod 16 8 (foldEvery [3,4] (0.25 <~)) $
+every 6 (rev) $
+every 10 (|*| speed "-1 1 -1 1") $
+every 7 (rip 0.125 0.125) $
+every 8 (# coarse "8 4 16") $
+every 9 (stut' 4 (0.0625*2) (|*| gain "0.8")) $
+stack [
+s "pad453/3" # n (choose [0,1]),
+one' $ rep 4 $ s "kit453/2" |=| cut "-1",
+whenmod 10 5 (gtfo) $
+whenmod 7 5 (jux (iter 8)) $
+sometimesBy 0.1 (stut' 16 (0.0625/8) (|*| gain "0.95")) $
+sound "kit453:2([3 6 5]/3,8)" # gain "0.8" # cut "10",
+rep 3 $ sound "{~ ~ ~ kit453:1/3 ~}%4" # up "{0 0 0 0 5}%16",
+foldEvery [2,3,4,5] (density 2) $ s "kit453:3*4" # cut "4",
+(0.0625 <~) $ rep 3 $ sound "kit453:4/5" # cut "4",
+sound "{~ [~ b453] ~ ~ b453 ~ ~}%4" # n (irand 10) |=| up "{0 12 -12 0}%16" # shape "0.4" |=| gain "0.9"]
+
+hush
