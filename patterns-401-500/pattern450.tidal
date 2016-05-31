@@ -1,0 +1,34 @@
+bps (140/120)
+
+let one p = stut' 1 (0.125/2) (|*| gain "1") $ p
+let one' p = rarely (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let one'' p = sometimes (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+let rep n p = stut' (n-1) (0.125*3) (|*| gain "1") $ p
+let rep' n p = stut' (n-1) (0.125/2*3) (|*| gain "1") $ p
+
+c1 $ whenmod 14 11 (iter 4) $
+whenmod 9 6 (superimpose (chop 8 . slow 4)) $
+whenmod 10 5 (foldEvery [3,4] (0.25 <~)) $
+stack [
+one' $
+every 3 (rev) $
+rep 4 $ sound "ker/2",
+whenmod 14 8 (gtfo) $
+whenmod 15 10 (jux (iter 4)) $
+rarely (|=| up "-12") $
+(0.125 ~>) $ rep 4 $ sound "swelle/2",
+whenmod 11 7 (gtfo) $
+one' $ one' $ sound "ch*8" |=| up "[0 1]/4" |=| gain "0.9",
+sound "~ cpr/3 ~ ~",
+whenmod 9 5 (gtfo) $ density 2 $ sound "~ cp:1",
+slow 4 $ sound "{~ [~ er] ~ [~ er/2] ~}%4"
+|=| up "{0 0 -12 0 -24}%16",
+sound "cy:1/6",
+whenmod 13 8 (gtfo) $
+whenmod 8 6 (density 2) $
+sound "ht(3,8)" |=| gain "0.7" |=| shape "0.5",
+every 4 (sometimes (|=| speed "0.5")) $
+rarely (rip' 0 1 8 0.25 0.125) $
+one' $ one' $ sound "sefm([3 5 2 4 6]/4,8)" |=| cut "1" ]
+
+hush
