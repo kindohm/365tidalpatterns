@@ -1,0 +1,84 @@
+bps (140/120)
+
+let one p = stut' 1 (0.125/2) (|*| gain "1") $ p
+    one' p = rarely (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+    one'' p = sometimes (stut' 1 (0.125/2) (|*| gain "1")) $ shift' 1024 $ p
+    rep n p = stut' (n-1) (0.125*3) (|*| gain "1") $ p
+    rep' n p = stut' (n-1) (0.125/2*3) (|*| gain "1") $ p
+
+
+c1 $
+stack [
+(# cutoff (scale 0.3 0.05 $ rand)) $
+rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # s "454pad1" # n "[0 1]/8" # cut "1" # resonance "0.5" # shape "0.1"]
+
+c1 $
+stack [
+(# cutoff (scale 0.3 0.05 $ rand)) $
+rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # s "454pad1" # n "[0 1]/8" # cut "1" # resonance "0.5" # shape "0.1",
+rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # s "454kit" # n "[0 1]/6" |=| cut "2"]
+
+c1 $
+stack [
+(# cutoff (scale 0.3 0.05 $ rand)) $
+rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # (whenmod 24 16 (const $ s "454pad2" # n "[0 1]/4" # gain "1.2") $
+s "454pad1" # n "[0 1 2 3 4 5]/24") # cut "1" # resonance "0.5" # shape "0.1",
+rarely (one) $ rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # s "454kit" # n "[0 1]/12" |=| cut "2",
+whenmod 8 4 (jux (iter 4)) $ density 4 $ every 4 (0.25 ~> ) $ s "454kit:7",
+s "{454kit 454kit*2 454kit ~ [~ 454kit]*2 ~ 454kit ~ ~}%8" # n "{5 5 5 5 5 5 6}%16" |=| cut "3",
+every 7 (rep 5) $ every 6 (# up "-12") $ (0.125 <~) $ s "{454kit:3 ~ ~ ~ ~}%4" |=| gain "0.85" |=| cut "7",
+rarely (stut' 16 (0.0625) (|*| gain "0.95")) $ shift' 1024 $
+rarely (stut' 4 (0.0625/3) (|*| gain "0.95")) $ s "{~ 454kit:2 ~ [~ 454kit:2/2] ~}%4" # cut "4" ]
+
+c1 $ whenmod 20 16 (iter 4) $
+whenmod 14 7 (foldEvery [2,3,4] (0.25 <~)) $
+whenmod 12 8 (# up "-2") $
+stack [
+(# cutoff (scale 0.3 0.05 $ rand)) $
+rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # (whenmod 24 16 (const $ s "454pad2" # n "[0 1]/4" # gain "1.2") $
+s "454pad1" # n "[0 1 2 3 4 5]/24") # cut "1" # resonance "0.5" # shape "0.1",
+rarely (one) $ rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # s "454kit" # n "[0 1]/12" |=| cut "2",
+whenmod 8 4 (jux (iter 4)) $ density 4 $ every 4 (0.25 ~> ) $ s "454kit:7",
+s "{454kit 454kit*2 454kit ~ [~ 454kit]*2 ~ 454kit ~ ~}%8" # n "{5 5 5 5 5 5 6}%16" |=| cut "3",
+every 7 (rep 5) $ every 6 (# up "-12") $ (0.125 <~) $ s "{454kit:3 ~ ~ ~ ~}%4" |=| gain "0.85" |=| cut "7",
+rarely (stut' 16 (0.0625) (|*| gain "0.95")) $ shift' 1024 $
+rarely (stut' 4 (0.0625/3) (|*| gain "0.95")) $ s "{~ 454kit:2 ~ [~ 454kit:2/2] ~}%4" # cut "4" ]
+
+-- out
+c1 $
+stack [
+rarely (one) $ rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # s "454kit" # n "[0 1]/12" |=| cut "2",
+whenmod 8 4 (jux (iter 4)) $ density 4 $ every 4 (0.25 ~> ) $ s "454kit:7",
+s "{454kit 454kit*2 454kit ~ [~ 454kit]*2 ~ 454kit ~ ~}%8" # n "{5 5 5 5 5 5 6}%16" |=| cut "3",
+every 7 (rep 5) $ every 6 (# up "-12") $ (0.125 <~) $ s "{454kit:3 ~ ~ ~ ~}%4" |=| gain "0.85" |=| cut "7",
+rarely (stut' 16 (0.0625) (|*| gain "0.95")) $ shift' 1024 $
+rarely (stut' 4 (0.0625/3) (|*| gain "0.95")) $ s "{~ 454kit:2 ~ [~ 454kit:2/2] ~}%4" # cut "4" ]
+
+hush
+
+-- kitchen sink
+c1 $ whenmod 20 17 (iter 4) $
+whenmod 14 7 (foldEvery [2,3,4] (0.25 <~)) $
+whenmod 10 7 (jux (iter 8)) $
+every 10 rev $
+every 6 (# accelerate "0.5 -0.5") $
+every 7 (rip 0.25 0.125) $
+every 8 (rip' 0 1 8 0.25 0.125) $
+every 9 (# coarse "32 64 16") $
+every 11 (# crush (scale (-4) 4 $ density 1.12 sine1)) $
+every 12 (ghost) $
+every 13 (# speed "-1 -2 -1.5") $
+whenmod 12 8 (|=| up "-2") $
+stack [
+(# cutoff (scale 0.3 0.05 $ rand)) $
+rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # (whenmod 24 16 (const $ s "454pad2" # n "[0 1]/4" # gain "1.2") $
+s "454pad1" # n "[0 1 2 3 4 5]/24") # cut "1" # resonance "0.5" # shape "0.1",
+rarely (one) $ rep' 7 $ gain "{1 ~ ~ ~ ~ ~ ~}%4" # s "454kit" # n "[0 1]/12" |=| cut "2",
+whenmod 8 4 (jux (iter 4)) $ density 4 $ every 4 (0.25 ~> ) $ s "454kit:7",
+s "{454kit 454kit*2 454kit ~ [~ 454kit]*2 ~ 454kit ~ ~}%8" # n "{5 5 5 5 5 5 6}%16" |=| cut "3",
+every 7 (rep 5) $ every 6 (# up "-12") $ (0.125 <~) $ s "{454kit:3 ~ ~ ~ ~}%4" |=| gain "0.85" |=| cut "7",
+rarely (stut' 16 (0.0625) (|*| gain "0.95")) $ shift' 1024 $
+rarely (stut' 4 (0.0625/3) (|*| gain "0.95")) $ s "{~ 454kit:2 ~ [~ 454kit:2/2] ~}%4" # cut "4" ]
+
+
+hush
