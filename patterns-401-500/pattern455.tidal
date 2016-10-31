@@ -1,0 +1,11 @@
+c1 $ whenmod 6 3 (chop 2) $ whenmod 4 2 (slow (4/3)) $
+(sound $ samples "{~/2 kv laz/2 defdo/2}%2" (every 6 (iter 8) $ every 4 ((0.75 ~>)) $ density 1.15 $ run 5))
+|=| delay "0.0625" |=| gain "1" |=| coarse "8" |=| cut "7"
+
+c1 silence
+
+c2 $ whenmod 6 3 (density (4/3)) $ whenmod 6 4 (chop 16) $
+(sound $ samples "{peri cold*2 b2/2 kr*3 doru akuma1 b2 {sq akuma1}%4 s/2 k/2 {peri doru}%4 {sqr peri}%4 {laz b3}%1}%2" (every 8 (rev) $ every 4 (density 2) $ "0"))
+|=| up "{-7}%2" |=| cut "11"
+
+c2 silence
