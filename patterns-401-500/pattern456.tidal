@@ -1,0 +1,17 @@
+cps 1
+
+d1 $ whenmod 10 7 (|=| cutoff (choose [200,300..3000])) $
+  every 2 (rev) $ every 3 (chop 8) $
+  every 4 (stut' 2 (0.125*3) (|*| speed "1.5")) $
+  stack [gtfo $ (|*| gain "0.9") $
+  every 5 (|*| speed "0.5") $
+  gain "1([3 5]/2,8)" #
+  s "[run fx]" |=| n "{0 1 0}%16" |=| accelerate "[2]/8"
+  |=| speed "[1,1.25]",
+  gtfo $ sound "[k*4? ~ ~]/3 cp" # n (run 16) |=| speed "[1 2]/3",
+  sound "lessb/5",
+  whenmod 7 7 (gtfo) $ degradeBy 0.2 $ brakk "jung4*8" |=| gain "1.1" ]
+  |=| cut "-1"
+  |=| delay "0.5"
+  |=| delaytime (scale 0.001 0.1 $ slow 5 tri1)
+  |=| delayfeedback (scale 0.1 0.9 $ slow 6 tri1)
