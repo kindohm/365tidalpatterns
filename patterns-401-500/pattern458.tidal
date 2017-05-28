@@ -1,0 +1,17 @@
+bps (160/120)
+
+d1 $ (|=| nudge (scale 0 0.25 $ slow 4 $ sine)) $
+  stack [(# pan (scale 0.3 0.7 $ rand)) $
+  whenmod 24 16 (slow (4/3) . (|=| room "0.5") . (|=| accelerate "{0.125}%16") . (|=| cutoff (scale 500 3000 $ density 2 $ sine))) $
+  every 3 (rev) $
+  every 5 (|*| speed "1.1") $
+  every 4 (striate' 16 (1/8) . rev . slow 3 . (|=| room (scale 0.01 0.5 $ density 3 $ saw))) $
+  within (0.25, 0.5) (stut' 6 (0.125) (|*| gain "0.7")) $
+  sound "hop3 [~ hop3] ~ hop3"
+  # unit "c" # speed "{3 3 3 [2.5 2.5 2.5 2]/4 3}%4"
+  # n (foldEvery [4,6,8,10,12] ((+2) <$>) "2"),
+  stut' 1 (0.125) ((|=| pan "0") . (|=| cutoff "1000")) $ s "~ cp" # nudge (scale 0 0.25 $ (0.25 <~) $ slow 3 $ sine) ]
+  |=| shape "0.2" |=| gain "1.2"
+
+
+hush

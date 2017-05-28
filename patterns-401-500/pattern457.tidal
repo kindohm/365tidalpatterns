@@ -1,0 +1,23 @@
+d1 $ whenmod 13 10 (iter 8) $
+  (|=| nudge (scale 0 0.5 $ slow 4.5 sine)) $
+  whenmod 12 8 (foldEvery [3,4] (0.25 <~)) $
+  every 8 (struct "x*8") $
+  every 4 (rev) $
+  every 5 (rip 0.25 0.125) $
+  every 6 (rip' 0 1 8 0.25 0.125) $
+  every 7 (|=| room (scale 0.01 0.5 $ shift' 5 $ rand)) $
+  stack [ gtfo $
+  (|=| pan (rand)) $
+  within (0,0.25) (stut' 3 0.25 (|*| gain "0.8")) $
+  within (0.25,0.5) (stut' 6 0.125 (|*| gain "0.8")) $
+  within (0.5,1) (stut' 20 0.0625 ((|*| gain "0.9") . (|*| speed "1.25")) ) $
+  foldEvery [2,3] (0.75 ~>) $
+  sound "fk([3 5]/2,16)" # n "[21 19 16]/24" # shape "0.3",
+  every 3 (stut' 6 (0.25/4) (|*| gain "0.8")) $ sometimesBy 0.2 (|=| s "cpr") $ s "~ cp" # n "[0 1 2]/24",
+  whenmod 20 12 (|*| speed "[0.5 0.25]*4") $
+  whenmod 10 5 (|*| speed "1.1") $
+  foldEvery [2,3,4,5,6] (slow (8/3)) $
+    sound "run:1*128" # rel (shift' 3 $ choose [0.01,0.02..0.2]) # pan (shift $ rand) # speed "[1,-1.1]" # room "0.2"
+    # gain "1.1"]
+
+hush
