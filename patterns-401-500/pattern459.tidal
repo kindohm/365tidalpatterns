@@ -1,3 +1,4 @@
+
 d1 $
 stack [
 fast (discretise (1/9) $ (1 <~) $ choose [4..12]) $
@@ -5,3 +6,41 @@ stack [s "riscm:0" # speed "[1 0.5 0.25]/180", s "risckit"]
   # rel (slow 9 $ rev $ saw)
   # pan (rand)
   # room (rand) ]
+
+  
+do
+  let kpats = ["k*8?", "k(3,8)", "k(5,8)"]
+      spats = ["s", "s [~ s] ~ ~", "~ s"]
+  c1 $ whenmod 17 15 (iter 8) $
+      whenmod 14 11 (spike') $
+      whenmod 20 15 (density 1.25) $
+      every 5 (rip 0.5 0.1) $
+      every 10 (rip' 0 1 8 0.5 0.1) $
+      every 3 (rev) $
+      every 4 (chop 4) $
+      every 7 (gap 4) $
+      every 8 (|=| accelerate "-1 1") $
+      every 9 (|=| coarse "{16 8 4 12 24}%16") $
+      every 6 (|=| vowel "<a u>") $
+      every 11 (|*| speed (scale 0.9 1.25 $ saw)) $
+      sometimesBy 0.1 (stut' 8 (0.0625) (|*| gain "0.9")) $
+      shift' 8 $
+      sometimesBy 0.1 (stut' 4 (0.0625/2) (|*| gain "0.9")) $
+      shift' 8 $ sometimes (stut' 1 (0.125*3) (|*| speed "1.5")) $
+      shift' 8 $ sometimes (|=| pan (rand)) $
+      shift' 8 $
+      stack [
+        sound "lessb/4" # cut "377",
+        sound "~ nerd/2" # n (irand 5) # cut "3823" # speed "0.8" # cutoff "1000" # resonance "0.1",
+        degradeBy 0.5 $ shift' 382 $ sound "lessmel(3,8)"
+          # up (choose [-12,-10,-14]) # cut "892" # begin (scale 0 0.5 $ shift' 389 $ rand) # shape "0.1" # crush "<5 6 7 -5 -6>",
+        slowcat [ sound (randcat kpats), sound (randcat spats) ] # n "[0 4 0 5]/3",
+        whenmod 8 4 (gtfo) $ slow 2 $ sound "~ teks [~ teks] ~" # speed "0.75" # gain "0.9",
+        whenmod 10 5 (gtfo) $ brakk "jung6*8",
+        degradeBy 0.4 $ shift' 3 $
+          sound "{peri pson tite c64 peri peri}%4" # n (irand 30) # speed (choose [2,2.1..4]) # cut "32" ]
+        # delaytime "0"
+        # delayfeedback "0"
+
+hush
+
