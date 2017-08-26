@@ -32,3 +32,7 @@ let remPos num den = if x<0 then x+den else x where x = rem num den
     mel' scale runSize f cycles p = note (preplace(1,cycles) p (f $ sc scale <$> run runSize))
     melOld scale runSize p = note (preplace(1,1) p (sc scale <$> run runSize))
     mel scale runSize p = mel' scale runSize (scramble) 4 p
+
+bps (160/120)
+
+d1 $ sound "k*8? cp"

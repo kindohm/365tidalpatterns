@@ -1,0 +1,7 @@
+d1 $
+stack [
+fast (discretise (1/9) $ (1 <~) $ choose [4..12]) $
+stack [s "riscm:0" # speed "[1 0.5 0.25]/180", s "risckit"]
+  # rel (slow 9 $ rev $ saw)
+  # pan (rand)
+  # room (rand) ]
