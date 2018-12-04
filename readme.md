@@ -1,7 +1,7 @@
 # 365 Tidal Patterns
 
 This is a collection of 365 Tidal patterns created over 365 days,
-beginning 2013-12-38.
+beginning 2013-12-28.
 
 Patterns are available for listening at:
 
@@ -11,7 +11,7 @@ Patterns are available for listening at:
 
 ## Tidal
 
-[https://github.com/yaxu/tidal](https://github.com/yaxu/tidal)
+[https://tidalcycles.org](https://tidalcycles.org)
 
 ## Custom Samples
 
